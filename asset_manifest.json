@@ -1,0 +1,523 @@
+[
+  {
+    "asset": "assets/cases/stool_rgb.webp",
+    "source": "figs/assets/stool_rgb.jpg",
+    "sha256": "a36770a587207e9e2e29d7e3a99bb9f11caec3eff17c5cbbccb04a076d682f31"
+  },
+  {
+    "asset": "assets/cases/toilet_rgb.webp",
+    "source": "figs/assets/toilet_rgb.jpg",
+    "sha256": "267b92816d2bf8f3e1d06a3fb609793723e5fff66601372ce111d5cbbd6da4ae"
+  },
+  {
+    "asset": "assets/cases/mural_1.webp",
+    "source": "figs/assets/mural_1.jpg",
+    "sha256": "3d48f80ce966ac2efc0f02ee7c5c7742496cb98455f47ffac3f7fab8b437ee08"
+  },
+  {
+    "asset": "assets/cases/mural_2.webp",
+    "source": "figs/assets/mural_2.jpg",
+    "sha256": "a7c9155dc97c13d8fab10bc43c21634f5db9a43ac1c2852b6c34c0653ea7ec12"
+  },
+  {
+    "asset": "assets/cases/mural_3.webp",
+    "source": "figs/assets/mural_3.jpg",
+    "sha256": "f8349080b4ceac2ec00fbeab9e5637ccd035798b36a973d3179e16145b51d115"
+  },
+  {
+    "asset": "assets/cases/sofa_1.webp",
+    "source": "figs/assets/sofa_1.jpg",
+    "sha256": "836841f9b272826d9e8b962eb1bd872db480bda946fc9dfb5acd853dea54d163"
+  },
+  {
+    "asset": "assets/cases/sofa_2.webp",
+    "source": "figs/assets/sofa_2.jpg",
+    "sha256": "a9e2f2e7ff7a84cdf3b998fd8317b5dbe43c0fa6c7344a5614c2d3d40b4b7480"
+  },
+  {
+    "asset": "assets/cases/sofa_3.webp",
+    "source": "figs/assets/sofa_3.jpg",
+    "sha256": "ba2ec52eaaf7c5c8e4a6550c4fb00f341086e5e2625d8f780c6cc3ff4779970c"
+  },
+  {
+    "asset": "assets/cases/scene_fusion.webp",
+    "source": "figs/integrated_revision/assets/scene_fusion.png",
+    "sha256": "989616a8a51053b310196d363bb801c30d6e667d06c1c9d3c8fb03fca63afa56"
+  },
+  {
+    "asset": "assets/cases/pair_cloud_dark.webp",
+    "source": "figs/integrated_revision/assets/pair_cloud_dark.png",
+    "sha256": "55090de6f3c26c25b1aaead51161f6b4961000a387eae90d243009ded5157fe3"
+  },
+  {
+    "asset": "assets/cases/stool_mask_focus.webp",
+    "source": "figs/integrated_revision/assets/stool_mask_focus.png",
+    "sha256": "229ff0f3f205f73a5b1b586f4d8065c4ed133804337310c75fdd02a1d4fc7947"
+  },
+  {
+    "asset": "assets/cases/toilet_mask_focus.webp",
+    "source": "figs/integrated_revision/assets/toilet_mask_focus.png",
+    "sha256": "04ca57edd6bd4e758007e7d6b844034e8384fa65f1465a533b18ee4f99b33683"
+  },
+  {
+    "asset": "assets/cases/stool_depth_luminous.webp",
+    "source": "figs/integrated_revision/assets/stool_depth_luminous.png",
+    "sha256": "a75aeb3685990b51ec81ac25035590abcbd2b83b1d327e0a6226dfb1bec2188c"
+  },
+  {
+    "asset": "assets/cases/toilet_depth_luminous.webp",
+    "source": "figs/integrated_revision/assets/toilet_depth_luminous.png",
+    "sha256": "d5a828fc3cd89d50ed7b15f108743c1fadabc30cc949f87cf7e5a0cc18a2b719"
+  },
+  {
+    "asset": "assets/cases/stool_object.webp",
+    "source": "figs/integrated_revision/assets/stool_object.png",
+    "sha256": "8e2036afaaf6591331b168cf5d9a45a3208fe0187113e748789925e5d9d121a9"
+  },
+  {
+    "asset": "assets/cases/toilet_object.webp",
+    "source": "figs/integrated_revision/assets/toilet_object.png",
+    "sha256": "84139546e6cf0a5402ba76eda5992063f33bfff22882a7fffcae095d5b43b6ac"
+  },
+  {
+    "asset": "assets/cases/monitors_pair.webp",
+    "source": "figs/appendix_cases/assets/monitors_pair.jpg",
+    "sha256": "0ef7924b5f7d3157e46305acff23f00bf1f2ce3b271b659ff0208e0801156413"
+  },
+  {
+    "asset": "assets/cases/monitors_another_view.webp",
+    "source": "figs/appendix_cases/assets/monitors_another_view.jpg",
+    "sha256": "628f07db794fef860a3ffbe4b1cf717ba4843f675f6a32af6306d5cc8079376b"
+  },
+  {
+    "asset": "assets/cases/monitors_partial.webp",
+    "source": "figs/appendix_cases/assets/monitors_partial.jpg",
+    "sha256": "43e583d0116474b8f45c751491835eae6d4e038cd54c4044f13bad304dec7cc6"
+  },
+  {
+    "asset": "assets/logos/execution_robot.svg",
+    "source": "figs/integrated_revision/logos/reference_style/execution_robot.svg",
+    "sha256": "174622bef1dc6eeb850dfb3ae65725f0a0be685d393c7581b96e4904e4ef29aa"
+  },
+  {
+    "asset": "assets/logos/control_robot.svg",
+    "source": "figs/integrated_revision/logos/reference_style/control_robot.svg",
+    "sha256": "9987fe8bffcecf129507850129184a5dff98737dea473ebbbc7c8bce0646d0c7"
+  },
+  {
+    "asset": "assets/logos/dual_agents.svg",
+    "source": "figs/integrated_revision/logos/reference_style/dual_agents.svg",
+    "sha256": "d9a7ccc0f6c8419e50fffa1efd9ba678c452859bb12b0f23ca3da11f8063b333"
+  },
+  {
+    "asset": "assets/logos/evidence_workshop.svg",
+    "source": "figs/integrated_revision/logos/reference_style/evidence_workshop.svg",
+    "sha256": "1e0c795d6ab73465d3a0a6ba2b05066b5c4def673c56a18a08c74d222a331bb6"
+  },
+  {
+    "asset": "assets/figures/motivation.webp",
+    "source": "figs/integrated_revision/landscape_revision/fig1_motivation_landscape.png",
+    "sha256": "bf599ebb6973c7249d7f25f839711c93a72f6bccc87e16b68b3e4c4ff6ac9d06"
+  },
+  {
+    "asset": "assets/figures/evolution.webp",
+    "source": "figs/integrated_revision/landscape_revision/fig2_self_evolution_expanded_landscape.png",
+    "sha256": "6ba1a517a52de90002b27541840c4c42d02cdffc3842b667c1fb99b08b956c75"
+  },
+  {
+    "asset": "assets/figures/architecture.webp",
+    "source": "figs/integrated_revision/landscape_revision/fig3_interaction_revision/fig3_architecture_interactions.png",
+    "sha256": "d420f27d62b6578e744417e8429b0e33da2116bf272a271e6391940653dea6db"
+  },
+  {
+    "asset": "assets/metric-points.js",
+    "source": "figs/assets/metric_projected_points.npz",
+    "note": "Saved 2D projected point samples, not a new 3D reconstruction."
+  },
+  {
+    "asset": "assets/favicon.svg",
+    "sha256": "3492e1546e052816b550d6bb0c19d396abb739f6d9fd5d6cb7a1c9da4dd300da",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Light-background derivative of the original outlined Space-X identity."
+  },
+  {
+    "asset": "assets/fonts/OFL-Manrope.txt",
+    "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+    "source": "Google Fonts upstream / SIL Open Font License",
+    "note": "Bundled locally. Font filenames and license files retained; no CDN requests at runtime."
+  },
+  {
+    "asset": "assets/fonts/OFL-Space-Grotesk.txt",
+    "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+    "source": "Google Fonts upstream / SIL Open Font License",
+    "note": "Bundled locally. Font filenames and license files retained; no CDN requests at runtime."
+  },
+  {
+    "asset": "assets/fonts/manrope.ttf",
+    "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+    "source": "Google Fonts upstream / SIL Open Font License",
+    "note": "Bundled locally. Font filenames and license files retained; no CDN requests at runtime."
+  },
+  {
+    "asset": "assets/fonts/space-grotesk.ttf",
+    "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+    "source": "Google Fonts upstream / SIL Open Font License",
+    "note": "Bundled locally. Font filenames and license files retained; no CDN requests at runtime."
+  },
+  {
+    "asset": "assets/logos/space-x-identity-board.png",
+    "sha256": "0d58cfec0d25afc2c0bff6a01e54f28c7e22eb8c7253311e4b4c95388872c247",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/logos/space-x-identity-board.svg",
+    "sha256": "16b639a807d85ff9c6974ebb2068d9345e0a9ea21b97c2b2b83b6479b38304e5",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/logos/space-x-symbol-dark.png",
+    "sha256": "b4377dd625395f89d344955d7cc49d811132b9943a29071ec76daff289a569d9",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/logos/space-x-symbol-dark.svg",
+    "sha256": "90e6e929ba41028587f6e5451aee2c715ddc5b586332c888b4340ffa41a44f2b",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/logos/space-x-symbol-light.png",
+    "sha256": "870952e2cf95952018f4b8e682f1d9ab3d33733effbcb8d92338ad60b5cb53ae",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/logos/space-x-symbol-light.svg",
+    "sha256": "c10f77a00de9f14bef0ba1b9d15e03cb643383ac48f3ac2f6992eedac85322ed",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/logos/space-x-wordmark-dark.png",
+    "sha256": "eff85f2a1485528dbc1e5ad646f99da8e2489374bc9a6ebf4b250950735ea54e",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/logos/space-x-wordmark-dark.svg",
+    "sha256": "d1d795121e3f22314f9462f559be1b0c79d4f616b3a4287ce8cdc237d9bde46a",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/logos/space-x-wordmark-light.png",
+    "sha256": "575e3d2e74f00dddd3a984484de8a7401cf1febd4dfd710fb3e40699bebab3ba",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/logos/space-x-wordmark-light.svg",
+    "sha256": "cd578e87335b7c99b2feff95db6da2af6c095e4d75d9d4155441aae1568f15ae",
+    "source": "Original vector identity / design_logo.py",
+    "note": "Not AI-generated. Dark and light variants; transparent PNG exports."
+  },
+  {
+    "asset": "assets/atlas/bin_close.webp",
+    "source": "figs/appendix_cases/assets/bin_close.jpg",
+    "sha256": "65f79a8afb642a4f61f21bd5032f2a4efa99c22aa3c61601e4f33418a0e87216"
+  },
+  {
+    "asset": "assets/atlas/delivery_source0.webp",
+    "source": "figs/appendix_cases/assets/delivery_source0.jpg",
+    "sha256": "9cf257a06cad66403dd96b7993f4d27d8fc9a6198bd0ce59897d9721bf3eb0cb"
+  },
+  {
+    "asset": "assets/atlas/delivery_source1.webp",
+    "source": "figs/appendix_cases/assets/delivery_source1.jpg",
+    "sha256": "0782e4912b5ce9bea50cd32237c9554a506f1f10beba5a62ae12e1f48d35aa99"
+  },
+  {
+    "asset": "assets/atlas/delivery_source2.webp",
+    "source": "figs/appendix_cases/assets/delivery_source2.jpg",
+    "sha256": "98deab6b4274bd077496dbf4865700e1c0559ed810e1e9915bea29179a786f5d"
+  },
+  {
+    "asset": "assets/atlas/depth_1.webp",
+    "source": "figs/appendix_cases/assets/depth_1.jpg",
+    "sha256": "8473ff247e4eb4863c2b79927f4997ada240d9602ae21e8a16dc168a790d18da"
+  },
+  {
+    "asset": "assets/atlas/depth_2.webp",
+    "source": "figs/appendix_cases/assets/depth_2.jpg",
+    "sha256": "8c488d4a78b22ea890fef9871d9c597940c00018f3ae8ca4e8a4724b5519e1ae"
+  },
+  {
+    "asset": "assets/atlas/doors_marked0.webp",
+    "source": "figs/appendix_cases/assets/doors_marked0.jpg",
+    "sha256": "358925dcd71444de2f3f4b118d38aaa7773a43fb833d87d0094800ad873ce271"
+  },
+  {
+    "asset": "assets/atlas/doors_marked1.webp",
+    "source": "figs/appendix_cases/assets/doors_marked1.jpg",
+    "sha256": "4b402b3e4baac99e0a66c81b705fa3fe30236a8cb1a2fe91255e84d4f43316ed"
+  },
+  {
+    "asset": "assets/atlas/doors_marked2.webp",
+    "source": "figs/appendix_cases/assets/doors_marked2.jpg",
+    "sha256": "51f9f165b309d013eb649edbcb7d8aab9b5b1df14bff2e0f1acb1d3727a59969"
+  },
+  {
+    "asset": "assets/atlas/doors_object0.webp",
+    "source": "figs/appendix_cases/assets/doors_object0.jpg",
+    "sha256": "6e75fda48e1b66561e5a22de00dbad48f8cd0aae354bcace47676549ce7ebcc9"
+  },
+  {
+    "asset": "assets/atlas/doors_object1.webp",
+    "source": "figs/appendix_cases/assets/doors_object1.jpg",
+    "sha256": "344a76f5536e7ee9a3e50f17be62bec3273106a9085c67016e464d8295afe4c6"
+  },
+  {
+    "asset": "assets/atlas/doors_object2.webp",
+    "source": "figs/appendix_cases/assets/doors_object2.jpg",
+    "sha256": "a3368e825f537242fcc36078da59ef895549c27f4cb85d40b287554c57dca87b"
+  },
+  {
+    "asset": "assets/atlas/keyboards_marked0.webp",
+    "source": "figs/appendix_cases/assets/keyboards_marked0.jpg",
+    "sha256": "f00119e897ae4570259273a233cd89df48259d86d830fa60c3512f95adf17836"
+  },
+  {
+    "asset": "assets/atlas/keyboards_marked1.webp",
+    "source": "figs/appendix_cases/assets/keyboards_marked1.jpg",
+    "sha256": "6948826b7c05cc7721b02b43846594bf909887325b7fd9eff3473c7bc44fce4b"
+  },
+  {
+    "asset": "assets/atlas/keyboards_marked2.webp",
+    "source": "figs/appendix_cases/assets/keyboards_marked2.jpg",
+    "sha256": "8b34af45a3ed00c35276a30c1324d3604c2cfeb12a8a74826d579f03ba92cf22"
+  },
+  {
+    "asset": "assets/atlas/keyboards_object0.webp",
+    "source": "figs/appendix_cases/assets/keyboards_object0.jpg",
+    "sha256": "709c61875a0f0ba4ba8a6a515bd1f42504d0e1082094f0c68c91a76142f88db8"
+  },
+  {
+    "asset": "assets/atlas/keyboards_object1.webp",
+    "source": "figs/appendix_cases/assets/keyboards_object1.jpg",
+    "sha256": "1300ff270a868138f501559109c102ea4f80ae2553275de99daba9710db46f89"
+  },
+  {
+    "asset": "assets/atlas/keyboards_object2.webp",
+    "source": "figs/appendix_cases/assets/keyboards_object2.jpg",
+    "sha256": "3df2b9075f84f0eeeb110e247b3e53fe2eda79b07e9c25e89c15157659d4a917"
+  },
+  {
+    "asset": "assets/atlas/monitors_another_view.webp",
+    "source": "figs/appendix_cases/assets/monitors_another_view.jpg",
+    "sha256": "a7def850fb7f463f3b6e3c03102ac31ffa7fb5d2b6fc68af02dae3ebf03e8bf2"
+  },
+  {
+    "asset": "assets/atlas/monitors_pair.webp",
+    "source": "figs/appendix_cases/assets/monitors_pair.jpg",
+    "sha256": "47199ea1a9ab93031c380702a10b27e0a0f8fd8654e5353eb6f0f6295c41299c"
+  },
+  {
+    "asset": "assets/atlas/monitors_partial.webp",
+    "source": "figs/appendix_cases/assets/monitors_partial.jpg",
+    "sha256": "b58042d801bccc32691e2b0e3dfc230833b9e55e763ca780f1031910ab2a4959"
+  },
+  {
+    "asset": "assets/atlas/mural_1.webp",
+    "source": "figs/appendix_cases/assets/mural_1.jpg",
+    "sha256": "7d685c8f9103aa2842f056e2295db6f7f92d1da3fa9241ea4d18fc2e38ccf518"
+  },
+  {
+    "asset": "assets/atlas/mural_2.webp",
+    "source": "figs/appendix_cases/assets/mural_2.jpg",
+    "sha256": "00b821d775aaf173f1abf26aa58757fa4a9dab74c40cbad1c1cebdee6163b233"
+  },
+  {
+    "asset": "assets/atlas/mural_3.webp",
+    "source": "figs/appendix_cases/assets/mural_3.jpg",
+    "sha256": "3b1f65d411ca516f5067cc653a96130d666a6110f7077ea014272a8b47e51fa2"
+  },
+  {
+    "asset": "assets/atlas/pair_cloud_dark.webp",
+    "source": "figs/appendix_cases/assets/pair_cloud_dark.png",
+    "sha256": "be491eb6e3f028395356a99d5880531c26a44116947e7b90c459c21c24038866"
+  },
+  {
+    "asset": "assets/atlas/pillow_1.webp",
+    "source": "figs/appendix_cases/assets/pillow_1.jpg",
+    "sha256": "f92974965a4a60b38e855e1e444d17d7303cd017ff71c2f2277e4bd4a582e56a"
+  },
+  {
+    "asset": "assets/atlas/pillow_2.webp",
+    "source": "figs/appendix_cases/assets/pillow_2.jpg",
+    "sha256": "7f7218cbb56ba3624a64d3c2a449a992f5ff107829cce3c82b91233e37c0f62f"
+  },
+  {
+    "asset": "assets/atlas/pillow_3.webp",
+    "source": "figs/appendix_cases/assets/pillow_3.jpg",
+    "sha256": "1723f0150edc77d397218f21b34363715705f1169f58430b9d8ecf6df1bc87a3"
+  },
+  {
+    "asset": "assets/atlas/shower_1.webp",
+    "source": "figs/appendix_cases/assets/shower_1.jpg",
+    "sha256": "3aee3672d6b17956faacc1d039852300a7835bdfcbaa1883478b3f657811902b"
+  },
+  {
+    "asset": "assets/atlas/shower_2.webp",
+    "source": "figs/appendix_cases/assets/shower_2.jpg",
+    "sha256": "4cec7aee179042a4e51abc4ccd65cb5c648ec366f24f6a8e5c0d6cb1196f0a43"
+  },
+  {
+    "asset": "assets/atlas/shower_3.webp",
+    "source": "figs/appendix_cases/assets/shower_3.jpg",
+    "sha256": "8b2c72a6ae0af9511dc84007f9602a36f1bf872b9b25dca9a123f1daf6d1126e"
+  },
+  {
+    "asset": "assets/atlas/shower_close.webp",
+    "source": "figs/appendix_cases/assets/shower_close.jpg",
+    "sha256": "1921780cef657fae1438e8156c72322b02a7ab01c4a9ff13aceda62939aa256f"
+  },
+  {
+    "asset": "assets/atlas/signs_crop0.webp",
+    "source": "figs/appendix_cases/assets/signs_crop0.jpg",
+    "sha256": "94b867e6773abe9c95b8f00d4d66e9e0885a016532fbc507b6002dc3fcff7dac"
+  },
+  {
+    "asset": "assets/atlas/signs_crop2.webp",
+    "source": "figs/appendix_cases/assets/signs_crop2.jpg",
+    "sha256": "7d20b9d524e2a61a9351e6c67f862cbd3681703205487b6d511174d62ed3404d"
+  },
+  {
+    "asset": "assets/atlas/signs_original.webp",
+    "source": "figs/appendix_cases/assets/signs_original.jpg",
+    "sha256": "72147a6def30644cfe3821f4fb4c472b0a68f0bce1dd633d1b61168df24e2468"
+  },
+  {
+    "asset": "assets/atlas/sofa_1.webp",
+    "source": "figs/appendix_cases/assets/sofa_1.jpg",
+    "sha256": "c087bf40a6dfe9d75f56104a7264042095e66ef85d02d3128d4cc91bce2843fc"
+  },
+  {
+    "asset": "assets/atlas/sofa_2.webp",
+    "source": "figs/appendix_cases/assets/sofa_2.jpg",
+    "sha256": "4d202a625efee65baa3e4fe47a35c63fbf4eb2060fa5affdf50fc007806f1b17"
+  },
+  {
+    "asset": "assets/atlas/sofa_3.webp",
+    "source": "figs/appendix_cases/assets/sofa_3.jpg",
+    "sha256": "f021f48aa59dff81c0ff729537527ef533fe54ba4258f9c4e89d2924f17c7f4b"
+  },
+  {
+    "asset": "assets/atlas/stool_depth_luminous.webp",
+    "source": "figs/appendix_cases/assets/stool_depth_luminous.png",
+    "sha256": "9ecd019064bdc933840c0589d38b49195b97612125d1d5ddc7990a21fefd0aab"
+  },
+  {
+    "asset": "assets/atlas/stool_mask_focus.webp",
+    "source": "figs/appendix_cases/assets/stool_mask_focus.png",
+    "sha256": "293909495bf10c733100f61797aed155efbdd409b01206cf50d655ee94eaf0d7"
+  },
+  {
+    "asset": "assets/atlas/stool_rgb.webp",
+    "source": "figs/appendix_cases/assets/stool_rgb.jpg",
+    "sha256": "78d043b3523706166a41126ebf89ee41e1bd89479220d966f3ef76ff83dedfa8"
+  },
+  {
+    "asset": "assets/atlas/telephone_detail.webp",
+    "source": "figs/appendix_cases/assets/telephone_detail.jpg",
+    "sha256": "5a04474178c24d2d5b24642e953c8ff8dcebb6820da359e82ac5410f7ec6ff1a"
+  },
+  {
+    "asset": "assets/atlas/telephone_marked.webp",
+    "source": "figs/appendix_cases/assets/telephone_marked.jpg",
+    "sha256": "380b9f2e034d6bffbfd974d326c8f2ad3c3bf9e2b79be6f7f1db6570f923142c"
+  },
+  {
+    "asset": "assets/atlas/temporal_blanket.webp",
+    "source": "figs/appendix_cases/assets/temporal_blanket.jpg",
+    "sha256": "2b5c60e19fc71b79c5b0b7a976d958f66b7ae2b0d3cc092f4b0049370035cadc"
+  },
+  {
+    "asset": "assets/atlas/temporal_blanket_crop.webp",
+    "source": "figs/appendix_cases/assets/temporal_blanket_crop.jpg",
+    "sha256": "aa991a06bbf5f91d6b8816c12d5cec08ec173ed778d23334405a2f68e9f7c86e"
+  },
+  {
+    "asset": "assets/atlas/temporal_microwave.webp",
+    "source": "figs/appendix_cases/assets/temporal_microwave.jpg",
+    "sha256": "6b46ddbb4808f8844e5013c3d0a5f1c6cf7b5715bbbf690487d29f68ae02fa98"
+  },
+  {
+    "asset": "assets/atlas/temporal_microwave_crop.webp",
+    "source": "figs/appendix_cases/assets/temporal_microwave_crop.jpg",
+    "sha256": "1ce66dc5b0e5a918084b8477b9ea71f1258b3e7e907455be1cec4d6388a18a94"
+  },
+  {
+    "asset": "assets/atlas/temporal_plant.webp",
+    "source": "figs/appendix_cases/assets/temporal_plant.jpg",
+    "sha256": "7c37b55f2c677311947befda1187bbdb7d077705afde25f42b40644057fb9a8a"
+  },
+  {
+    "asset": "assets/atlas/temporal_plant_crop.webp",
+    "source": "figs/appendix_cases/assets/temporal_plant_crop.jpg",
+    "sha256": "ec9295f40552da52d4da58a21cd4ed7ed86c900296dbdf543350ecd1062c8a7f"
+  },
+  {
+    "asset": "assets/atlas/temporal_trash_can.webp",
+    "source": "figs/appendix_cases/assets/temporal_trash_can.jpg",
+    "sha256": "7c0d6cde2f335c057415a9f4e0fa7af2bdbd9d49d9bded2ff77aa6d9351c6755"
+  },
+  {
+    "asset": "assets/atlas/temporal_trash_can_crop.webp",
+    "source": "figs/appendix_cases/assets/temporal_trash_can_crop.jpg",
+    "sha256": "47b590deeeda0eeda7245676c5428fa14480186e08a74423a21d9142c725fbf8"
+  },
+  {
+    "asset": "assets/atlas/toilet_depth_luminous.webp",
+    "source": "figs/appendix_cases/assets/toilet_depth_luminous.png",
+    "sha256": "8835b46a327159ed3cd96a66e7b58ca4590de08da4eae426e28a5a7511809369"
+  },
+  {
+    "asset": "assets/atlas/toilet_mask_focus.webp",
+    "source": "figs/appendix_cases/assets/toilet_mask_focus.png",
+    "sha256": "53dbc3de93689c90d6b152f6dd4da92627df6d61c40764331fa75a61b988801e"
+  },
+  {
+    "asset": "assets/atlas/toilet_rgb.webp",
+    "source": "figs/appendix_cases/assets/toilet_rgb.jpg",
+    "sha256": "544599eb5646ad8fce3a952020f4d247d46cf48c0b140501d6e9df99203ff769"
+  },
+  {
+    "asset": "assets/atlas/towel_1.webp",
+    "source": "figs/appendix_cases/assets/towel_1.jpg",
+    "sha256": "898d14aadb03932182dd7124ddf067f124ff463a441353f7b2ef16bc08bf6dc0"
+  },
+  {
+    "asset": "assets/atlas/towel_2.webp",
+    "source": "figs/appendix_cases/assets/towel_2.jpg",
+    "sha256": "f195d90b91a38c9aba8fdf2a631cd17bd808cbfc612f7991b1d1d4b3c55773d1"
+  },
+  {
+    "asset": "assets/atlas/towel_3.webp",
+    "source": "figs/appendix_cases/assets/towel_3.jpg",
+    "sha256": "42c30425807cc31fb7122e2501ea967601c28708405a08b15b4247bca7204026"
+  },
+  {
+    "asset": "assets/atlas/towels_close.webp",
+    "source": "figs/appendix_cases/assets/towels_close.jpg",
+    "sha256": "1fad78b705318602b789cd493e976fc72c044b4d3fcf23b72af418c74b0008a5"
+  },
+  {
+    "asset": "assets/metric-cloud-light.svg",
+    "source": "figs/assets/metric_projected_points.npz",
+    "note": "Original saved PCA point coordinates and endpoints, recolored on a light background without new reconstruction.",
+    "sha256": "4bd45a0255cdbe85a4cbcf7225c5799747f2c0e9cc55badc460907e90944cefb"
+  }
+]

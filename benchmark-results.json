@@ -1,0 +1,1344 @@
+{
+  "snapshot": "2026-11-15",
+  "vsiSnapshot": "2026-11-14T23:21:06.581412+08:00",
+  "models": [
+    {
+      "id": "gpt-6-sol",
+      "label": "GPT-6-sol"
+    },
+    {
+      "id": "gpt-6-astra",
+      "label": "GPT-6-astra"
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "label": "Gemini-3.8-Flash"
+    },
+    {
+      "id": "gemini-4-argon",
+      "label": "Gemini-4-Argon"
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "viewspatial",
+      "name": "ViewSpatial",
+      "description": "Perspective & orientation",
+      "metric": "Benchmark score"
+    },
+    {
+      "id": "spar",
+      "name": "SPAR",
+      "description": "Geometry & spatial relations",
+      "metric": "Benchmark score"
+    },
+    {
+      "id": "mmsi",
+      "name": "MMSI",
+      "description": "Reasoning across images",
+      "metric": "Benchmark score"
+    },
+    {
+      "id": "vsi",
+      "name": "VSI",
+      "description": "Video spatial reasoning",
+      "metric": "Benchmark score",
+      "badge": "Only 10 initial frames"
+    }
+  ],
+  "pairs": {
+    "gpt-6-sol": {
+      "viewspatial": {
+        "baseline": {
+          "score": 53.1863
+        },
+        "spacex": {
+          "score": 79.986
+        },
+        "delta": 26.7997,
+        "relativeGain": 50.38835188761015
+      },
+      "spar": {
+        "baseline": {
+          "score": 57.1522
+        },
+        "spacex": {
+          "score": 70.3861
+        },
+        "delta": 13.233899999999998,
+        "relativeGain": 23.155539069362156
+      },
+      "mmsi": {
+        "baseline": {
+          "score": 53.9
+        },
+        "spacex": {
+          "score": 66.3327
+        },
+        "delta": 12.432700000000004,
+        "relativeGain": 23.066233766233772
+      },
+      "vsi": {
+        "baseline": {
+          "score": 48.40399185457468
+        },
+        "spacex": {
+          "score": 65.336289163196
+        },
+        "delta": 16.932297308621322,
+        "relativeGain": 34.98120022723094
+      }
+    },
+    "gpt-6-astra": {
+      "viewspatial": {
+        "baseline": {
+          "score": 59.8879
+        },
+        "spacex": {
+          "score": 85.2626
+        },
+        "delta": 25.374700000000004,
+        "relativeGain": 42.370328563866835
+      },
+      "spar": {
+        "baseline": {
+          "score": 68.9618
+        },
+        "spacex": {
+          "score": 73.8189
+        },
+        "delta": 4.857100000000003,
+        "relativeGain": 7.043174627112406
+      },
+      "mmsi": {
+        "baseline": {
+          "score": 71.6
+        },
+        "spacex": {
+          "score": 77.7
+        },
+        "delta": 6.1000000000000085,
+        "relativeGain": 8.519553072625712
+      },
+      "vsi": {
+        "baseline": {
+          "score": 61.07783319978483
+        },
+        "spacex": {
+          "score": 71.99242436814114
+        },
+        "delta": 10.914591168356317,
+        "relativeGain": 17.8699711442854
+      }
+    },
+    "gemini-3.8-flash": {
+      "viewspatial": {
+        "baseline": {
+          "score": 57.7758
+        },
+        "spacex": {
+          "score": 85.2188
+        },
+        "delta": 27.443000000000005,
+        "relativeGain": 47.499125931618444
+      },
+      "spar": {
+        "baseline": {
+          "score": 62.9976
+        },
+        "spacex": {
+          "score": 75.7916
+        },
+        "delta": 12.794000000000004,
+        "relativeGain": 20.308710173085966
+      },
+      "mmsi": {
+        "baseline": {
+          "score": 52.6527
+        },
+        "spacex": {
+          "score": 65.9292
+        },
+        "delta": 13.276499999999992,
+        "relativeGain": 25.215231127748417
+      },
+      "vsi": {
+        "baseline": {
+          "score": 53.09119255899349
+        },
+        "spacex": {
+          "score": 66.4172415421705
+        },
+        "delta": 13.32604898317701,
+        "relativeGain": 25.10030071064888
+      }
+    },
+    "gemini-4-argon": {
+      "viewspatial": {
+        "baseline": {
+          "score": 60.4676
+        },
+        "spacex": {
+          "score": 87.6148
+        },
+        "delta": 27.147200000000005,
+        "relativeGain": 44.89544814082254
+      },
+      "spar": {
+        "baseline": {
+          "score": 68.2062
+        },
+        "spacex": {
+          "score": 76.4482
+        },
+        "delta": 8.242000000000004,
+        "relativeGain": 12.08394544777455
+      },
+      "mmsi": {
+        "baseline": {
+          "score": 74.1641
+        },
+        "spacex": {
+          "score": 78.4537
+        },
+        "delta": 4.289599999999993,
+        "relativeGain": 5.7839305000667345
+      },
+      "vsi": {
+        "baseline": {
+          "score": 63.31577616387516
+        },
+        "spacex": {
+          "score": 75.39729412815214
+        },
+        "delta": 12.081517964276983,
+        "relativeGain": 19.081370704526083
+      }
+    }
+  },
+  "subtasks": {
+    "gpt-6-sol": {
+      "viewspatial": [
+        {
+          "id": "camera-relative-direction",
+          "name": "Camera-relative direction",
+          "icon": "target",
+          "mechanism": "Bind the target to the requested camera frame.",
+          "baseline": 59.0525,
+          "spacex": 75.0,
+          "delta": 15.947499999999998,
+          "relativeGain": 27.005630582955842
+        },
+        {
+          "id": "camera-object-orientation",
+          "name": "Object orientation \u00b7 camera view",
+          "icon": "cube",
+          "mechanism": "Connect object axes to the camera coordinate frame.",
+          "baseline": 37.751,
+          "spacex": 93.4608,
+          "delta": 55.70980000000001,
+          "relativeGain": 147.57171995443832
+        },
+        {
+          "id": "person-object-orientation",
+          "name": "Object orientation \u00b7 person view",
+          "icon": "target",
+          "mechanism": "Bind observer position, facing direction and object orientation.",
+          "baseline": 44.4779,
+          "spacex": 93.6747,
+          "delta": 49.1968,
+          "relativeGain": 110.60953866976635
+        },
+        {
+          "id": "person-relative-direction",
+          "name": "Person-relative direction",
+          "icon": "target",
+          "mechanism": "Use a jointly anchored observer and target relation.",
+          "baseline": 76.2471,
+          "spacex": 88.2423,
+          "delta": 11.995199999999997,
+          "relativeGain": 15.732008168179506
+        },
+        {
+          "id": "scene-simulation",
+          "name": "Scene simulation",
+          "icon": "memory",
+          "mechanism": "Carry observations and unresolved scene relations into later calls.",
+          "baseline": 47.9638,
+          "spacex": 57.0909,
+          "delta": 9.127099999999999,
+          "relativeGain": 19.029142811870617
+        }
+      ],
+      "spar": [
+        {
+          "id": "low",
+          "name": "Low \u00b7 spatial perception",
+          "icon": "eye",
+          "mechanism": "Interpret depth, distances and metric quantities consistently.",
+          "baseline": 49.49,
+          "spacex": 57.81,
+          "delta": 8.32,
+          "relativeGain": 16.811477066073955
+        },
+        {
+          "id": "middle",
+          "name": "Middle \u00b7 matching & viewpoints",
+          "icon": "link",
+          "mechanism": "Connect matching views with requested reference frames.",
+          "baseline": 45.9,
+          "spacex": 78.58,
+          "delta": 32.68,
+          "relativeGain": 71.19825708061003
+        },
+        {
+          "id": "high",
+          "name": "High \u00b7 spatial imagination",
+          "icon": "cube",
+          "mechanism": "Compose spatial relations into complete geometric reasoning.",
+          "baseline": 67.71,
+          "spacex": 78.84,
+          "delta": 11.13000000000001,
+          "relativeGain": 16.437749224634487
+        }
+      ],
+      "mmsi": [
+        {
+          "id": "camera-camera",
+          "name": "Camera-to-camera relations",
+          "icon": "cube",
+          "mechanism": "Link cameras through shared source geometry.",
+          "baseline": 62.3656,
+          "spacex": 78.4946,
+          "delta": 16.129000000000005,
+          "relativeGain": 25.86201367420502
+        },
+        {
+          "id": "object-object",
+          "name": "Object-to-object relations",
+          "icon": "link",
+          "mechanism": "Associate object identities and their spatial relation.",
+          "baseline": 39.3617,
+          "spacex": 55.3191,
+          "delta": 15.9574,
+          "relativeGain": 40.54042381299588
+        },
+        {
+          "id": "region-region",
+          "name": "Region-to-region relations",
+          "icon": "target",
+          "mechanism": "Bind region evidence to the same source and frame.",
+          "baseline": 53.0864,
+          "spacex": 62.963,
+          "delta": 9.876600000000003,
+          "relativeGain": 18.604765062238172
+        },
+        {
+          "id": "camera-object",
+          "name": "Camera-to-object relations",
+          "icon": "cube",
+          "mechanism": "Ground the target and transform it into the requested camera.",
+          "baseline": 38.3721,
+          "spacex": 80.2326,
+          "delta": 41.8605,
+          "relativeGain": 109.09098016527632
+        },
+        {
+          "id": "object-region",
+          "name": "Object-to-region relations",
+          "icon": "target",
+          "mechanism": "Keep object and region references attached to their sources.",
+          "baseline": 44.7059,
+          "spacex": 52.9412,
+          "delta": 8.235300000000002,
+          "relativeGain": 18.42105851800322
+        },
+        {
+          "id": "camera-region",
+          "name": "Camera-to-region relations",
+          "icon": "cube",
+          "mechanism": "Express source-bound regions in the requested camera frame.",
+          "baseline": 67.4699,
+          "spacex": 74.6988,
+          "delta": 7.22890000000001,
+          "relativeGain": 10.71425924745703
+        },
+        {
+          "id": "measurement",
+          "name": "Metric attributes",
+          "icon": "cube",
+          "mechanism": "Preserve measurement endpoints, units and scale.",
+          "baseline": 68.75,
+          "spacex": 69.8413,
+          "delta": 1.091300000000004,
+          "relativeGain": 1.5873454545454604
+        },
+        {
+          "id": "appearance",
+          "name": "Appearance attributes",
+          "icon": "eye",
+          "mechanism": "Inspect the local visual evidence for the queried attribute.",
+          "baseline": 50.0,
+          "spacex": 57.5758,
+          "delta": 7.575800000000001,
+          "relativeGain": 15.151600000000002
+        },
+        {
+          "id": "camera-motion",
+          "name": "Camera motion",
+          "icon": "clock",
+          "mechanism": "Associate camera observations across temporal changes.",
+          "baseline": 72.973,
+          "spacex": 78.3784,
+          "delta": 5.4054,
+          "relativeGain": 7.407397256519535
+        },
+        {
+          "id": "object-motion",
+          "name": "Object motion",
+          "icon": "clock",
+          "mechanism": "Track queried object identity and motion across views.",
+          "baseline": 44.7368,
+          "spacex": 59.2105,
+          "delta": 14.473700000000001,
+          "relativeGain": 32.3530069204771
+        },
+        {
+          "id": "multistep",
+          "name": "Multistep reasoning",
+          "icon": "memory",
+          "mechanism": "Relay observations and unresolved premises between reasoning steps.",
+          "baseline": 55.0505,
+          "spacex": 63.4518,
+          "delta": 8.401299999999999,
+          "relativeGain": 15.261078464319125
+        }
+      ],
+      "vsi": [
+        {
+          "id": "counting",
+          "name": "Object counting",
+          "icon": "target",
+          "mechanism": "Filter candidates and associate repeated sightings with physical instances.",
+          "baseline": 1.2920353982300885,
+          "spacex": 52.12389380530974,
+          "delta": 50.83185840707965,
+          "relativeGain": 3934.2465753424663
+        },
+        {
+          "id": "absolute-distance",
+          "name": "Absolute distance",
+          "icon": "cube",
+          "mechanism": "Attach geometry, scale and measurement endpoints to source regions.",
+          "baseline": 43.033573141486805,
+          "spacex": 63.786407766990294,
+          "delta": 20.75283462550349,
+          "relativeGain": 48.224753629618036
+        },
+        {
+          "id": "object-size",
+          "name": "Object size",
+          "icon": "cube",
+          "mechanism": "Connect object extent to source geometry and metric scale.",
+          "baseline": 69.62224554039874,
+          "spacex": 70.94438614900315,
+          "delta": 1.322140608604414,
+          "relativeGain": 1.8990203466465814
+        },
+        {
+          "id": "room-size",
+          "name": "Room size",
+          "icon": "cube",
+          "mechanism": "Aggregate spatial coverage into a consistent room estimate.",
+          "baseline": 44.44444444444445,
+          "spacex": 59.583333333333336,
+          "delta": 15.138888888888886,
+          "relativeGain": 34.06249999999999
+        },
+        {
+          "id": "relative-distance",
+          "name": "Relative distance",
+          "icon": "link",
+          "mechanism": "Compare targets using source-bound geometric evidence.",
+          "baseline": 54.647887323943664,
+          "spacex": 60.70422535211267,
+          "delta": 6.056338028169009,
+          "relativeGain": 11.082474226804113
+        },
+        {
+          "id": "relative-direction",
+          "name": "Relative direction",
+          "icon": "target",
+          "mechanism": "Preserve target, observer position and facing direction across views.",
+          "baseline": 57.39830155206788,
+          "spacex": 77.85581053475775,
+          "delta": 20.457508982689873,
+          "relativeGain": 35.641314166991855
+        },
+        {
+          "id": "routes",
+          "name": "Route planning",
+          "icon": "link",
+          "mechanism": "Connect observations and spatial relations along the requested route.",
+          "baseline": 57.73195876288659,
+          "spacex": 66.49484536082474,
+          "delta": 8.762886597938149,
+          "relativeGain": 15.178571428571438
+        },
+        {
+          "id": "appearance-order",
+          "name": "Appearance order",
+          "icon": "clock",
+          "mechanism": "Link timestamped sightings and restore decisive source frames.",
+          "baseline": 59.06148867313916,
+          "spacex": 71.19741100323624,
+          "delta": 12.135922330097081,
+          "relativeGain": 20.54794520547944
+        }
+      ]
+    },
+    "gpt-6-astra": {
+      "viewspatial": [
+        {
+          "id": "camera-relative-direction",
+          "name": "Camera-relative direction",
+          "icon": "target",
+          "mechanism": "Bind the target to the requested camera frame.",
+          "baseline": 62.9379,
+          "spacex": 79.6011,
+          "delta": 16.663200000000003,
+          "relativeGain": 26.475621207571276
+        },
+        {
+          "id": "camera-object-orientation",
+          "name": "Object orientation \u00b7 camera view",
+          "icon": "cube",
+          "mechanism": "Connect object axes to the camera coordinate frame.",
+          "baseline": 37.8514,
+          "spacex": 95.9839,
+          "delta": 58.13250000000001,
+          "relativeGain": 153.58084509423696
+        },
+        {
+          "id": "person-object-orientation",
+          "name": "Object orientation \u00b7 person view",
+          "icon": "target",
+          "mechanism": "Bind observer position, facing direction and object orientation.",
+          "baseline": 44.8795,
+          "spacex": 96.6867,
+          "delta": 51.8072,
+          "relativeGain": 115.43622366559343
+        },
+        {
+          "id": "person-relative-direction",
+          "name": "Person-relative direction",
+          "icon": "target",
+          "mechanism": "Use a jointly anchored observer and target relation.",
+          "baseline": 89.0736,
+          "spacex": 90.4988,
+          "delta": 1.4252000000000038,
+          "relativeGain": 1.6000251477429943
+        },
+        {
+          "id": "scene-simulation",
+          "name": "Scene simulation",
+          "icon": "memory",
+          "mechanism": "Carry observations and unresolved scene relations into later calls.",
+          "baseline": 66.1538,
+          "spacex": 70.2899,
+          "delta": 4.136099999999999,
+          "relativeGain": 6.25224854808038
+        }
+      ],
+      "spar": [
+        {
+          "id": "low",
+          "name": "Low \u00b7 spatial perception",
+          "icon": "eye",
+          "mechanism": "Interpret depth, distances and metric quantities consistently.",
+          "baseline": 60.44,
+          "spacex": 60.05,
+          "delta": -0.39000000000000057,
+          "relativeGain": -0.6452680344142961
+        },
+        {
+          "id": "middle",
+          "name": "Middle \u00b7 matching & viewpoints",
+          "icon": "link",
+          "mechanism": "Connect matching views with requested reference frames.",
+          "baseline": 62.87,
+          "spacex": 83.81,
+          "delta": 20.940000000000005,
+          "relativeGain": 33.306823604262775
+        },
+        {
+          "id": "high",
+          "name": "High \u00b7 spatial imagination",
+          "icon": "cube",
+          "mechanism": "Compose spatial relations into complete geometric reasoning.",
+          "baseline": 78.57,
+          "spacex": 82.73,
+          "delta": 4.160000000000011,
+          "relativeGain": 5.294641720758573
+        }
+      ],
+      "mmsi": [
+        {
+          "id": "camera-camera",
+          "name": "Camera-to-camera relations",
+          "icon": "cube",
+          "mechanism": "Link cameras through shared source geometry.",
+          "baseline": 73.1183,
+          "spacex": 80.6452,
+          "delta": 7.526899999999998,
+          "relativeGain": 10.294139770755061
+        },
+        {
+          "id": "object-object",
+          "name": "Object-to-object relations",
+          "icon": "link",
+          "mechanism": "Associate object identities and their spatial relation.",
+          "baseline": 69.1489,
+          "spacex": 77.6596,
+          "delta": 8.5107,
+          "relativeGain": 12.307787976381404
+        },
+        {
+          "id": "region-region",
+          "name": "Region-to-region relations",
+          "icon": "target",
+          "mechanism": "Bind region evidence to the same source and frame.",
+          "baseline": 75.3086,
+          "spacex": 77.7778,
+          "delta": 2.4692000000000007,
+          "relativeGain": 3.278775598006072
+        },
+        {
+          "id": "camera-object",
+          "name": "Camera-to-object relations",
+          "icon": "cube",
+          "mechanism": "Ground the target and transform it into the requested camera.",
+          "baseline": 61.6279,
+          "spacex": 87.2093,
+          "delta": 25.581400000000002,
+          "relativeGain": 41.50944620861656
+        },
+        {
+          "id": "object-region",
+          "name": "Object-to-region relations",
+          "icon": "target",
+          "mechanism": "Keep object and region references attached to their sources.",
+          "baseline": 65.8824,
+          "spacex": 67.0588,
+          "delta": 1.176400000000001,
+          "relativeGain": 1.7856058674243818
+        },
+        {
+          "id": "camera-region",
+          "name": "Camera-to-region relations",
+          "icon": "cube",
+          "mechanism": "Express source-bound regions in the requested camera frame.",
+          "baseline": 72.2892,
+          "spacex": 85.5422,
+          "delta": 13.253,
+          "relativeGain": 18.33330566668327
+        },
+        {
+          "id": "measurement",
+          "name": "Metric attributes",
+          "icon": "cube",
+          "mechanism": "Preserve measurement endpoints, units and scale.",
+          "baseline": 73.4375,
+          "spacex": 75.0,
+          "delta": 1.5625,
+          "relativeGain": 2.127659574468085
+        },
+        {
+          "id": "appearance",
+          "name": "Appearance attributes",
+          "icon": "eye",
+          "mechanism": "Inspect the local visual evidence for the queried attribute.",
+          "baseline": 69.697,
+          "spacex": 72.7273,
+          "delta": 3.030299999999997,
+          "relativeGain": 4.347819848773974
+        },
+        {
+          "id": "camera-motion",
+          "name": "Camera motion",
+          "icon": "clock",
+          "mechanism": "Associate camera observations across temporal changes.",
+          "baseline": 83.7838,
+          "spacex": 81.0811,
+          "delta": -2.702699999999993,
+          "relativeGain": -3.2258026014575525
+        },
+        {
+          "id": "object-motion",
+          "name": "Object motion",
+          "icon": "clock",
+          "mechanism": "Track queried object identity and motion across views.",
+          "baseline": 64.4737,
+          "spacex": 64.4737,
+          "delta": 0.0,
+          "relativeGain": 0.0
+        },
+        {
+          "id": "multistep",
+          "name": "Multistep reasoning",
+          "icon": "memory",
+          "mechanism": "Relay observations and unresolved premises between reasoning steps.",
+          "baseline": 75.2525,
+          "spacex": 79.798,
+          "delta": 4.545500000000004,
+          "relativeGain": 6.040330886017081
+        }
+      ],
+      "vsi": [
+        {
+          "id": "counting",
+          "name": "Object counting",
+          "icon": "target",
+          "mechanism": "Filter candidates and associate repeated sightings with physical instances.",
+          "baseline": 25.026548672566374,
+          "spacex": 58.62254025044723,
+          "delta": 33.59599157788085,
+          "relativeGain": 134.24140906296097
+        },
+        {
+          "id": "absolute-distance",
+          "name": "Absolute distance",
+          "icon": "cube",
+          "mechanism": "Attach geometry, scale and measurement endpoints to source regions.",
+          "baseline": 48.85265700483092,
+          "spacex": 68.32313341493268,
+          "delta": 19.470476410101767,
+          "relativeGain": 39.855511662705226
+        },
+        {
+          "id": "object-size",
+          "name": "Object size",
+          "icon": "cube",
+          "mechanism": "Connect object extent to source geometry and metric scale.",
+          "baseline": 73.36152219873149,
+          "spacex": 74.6779303062302,
+          "delta": 1.3164081074987024,
+          "relativeGain": 1.794412204169701
+        },
+        {
+          "id": "room-size",
+          "name": "Room size",
+          "icon": "cube",
+          "mechanism": "Aggregate spatial coverage into a consistent room estimate.",
+          "baseline": 54.17543859649123,
+          "spacex": 65.65972222222223,
+          "delta": 11.484283625730995,
+          "relativeGain": 21.19832145941278
+        },
+        {
+          "id": "relative-distance",
+          "name": "Relative distance",
+          "icon": "link",
+          "mechanism": "Compare targets using source-bound geometric evidence.",
+          "baseline": 64.50704225352113,
+          "spacex": 65.95744680851064,
+          "delta": 1.450404554989504,
+          "relativeGain": 2.2484437424509776
+        },
+        {
+          "id": "relative-direction",
+          "name": "Relative direction",
+          "icon": "target",
+          "mechanism": "Preserve target, observer position and facing direction across views.",
+          "baseline": 74.92024024275011,
+          "spacex": 85.11794552065227,
+          "delta": 10.197705277902159,
+          "relativeGain": 13.611415613271438
+        },
+        {
+          "id": "routes",
+          "name": "Route planning",
+          "icon": "link",
+          "mechanism": "Connect observations and spatial relations along the requested route.",
+          "baseline": 83.50515463917526,
+          "spacex": 89.70588235294117,
+          "delta": 6.2007277137659145,
+          "relativeGain": 7.425562817719674
+        },
+        {
+          "id": "appearance-order",
+          "name": "Appearance order",
+          "icon": "clock",
+          "mechanism": "Link timestamped sightings and restore decisive source frames.",
+          "baseline": 64.27406199021208,
+          "spacex": 67.87479406919276,
+          "delta": 3.600732078980684,
+          "relativeGain": 5.602154224403957
+        }
+      ]
+    },
+    "gemini-3.8-flash": {
+      "viewspatial": [
+        {
+          "id": "camera-relative-direction",
+          "name": "Camera-relative direction",
+          "icon": "target",
+          "mechanism": "Bind the target to the requested camera frame.",
+          "baseline": 63.5234,
+          "spacex": 85.4563,
+          "delta": 21.932899999999997,
+          "relativeGain": 34.527276562652496
+        },
+        {
+          "id": "camera-object-orientation",
+          "name": "Object orientation \u00b7 camera view",
+          "icon": "cube",
+          "mechanism": "Connect object axes to the camera coordinate frame.",
+          "baseline": 41.9679,
+          "spacex": 97.9499,
+          "delta": 55.982,
+          "relativeGain": 133.3924261161507
+        },
+        {
+          "id": "person-object-orientation",
+          "name": "Object orientation \u00b7 person view",
+          "icon": "target",
+          "mechanism": "Bind observer position, facing direction and object orientation.",
+          "baseline": 44.7791,
+          "spacex": 81.1688,
+          "delta": 36.389700000000005,
+          "relativeGain": 81.26492046512772
+        },
+        {
+          "id": "person-relative-direction",
+          "name": "Person-relative direction",
+          "icon": "target",
+          "mechanism": "Use a jointly anchored observer and target relation.",
+          "baseline": 85.1544,
+          "spacex": 90.3743,
+          "delta": 5.21990000000001,
+          "relativeGain": 6.129923996880972
+        },
+        {
+          "id": "scene-simulation",
+          "name": "Scene simulation",
+          "icon": "memory",
+          "mechanism": "Carry observations and unresolved scene relations into later calls.",
+          "baseline": 53.6652,
+          "spacex": 67.3077,
+          "delta": 13.642499999999998,
+          "relativeGain": 25.421502202544666
+        }
+      ],
+      "spar": [
+        {
+          "id": "low",
+          "name": "Low \u00b7 spatial perception",
+          "icon": "eye",
+          "mechanism": "Interpret depth, distances and metric quantities consistently.",
+          "baseline": 58.67,
+          "spacex": 62.49,
+          "delta": 3.8200000000000003,
+          "relativeGain": 6.51099369354014
+        },
+        {
+          "id": "middle",
+          "name": "Middle \u00b7 matching & viewpoints",
+          "icon": "link",
+          "mechanism": "Connect matching views with requested reference frames.",
+          "baseline": 43.87,
+          "spacex": 77.63,
+          "delta": 33.76,
+          "relativeGain": 76.95463870526555
+        },
+        {
+          "id": "high",
+          "name": "High \u00b7 spatial imagination",
+          "icon": "cube",
+          "mechanism": "Compose spatial relations into complete geometric reasoning.",
+          "baseline": 73.23,
+          "spacex": 87.01,
+          "delta": 13.780000000000001,
+          "relativeGain": 18.817424552778917
+        }
+      ],
+      "mmsi": [
+        {
+          "id": "camera-camera",
+          "name": "Camera-to-camera relations",
+          "icon": "cube",
+          "mechanism": "Link cameras through shared source geometry.",
+          "baseline": 61.2903,
+          "spacex": 83.3333,
+          "delta": 22.042999999999992,
+          "relativeGain": 35.96490798707135
+        },
+        {
+          "id": "object-object",
+          "name": "Object-to-object relations",
+          "icon": "link",
+          "mechanism": "Associate object identities and their spatial relation.",
+          "baseline": 40.8602,
+          "spacex": 60.0,
+          "delta": 19.1398,
+          "relativeGain": 46.84215936290082
+        },
+        {
+          "id": "region-region",
+          "name": "Region-to-region relations",
+          "icon": "target",
+          "mechanism": "Bind region evidence to the same source and frame.",
+          "baseline": 41.9753,
+          "spacex": 66.6667,
+          "delta": 24.69140000000001,
+          "relativeGain": 58.82364152251446
+        },
+        {
+          "id": "camera-object",
+          "name": "Camera-to-object relations",
+          "icon": "cube",
+          "mechanism": "Ground the target and transform it into the requested camera.",
+          "baseline": 43.0233,
+          "spacex": 67.3913,
+          "delta": 24.368000000000002,
+          "relativeGain": 56.63907696527232
+        },
+        {
+          "id": "object-region",
+          "name": "Object-to-region relations",
+          "icon": "target",
+          "mechanism": "Keep object and region references attached to their sources.",
+          "baseline": 58.8235,
+          "spacex": 66.6667,
+          "delta": 7.843200000000003,
+          "relativeGain": 13.33344666672334
+        },
+        {
+          "id": "camera-region",
+          "name": "Camera-to-region relations",
+          "icon": "cube",
+          "mechanism": "Express source-bound regions in the requested camera frame.",
+          "baseline": 54.2169,
+          "spacex": 78.2609,
+          "delta": 24.044000000000004,
+          "relativeGain": 44.34779561354486
+        },
+        {
+          "id": "measurement",
+          "name": "Metric attributes",
+          "icon": "cube",
+          "mechanism": "Preserve measurement endpoints, units and scale.",
+          "baseline": 65.625,
+          "spacex": 55.5556,
+          "delta": -10.069400000000002,
+          "relativeGain": -15.34384761904762
+        },
+        {
+          "id": "appearance",
+          "name": "Appearance attributes",
+          "icon": "eye",
+          "mechanism": "Inspect the local visual evidence for the queried attribute.",
+          "baseline": 51.5152,
+          "spacex": 42.8571,
+          "delta": -8.658099999999997,
+          "relativeGain": -16.80688418175606
+        },
+        {
+          "id": "camera-motion",
+          "name": "Camera motion",
+          "icon": "clock",
+          "mechanism": "Associate camera observations across temporal changes.",
+          "baseline": 75.6757,
+          "spacex": 80.0,
+          "delta": 4.324299999999994,
+          "relativeGain": 5.714251734704791
+        },
+        {
+          "id": "object-motion",
+          "name": "Object motion",
+          "icon": "clock",
+          "mechanism": "Track queried object identity and motion across views.",
+          "baseline": 52.6316,
+          "spacex": 50.0,
+          "delta": -2.631599999999999,
+          "relativeGain": -5.000037999984798
+        },
+        {
+          "id": "multistep",
+          "name": "Multistep reasoning",
+          "icon": "memory",
+          "mechanism": "Relay observations and unresolved premises between reasoning steps.",
+          "baseline": 46.9697,
+          "spacex": 60.4167,
+          "delta": 13.446999999999996,
+          "relativeGain": 28.62909492715515
+        }
+      ],
+      "vsi": [
+        {
+          "id": "counting",
+          "name": "Object counting",
+          "icon": "target",
+          "mechanism": "Filter candidates and associate repeated sightings with physical instances.",
+          "baseline": 45.85840707964602,
+          "spacex": 49.542857142857144,
+          "delta": 3.6844500632111234,
+          "relativeGain": 8.034404807851349
+        },
+        {
+          "id": "absolute-distance",
+          "name": "Absolute distance",
+          "icon": "cube",
+          "mechanism": "Attach geometry, scale and measurement endpoints to source regions.",
+          "baseline": 30.347721822541967,
+          "spacex": 40.0,
+          "delta": 9.652278177458033,
+          "relativeGain": 31.805610430659815
+        },
+        {
+          "id": "object-size",
+          "name": "Object size",
+          "icon": "cube",
+          "mechanism": "Connect object extent to source geometry and metric scale.",
+          "baseline": 73.3473242392445,
+          "spacex": 73.08641975308642,
+          "delta": -0.2609044861580827,
+          "relativeGain": -0.35571098041295107
+        },
+        {
+          "id": "room-size",
+          "name": "Room size",
+          "icon": "cube",
+          "mechanism": "Aggregate spatial coverage into a consistent room estimate.",
+          "baseline": 50.55555555555556,
+          "spacex": 55.26315789473685,
+          "delta": 4.7076023391812925,
+          "relativeGain": 9.31174089068827
+        },
+        {
+          "id": "relative-distance",
+          "name": "Relative distance",
+          "icon": "link",
+          "mechanism": "Compare targets using source-bound geometric evidence.",
+          "baseline": 59.57746478873239,
+          "spacex": 71.42857142857143,
+          "delta": 11.851106639839038,
+          "relativeGain": 19.89192840256671
+        },
+        {
+          "id": "relative-direction",
+          "name": "Relative direction",
+          "icon": "target",
+          "mechanism": "Preserve target, observer position and facing direction across views.",
+          "baseline": 52.72698251019909,
+          "spacex": 67.19298245614034,
+          "delta": 14.465999945941249,
+          "relativeGain": 27.435668147979186
+        },
+        {
+          "id": "routes",
+          "name": "Route planning",
+          "icon": "link",
+          "mechanism": "Connect observations and spatial relations along the requested route.",
+          "baseline": 53.09278350515464,
+          "spacex": 87.5,
+          "delta": 34.40721649484536,
+          "relativeGain": 64.80582524271844
+        },
+        {
+          "id": "appearance-order",
+          "name": "Appearance order",
+          "icon": "clock",
+          "mechanism": "Link timestamped sightings and restore decisive source frames.",
+          "baseline": 59.22330097087378,
+          "spacex": 87.32394366197182,
+          "delta": 28.100642691098045,
+          "relativeGain": 47.44862618332949
+        }
+      ]
+    },
+    "gemini-4-argon": {
+      "viewspatial": [
+        {
+          "id": "camera-relative-direction",
+          "name": "Camera-relative direction",
+          "icon": "target",
+          "mechanism": "Bind the target to the requested camera frame.",
+          "baseline": 62.4365,
+          "spacex": 82.0685,
+          "delta": 19.631999999999998,
+          "relativeGain": 31.443146236576357
+        },
+        {
+          "id": "camera-object-orientation",
+          "name": "Object orientation \u00b7 camera view",
+          "icon": "cube",
+          "mechanism": "Connect object axes to the camera coordinate frame.",
+          "baseline": 36.5462,
+          "spacex": 93.763,
+          "delta": 57.216800000000006,
+          "relativeGain": 156.5601895682725
+        },
+        {
+          "id": "person-object-orientation",
+          "name": "Object orientation \u00b7 person view",
+          "icon": "target",
+          "mechanism": "Bind observer position, facing direction and object orientation.",
+          "baseline": 43.4739,
+          "spacex": 97.0864,
+          "delta": 53.6125,
+          "relativeGain": 123.32111910824655
+        },
+        {
+          "id": "person-relative-direction",
+          "name": "Person-relative direction",
+          "icon": "target",
+          "mechanism": "Use a jointly anchored observer and target relation.",
+          "baseline": 92.0428,
+          "spacex": 92.9801,
+          "delta": 0.9372999999999934,
+          "relativeGain": 1.018330602719597
+        },
+        {
+          "id": "scene-simulation",
+          "name": "Scene simulation",
+          "icon": "memory",
+          "mechanism": "Carry observations and unresolved scene relations into later calls.",
+          "baseline": 70.3327,
+          "spacex": 75.2169,
+          "delta": 4.884199999999993,
+          "relativeGain": 6.9444227222899055
+        }
+      ],
+      "spar": [
+        {
+          "id": "low",
+          "name": "Low \u00b7 spatial perception",
+          "icon": "eye",
+          "mechanism": "Interpret depth, distances and metric quantities consistently.",
+          "baseline": 62.14,
+          "spacex": 65.73,
+          "delta": 3.5900000000000034,
+          "relativeGain": 5.777277116189255
+        },
+        {
+          "id": "middle",
+          "name": "Middle \u00b7 matching & viewpoints",
+          "icon": "link",
+          "mechanism": "Connect matching views with requested reference frames.",
+          "baseline": 59.6,
+          "spacex": 82.92,
+          "delta": 23.32,
+          "relativeGain": 39.12751677852349
+        },
+        {
+          "id": "high",
+          "name": "High \u00b7 spatial imagination",
+          "icon": "cube",
+          "mechanism": "Compose spatial relations into complete geometric reasoning.",
+          "baseline": 76.47,
+          "spacex": 83.82,
+          "delta": 7.349999999999994,
+          "relativeGain": 9.611612397018432
+        }
+      ],
+      "mmsi": [
+        {
+          "id": "camera-camera",
+          "name": "Camera-to-camera relations",
+          "icon": "cube",
+          "mechanism": "Link cameras through shared source geometry.",
+          "baseline": 79.3478,
+          "spacex": 74.2857,
+          "delta": -5.062100000000001,
+          "relativeGain": -6.379634974126567
+        },
+        {
+          "id": "object-object",
+          "name": "Object-to-object relations",
+          "icon": "link",
+          "mechanism": "Associate object identities and their spatial relation.",
+          "baseline": 73.913,
+          "spacex": 73.6111,
+          "delta": -0.3019000000000034,
+          "relativeGain": -0.40845318144305254
+        },
+        {
+          "id": "region-region",
+          "name": "Region-to-region relations",
+          "icon": "target",
+          "mechanism": "Bind region evidence to the same source and frame.",
+          "baseline": 79.0123,
+          "spacex": 81.3559,
+          "delta": 2.3436000000000092,
+          "relativeGain": 2.9661204647884056
+        },
+        {
+          "id": "camera-object",
+          "name": "Camera-to-object relations",
+          "icon": "cube",
+          "mechanism": "Ground the target and transform it into the requested camera.",
+          "baseline": 75.0,
+          "spacex": 85.7143,
+          "delta": 10.714299999999994,
+          "relativeGain": 14.285733333333326
+        },
+        {
+          "id": "object-region",
+          "name": "Object-to-region relations",
+          "icon": "target",
+          "mechanism": "Keep object and region references attached to their sources.",
+          "baseline": 73.494,
+          "spacex": 76.7857,
+          "delta": 3.291700000000006,
+          "relativeGain": 4.478869023321639
+        },
+        {
+          "id": "camera-region",
+          "name": "Camera-to-region relations",
+          "icon": "cube",
+          "mechanism": "Express source-bound regions in the requested camera frame.",
+          "baseline": 80.4878,
+          "spacex": 87.3239,
+          "delta": 6.836100000000002,
+          "relativeGain": 8.493336878384056
+        },
+        {
+          "id": "measurement",
+          "name": "Metric attributes",
+          "icon": "cube",
+          "mechanism": "Preserve measurement endpoints, units and scale.",
+          "baseline": 73.4375,
+          "spacex": 82.6087,
+          "delta": 9.171199999999999,
+          "relativeGain": 12.488442553191488
+        },
+        {
+          "id": "appearance",
+          "name": "Appearance attributes",
+          "icon": "eye",
+          "mechanism": "Inspect the local visual evidence for the queried attribute.",
+          "baseline": 54.5455,
+          "spacex": 54.902,
+          "delta": 0.35650000000000404,
+          "relativeGain": 0.6535827886810169
+        },
+        {
+          "id": "camera-motion",
+          "name": "Camera motion",
+          "icon": "clock",
+          "mechanism": "Associate camera observations across temporal changes.",
+          "baseline": 85.1351,
+          "spacex": 84.4828,
+          "delta": -0.6522999999999968,
+          "relativeGain": -0.7661939670006811
+        },
+        {
+          "id": "object-motion",
+          "name": "Object motion",
+          "icon": "clock",
+          "mechanism": "Track queried object identity and motion across views.",
+          "baseline": 65.7895,
+          "spacex": 73.5294,
+          "delta": 7.739899999999992,
+          "relativeGain": 11.764643294142669
+        },
+        {
+          "id": "multistep",
+          "name": "Multistep reasoning",
+          "icon": "memory",
+          "mechanism": "Relay observations and unresolved premises between reasoning steps.",
+          "baseline": 73.057,
+          "spacex": 80.7453,
+          "delta": 7.688299999999998,
+          "relativeGain": 10.523700672077965
+        }
+      ],
+      "vsi": [
+        {
+          "id": "counting",
+          "name": "Object counting",
+          "icon": "target",
+          "mechanism": "Filter candidates and associate repeated sightings with physical instances.",
+          "baseline": 56.67256637168142,
+          "spacex": 64.47105788423154,
+          "delta": 7.798491512550122,
+          "relativeGain": 13.760611194849526
+        },
+        {
+          "id": "absolute-distance",
+          "name": "Absolute distance",
+          "icon": "cube",
+          "mechanism": "Attach geometry, scale and measurement endpoints to source regions.",
+          "baseline": 50.671462829736214,
+          "spacex": 68.59450726978999,
+          "delta": 17.923044440053772,
+          "relativeGain": 35.37108154994048
+        },
+        {
+          "id": "object-size",
+          "name": "Object size",
+          "icon": "cube",
+          "mechanism": "Connect object extent to source geometry and metric scale.",
+          "baseline": 75.498426023085,
+          "spacex": 83.01470588235294,
+          "delta": 7.516279859267939,
+          "relativeGain": 9.95554510894002
+        },
+        {
+          "id": "room-size",
+          "name": "Room size",
+          "icon": "cube",
+          "mechanism": "Aggregate spatial coverage into a consistent room estimate.",
+          "baseline": 51.84027777777778,
+          "spacex": 57.664974619289346,
+          "delta": 5.824696841511567,
+          "relativeGain": 11.23585191128822
+        },
+        {
+          "id": "relative-distance",
+          "name": "Relative distance",
+          "icon": "link",
+          "mechanism": "Compare targets using source-bound geometric evidence.",
+          "baseline": 66.05633802816901,
+          "spacex": 83.08605341246292,
+          "delta": 17.029715384293908,
+          "relativeGain": 25.780592586031293
+        },
+        {
+          "id": "relative-direction",
+          "name": "Relative direction",
+          "icon": "target",
+          "mechanism": "Preserve target, observer position and facing direction across views.",
+          "baseline": 74.47834448282755,
+          "spacex": 86.41873854490397,
+          "delta": 11.940394062076422,
+          "relativeGain": 16.032034741091103
+        },
+        {
+          "id": "routes",
+          "name": "Route planning",
+          "icon": "link",
+          "mechanism": "Connect observations and spatial relations along the requested route.",
+          "baseline": 69.0721649484536,
+          "spacex": 80.0,
+          "delta": 10.927835051546396,
+          "relativeGain": 15.820895522388065
+        },
+        {
+          "id": "appearance-order",
+          "name": "Appearance order",
+          "icon": "clock",
+          "mechanism": "Link timestamped sightings and restore decisive source frames.",
+          "baseline": 62.23662884927067,
+          "spacex": 79.92831541218638,
+          "delta": 17.691686562915706,
+          "relativeGain": 28.4264859617682
+        }
+      ]
+    }
+  },
+  "highlightThreshold": 10,
+  "highlightThresholdType": "relativeGain",
+  "highlightLimit": 6
+}

@@ -1,0 +1,219 @@
+1
+00:00:00,558 --> 00:00:04,178
+Space-X is a self-evolving framework for spatial reasoning.
+
+2
+00:00:04,404 --> 00:00:09,092
+Its central idea is simple: better reasoning comes from connecting evidence, not
+
+3
+00:00:09,092 --> 00:00:10,488
+merely from adding tools.
+
+4
+00:00:11,891 --> 00:00:17,060
+Tool-augmented agents can miss a crucial observation, mix object identities or
+
+5
+00:00:17,060 --> 00:00:20,667
+reference frames, and decide before the evidence is complete.
+
+6
+00:00:20,894 --> 00:00:24,788
+A correct tool output only becomes useful when it supports the question being
+
+7
+00:00:24,788 --> 00:00:25,367
+asked.
+
+8
+00:00:26,784 --> 00:00:30,548
+An execution agent constructs an evidence chain for each task.
+
+9
+00:00:30,774 --> 00:00:35,750
+A control agent studies execution traces and evaluation feedback, then improves the
+
+10
+00:00:35,750 --> 00:00:36,966
+surrounding harness.
+
+11
+00:00:37,205 --> 00:00:42,002
+Tools, interfaces, skills, memory, and decision rules evolve together.
+
+12
+00:00:43,391 --> 00:00:45,569
+The question determines what evidence is needed.
+
+13
+00:00:45,807 --> 00:00:49,162
+Source-aware tools acquire observations and geometry.
+
+14
+00:00:49,401 --> 00:00:54,317
+The harness binds results to objects, sources, and reference frames, then checks
+
+15
+00:00:54,317 --> 00:00:56,602
+whether the key claims have sufficient support.
+
+16
+00:00:56,829 --> 00:00:59,403
+Every decision stays connected to its evidence.
+
+17
+00:01:00,796 --> 00:01:04,920
+Consider the distance between the closest surfaces of a stool and a toilet.
+
+18
+00:01:05,159 --> 00:01:09,955
+Segmentation identifies the objects, and depth supplies geometry from the same
+
+19
+00:01:09,955 --> 00:01:10,642
+source.
+
+20
+00:01:10,880 --> 00:01:14,931
+The harness selects the requested surface-to-surface measurement and produces an
+
+21
+00:01:14,931 --> 00:01:17,240
+answer of zero point eight six meters.
+
+22
+00:01:18,617 --> 00:01:23,102
+A mural is visible in one image, but the question refers to a different camera.
+
+23
+00:01:23,341 --> 00:01:27,932
+Space-X associates the target with shared geometry and transforms it into the
+
+24
+00:01:27,932 --> 00:01:29,352
+requested camera frame.
+
+25
+00:01:29,591 --> 00:01:33,906
+The resulting relation is behind, rather than an answer based on image position
+
+26
+00:01:33,906 --> 00:01:34,436
+alone.
+
+27
+00:01:35,922 --> 00:01:40,573
+Five role-specific memories preserve the working state, observations, spatial
+
+28
+00:01:40,573 --> 00:01:44,361
+relations, execution history, and reusable procedures.
+
+29
+00:01:44,648 --> 00:01:48,784
+For counting, repeated sightings are associated with physical instances.
+
+30
+00:01:49,011 --> 00:01:53,783
+In this example, eight accepted sightings support two monitors, rather than eight
+
+31
+00:01:53,783 --> 00:01:54,986
+separate objects.
+
+32
+00:01:56,379 --> 00:02:01,584
+Across ViewSpatial, SPAR, MMSI, and VSI, all four base models
+
+33
+00:02:01,584 --> 00:02:03,100
+improve with Space-X.
+
+34
+00:02:03,399 --> 00:02:08,555
+For GPT-6-sol, ViewSpatial rises from fifty-three point one nine to
+
+35
+00:02:08,555 --> 00:02:10,492
+seventy-nine point nine nine.
+
+36
+00:02:10,803 --> 00:02:16,139
+For Gemini Flash, VSI rises from fifty-three point zero nine to sixty-six
+
+37
+00:02:16,139 --> 00:02:19,122
+point four two, using ten initial frames.
+
+38
+00:02:20,504 --> 00:02:23,307
+The ablation makes the central insight concrete.
+
+39
+00:02:23,533 --> 00:02:28,593
+On ViewSpatial, evolving tools alone reaches sixty-eight point one five, while
+
+40
+00:02:28,593 --> 00:02:33,343
+jointly evolving tools and evidence rules reaches seventy-nine point nine nine.
+
+41
+00:02:33,581 --> 00:02:36,900
+The key is to make different tool outputs work together as evidence.
+
+42
+00:02:38,308 --> 00:02:42,347
+The development sequence contains five hundred and seventy-five optimization
+
+43
+00:02:42,347 --> 00:02:44,596
+candidates across five categories.
+
+44
+00:02:44,823 --> 00:02:50,351
+As tools, skills, memory, evidence links, and control improve together, spatial
+
+45
+00:02:50,351 --> 00:02:51,988
+reasoning performance increases.
+
+46
+00:02:52,214 --> 00:02:54,824
+Capabilities accumulate through their connections.
+
+47
+00:02:56,225 --> 00:02:58,642
+The harness also transfers across models.
+
+48
+00:02:58,881 --> 00:03:03,929
+With X-SFT, the target model continues self-evolution from the inherited
+
+49
+00:03:03,929 --> 00:03:06,960
+structure, reusing the original development data.
+
+50
+00:03:07,258 --> 00:03:12,102
+Fifteen iterations further improve all three target models, providing a lower-cost
+
+51
+00:03:12,102 --> 00:03:14,231
+route than rebuilding from scratch.
+
+52
+00:03:15,641 --> 00:03:20,799
+Space-X turns fragmented spatial clues into traceable, derivable answers.
+
+53
+00:03:21,026 --> 00:03:25,161
+Its contribution is not a larger collection of settings, but a harness whose
+
+54
+00:03:25,161 --> 00:03:27,194
+components learn to work together.
+
+55
+00:03:27,420 --> 00:03:30,811
+Explore the paper, project page, and visual cases.

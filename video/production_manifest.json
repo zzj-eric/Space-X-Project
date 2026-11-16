@@ -1,0 +1,19 @@
+{
+  "duration_seconds": 211.66666666666663,
+  "scene_count": 12,
+  "frame_count": 5080,
+  "caption_cues": 55,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 24,
+  "voice": "en-US-AndrewNeural",
+  "voice_gender": "Male",
+  "speech_rate": "+4%",
+  "loudness_target_lufs": -16,
+  "true_peak_target_dbtp": -1.5,
+  "video": "Space-X_research_overview_en.mp4",
+  "audio": "Space-X_narration_en.m4a",
+  "gpu_used": false
+}

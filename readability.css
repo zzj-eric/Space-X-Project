@@ -1,0 +1,238 @@
+/* Targeted small-type refinement: keep display headings and content unchanged. */
+:root { --cyan: #086a70; --muted: #425f70; }
+
+/* Labels that explain the method must be readable, not decorative microtext. */
+.eyebrow, .hero .eyebrow, .section-heading .eyebrow,
+.memory-copy .eyebrow, .results-heading .eyebrow, .closing .eyebrow {
+  font-size: 12px;
+  letter-spacing: 1.35px;
+}
+.micro-label, .chain-label { font-size: 12px; letter-spacing: .85px; }
+.chain-label { font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+.evolution-example .micro-label { font-size: 11px; }
+.mini-chain p { font-size: 14px; line-height: 1.8; }
+.evolution-example { gap: 32px; }
+.mini-chain { gap: 17px; }
+.evolution-example h3 { line-height: 1.45; }
+
+/* Source/tool captions: one consistent readable scale, below body copy. */
+.observatory-heading { font-size: 10.5px; letter-spacing: 1px; }
+.observatory-heading .mono { font-size: 9.5px; letter-spacing: .6px; }
+.source-pair figcaption { font-size: 12px; }
+.source-pair figcaption .mono { font-size: 10px; letter-spacing: .6px; }
+.layer-control button { font-size: 12px; padding-block: 9px; }
+.source-connectors { height: 42px; }
+.source-connectors b { font-size: 11px; }
+.cloud-caption { font-size: 9.5px; letter-spacing: .7px; }
+.metric-value>small { font-size: 10.5px; }
+.observatory-footer { flex-wrap: wrap; gap: 8px 12px; }
+.observatory-footer span { font-size: 10.5px; }
+.hero-points span { font-size: 12px; }
+.hero-bottom p, .hero-bottom a { font-size: 11px; }
+.hero-bottom p { line-height: 1.7; }
+.visual-tag { font-size: 11px; line-height: 1.55; padding-inline: 8px; }
+.mismatch>div, .proposal { font-size: 12px; }
+.resolution { font-size: 12px; line-height: 1.6; }
+.agent-card>p { font-size: 13px; }
+.agent-id { font-size: 10.5px; letter-spacing: .85px; line-height: 1.65; }
+.agent-steps { font-size: 12px; }
+.edit-stack>span { font-size: 11.5px; }
+.loop-path { font-size: 11px; line-height: 1.65; color: #405d70; }
+.evolution-core>span { font-size: 9.5px; letter-spacing: .65px; max-width: 135px; }
+
+/* Short walkthroughs and role-specific memory. */
+.case-tabs button { font-size: 12px; }
+.case-topline .micro-label, .step-copy .micro-label { font-size: 11px; letter-spacing: .8px; }
+.replay-label { font-size: 11px; color: #476373; }
+.case-image-grid figcaption, .media-caption { font-size: 12px; line-height: 1.7; }
+.case-steps button { font-size: 12px; }
+.case-steps button>span { font-size: 11px; }
+.evidence-tokens span { font-size: 11px; }
+.readout>span { font-size: 10px; }
+.case-progress-actions>span, .case-progress-actions .text-action { font-size: 12px; }
+.case-outcome .micro-label { font-size: 10.5px; letter-spacing: .7px; }
+.data-note { font-size: 12px; color: #456173; line-height: 1.8; }
+.coordinate-copy span { font-size: 11px; }
+.sighting-group strong { font-size: 12px; }
+.sighting-dots span { font-size: 10px; }
+.relay-block span { font-size: 11px; }
+.memory-selector button { font-size: 11.5px; color: #405c6e; }
+.memory-detail .micro-label { font-size: 11px; }
+.memory-record>.micro-label { font-size: 10.5px; }
+.memory-record dl { font-size: 12px; line-height: 1.8; }
+.memory-record dt { color: #416577; }
+.memory-flow, .memory-flow strong { font-size: 11px; }
+.tool-ribbon>span { font-size: 12px; }
+.expand-chip { font-size: 11px; }
+.paper-figure figcaption { font-size: 12px; }
+.result-top>span { font-size: 11px; line-height: 1.7; }
+.score-bars>div, .score-bars>div>span, .score-bars b { font-size: 11px; }
+.score-bars>div>span { width: 118px; }
+.result-card .metric-note, .protocol-details, .protocol-details summary, .protocol-details p { font-size: 12px; }
+.closing>p:not(.eyebrow), footer>span, footer>a:last-child { font-size: 12px; }
+footer>span { color: #496575; }
+.closing>p:not(.eyebrow) { color: #496575; }
+dialog>p { font-size: 12px; }
+
+/* Appendix atlas metadata and explanation labels. */
+.case-atlas { --theme: #08676e; }
+.case-atlas[data-theme=B] { --theme: #205b87; }
+.case-atlas[data-theme=C] { --theme: #86482f; }
+.case-atlas[data-theme=D] { --theme: #65448f; }
+.case-atlas[data-theme=E] { --theme: #755317; }
+.atlas-stat { color: #405e72; }
+.atlas-stat span { font-size: 12px; }
+.atlas-search input { font-size: 13px; }
+.search-shortcut { font-size: 10px; }
+.atlas-filters button { font-size: 12px; }
+.filter-count { font-size: 10px; }
+.atlas-theme .micro-label { font-size: 12px; letter-spacing: .5px; }
+.atlas-theme>p { font-size: 14px; }
+.atlas-count-row p, .atlas-count-row p:last-child { font-size: 11px; color: #405e70; }
+.atlas-card-code, .atlas-card-label { font-size: 10.5px; }
+.atlas-card-label { letter-spacing: .3px; line-height: 1.65; }
+.atlas-card-result { font-size: 11px; color: #5a6070; }
+.atlas-card-result strong { font-size: 12px; }
+.atlas-card-hint { font-size: 11px; }
+.reader-top, .reader-top>span:nth-child(2), .reader-id { font-size: 11px; color: #476577; }
+.reader-link { font-size: 11px; }
+.reader-modes button { font-size: 12px; }
+.gallery-top .micro-label, .gallery-top>span:last-child { font-size: 11px; color: #456779; }
+.source-caption { font-size: 12px; line-height: 1.65; }
+.source-zoom-hint, .atlas-source-main .source-zoom-hint { font-size: 10.5px; }
+.atlas-thumb { font-size: 10px; }
+.atlas-chain button { font-size: 12px; }
+.atlas-chain button>span:first-child { font-size: 11px; }
+.atlas-chain button>small { font-size: 10px; }
+.atlas-step-detail>.micro-label { font-size: 11px; }
+.atlas-step-actions>span, .atlas-small-button { font-size: 12px; }
+.ledger-heading { font-size: 12px; }
+.atlas-evidence-ledger dl { font-size: 12px; grid-template-columns: 118px 1fr; }
+.atlas-evidence-ledger dt { color: #405f72; }
+.compare-arm>.micro-label, .artifact-card .micro-label, .held-fixed .micro-label,
+.lens-discussion .micro-label, .atlas-conclusion .micro-label { font-size: 11px; letter-spacing: .7px; }
+.arm-media-button { font-size: 11px; }
+.insight-kicker { font-size: 11px; }
+.study-check span { font-size: 11px; }
+.study-check p { font-size: 12px; }
+.fixed-pills span { font-size: 11px; }
+.atlas-provenance summary, .atlas-provenance p { font-size: 12px; }
+.atlas-reader-bottom .text-action, .atlas-reader-bottom>span { font-size: 11px; }
+.atlas-footnote { font-size: 12px; color: #405e70; }
+.instrument-title { font-size: 11.5px; letter-spacing: .25px; }
+.instrument p { font-size: 12px; color: #426274; line-height: 1.75; }
+.mask-compare:before, .mask-compare:after { font-size: 10px; }
+.mask-control label, .mask-control output { font-size: 11px; }
+.timeline-picker button { font-size: 11px; }
+.readout-details { font-size: 12px; }
+.role-strip button small { font-size: 10px; color: #436173; }
+.role-strip button strong { font-size: 12px; }
+.instrument-badges span { font-size: 11px; }
+.sign-inspect button { font-size: 11px; }
+.proposal-track span { font-size: 12px; }
+.proposal-track small { font-size: 10px; }
+.source-dialog-controls button, .source-dialog-controls>span { font-size: 12px; }
+
+/* Compact layouts keep the same hierarchy instead of shrinking to 6-8px. */
+@media(max-width:1150px) {
+  .observatory-heading { flex-wrap: wrap; gap: 5px 10px; }
+  .layer-control button { font-size: 11px; }
+  .agent-id { font-size: 10px; letter-spacing: .4px; }
+  .agent-steps { font-size: 11px; gap: 7px; }
+  .edit-stack>span { font-size: 11px; padding: 8px 7px; }
+  .loop-path { font-size: 10.5px; }
+  .evolution-core>span { font-size: 9px; }
+  .mini-chain p { font-size: 13px; }
+  .case-steps { gap: 7px; }
+  .case-steps button { font-size: 11px; gap: 5px; }
+}
+@media(min-width:701px) and (max-width:900px) {
+  .hero .eyebrow { font-size: 10.5px; letter-spacing: .8px; }
+  .observatory-heading .mono { font-size: 9px; }
+  .layer-control button { font-size: 10px; gap: 4px; }
+  .observatory-footer { justify-content: center; }
+  .agent-id { flex-wrap: wrap; justify-content: center; gap: 5px; }
+  .agent-card>p { font-size: 12px; }
+  .control-illustration { flex-direction: column; height: auto; min-height: 215px; gap: 5px; padding-block: 12px; }
+  .control-illustration>img { height: 100px; width: 70px; }
+  .edit-stack { gap: 5px; width: 100%; }
+  .edit-stack>span { justify-content: center; }
+  .memory-selector { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .memory-flow { flex-wrap: wrap; justify-content: center; }
+  .atlas-stat i { margin-inline: 5px; }
+  .atlas-stat span { font-size: 11px; }
+  .atlas-evidence-ledger dl { grid-template-columns: 85px 1fr; font-size: 11.5px; }
+  .source-pair figcaption { font-size: 11px; flex-wrap: wrap; }
+  .source-pair figcaption .mono { font-size: 9px; }
+}
+@media(max-width:700px) {
+  .eyebrow, .hero .eyebrow, .section-heading .eyebrow,
+  .memory-copy .eyebrow, .results-heading .eyebrow, .closing .eyebrow {
+    font-size: 11px; letter-spacing: .9px;
+  }
+  .hero-bottom p { font-size: 10.5px; }
+  .hero-bottom a { font-size: 10.5px; }
+  .observatory-heading { font-size: 10px; letter-spacing: .7px; }
+  .observatory-heading .mono { font-size: 9px; }
+  .source-pair figcaption { font-size: 11px; }
+  .source-pair figcaption .mono { font-size: 9px; }
+  .layer-control button { font-size: 10.5px; }
+  .observatory-footer { justify-content: center; gap: 7px 12px; }
+  .visual-tag { font-size: 10px; }
+  .mismatch>div { font-size: 9px; }
+  .proposal { font-size: 9px; gap: 5px; padding: 7px 5px; }
+  .resolution { font-size: 11px; }
+  .mini-chain p { font-size: 14px; }
+  .chain-label { font-size: 12px; margin-bottom: 7px; }
+  .evolution-example .micro-label { font-size: 11px; }
+  .agent-id { font-size: 10px; }
+  .agent-card>p { font-size: 13px; }
+  .agent-steps { font-size: 12px; }
+  .loop-path { font-size: 11px; }
+  .evolution-core>span { font-size: 9px; }
+  .case-tabs button, .case-steps button { font-size: 11px; }
+  .case-topline .micro-label, .step-copy .micro-label { font-size: 11px; }
+  .case-outcome .micro-label { font-size: 10px; }
+  .case-image-grid figcaption, .media-caption { font-size: 11px; }
+  .readout>span { font-size: 9px; }
+  .relay-block span { font-size: 10.5px; }
+  .sighting-group strong { font-size: 11px; }
+  .memory-selector { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .memory-selector button { font-size: 11.5px; min-height: 66px; }
+  .memory-record dl { font-size: 12px; grid-template-columns: 85px 1fr; }
+  .memory-flow { flex-wrap: wrap; justify-content: center; }
+  .memory-flow strong { font-size: 10.5px; }
+  .tool-ribbon>span { font-size: 11px; }
+  .figure-tabs button { font-size: 11px; }
+  .paper-figure figcaption, .data-note { font-size: 11px; }
+  .result-top>span { font-size: 10.5px; max-width: 115px; }
+  .result-card .metric-note, .protocol-details summary, .protocol-details p { font-size: 11px; }
+  .atlas-stat { gap: 7px; }
+  .atlas-stat span { font-size: 11px; }
+  .atlas-stat i { margin-inline: 7px; }
+  .atlas-filters button { font-size: 11px; gap: 6px; }
+  .atlas-theme .micro-label { font-size: 11px; }
+  .atlas-theme>p { font-size: 13px; }
+  .atlas-card-label, .atlas-card-code { font-size: 10px; }
+  .atlas-card-label { min-height: 33px; }
+  .atlas-card-result { font-size: 10px; }
+  .atlas-card-result strong { font-size: 11px; }
+  .atlas-card-hint { font-size: 10px; }
+  .reader-top, .reader-top>span:nth-child(2), .reader-id, .reader-link { font-size: 10.5px; }
+  .reader-modes button { font-size: 10.5px; gap: 4px; }
+  .gallery-top .micro-label, .gallery-top>span:last-child { font-size: 10.5px; }
+  .source-caption { font-size: 11px; }
+  .atlas-chain button { font-size: 11px; }
+  .atlas-chain button>small { font-size: 10px; }
+  .atlas-evidence-ledger dl { grid-template-columns: 92px 1fr; font-size: 12px; }
+  .compare-arm>.micro-label { font-size: 10px; }
+  .atlas-provenance summary, .atlas-provenance p { font-size: 11px; }
+  .atlas-reader-bottom { gap: 8px; }
+  .atlas-reader-bottom>span { font-size: 10px; }
+  .atlas-footnote { font-size: 11px; }
+  .timeline-picker button { font-size: 10px; }
+  .proposal-track span { font-size: 11px; }
+}
+/* Retain small-label contrast against the deeper blue-gray surfaces. */
+.mismatch .correct { color: #086a70; }
+.atlas-chain button>small { color: #466577; }

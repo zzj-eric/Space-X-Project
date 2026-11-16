@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e1eaf2">
+  <meta name="description" content="Space-X: self-evolving agents connect visual observations, tool outputs, and memory into traceable evidence chains for spatial reasoning. Explore recorded cases and the method.">
+  <title>Space-X: Self-Evolving Spatial Agents Weaving Clues into Evidence Chains</title>
+  <meta property="og:title" content="Space-X: Self-Evolving Spatial Agents Weaving Clues into Evidence Chains">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css?v=6a011a7eb5c7">
+  <link rel="stylesheet" href="light.css?v=891a6564e2a5">
+  <link rel="stylesheet" href="atlas.css?v=207b545c5f29">
+  <link rel="stylesheet" href="tone.css?v=4555b1a3cbcb">
+  <link rel="stylesheet" href="readability.css?v=2b50ddfbd4a5">
+  <link rel="stylesheet" href="research.css?v=ee141ee00bee">
+  <link rel="stylesheet" href="showcase.css?v=50a97eeaad11">
+  <link rel="stylesheet" href="hero-title.css?v=50826eb68b8a">
+  <link rel="stylesheet" href="video.css?v=bdb2b4150b13">
+  <script src="paper-link.js?v=7259e3d291cc" defer></script>
+  <script src="code-link.js?v=847e1991aa26" defer></script>
+  <script src="video/chapters.js?v=cd59c77f699e" defer></script>
+  <script src="video/player.js?v=72af1e7cad8f" defer></script>
+  <script src="assets/metric-points.js?v=e7a61ddc1703" defer></script>
+  <script src="content.js?v=9f486f08f1ff" defer></script>
+  <script src="app.js?v=3c6ccfa7b5c0" defer></script>
+  <script src="atlas-data.js?v=40a1a6494731" defer></script>
+  <script src="atlas.js?v=ab510efe278f" defer></script>
+  <script src="assets/vendor/echarts.min.js?v=bf4a223524e4" defer></script>
+  <script src="research-data.js?v=f863208e4f07" defer></script>
+  <script src="research.js?v=eaa54c12211f" defer></script>
+  <script src="showcase.js?v=8cb51e034232" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"></path></symbol>
+    <symbol id="i-diagonal" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"></path></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 10v10M3 7l9 5 9-5M8 4.2l9 5v5"></path></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="m9 15 6-6M7 14l-2 2a4 4 0 0 0 6 6l4-4a4 4 0 0 0 0-6M17 10l2-2a4 4 0 0 0-6-6L9 6a4 4 0 0 0 0 6" transform="translate(0 -2)"></path></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></symbol>
+    <symbol id="i-memory" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"></rect><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4M10 10h4v4h-4Z"></path></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14 4a6 6 0 0 0-7 8L2 17a3 3 0 0 0 5 5l5-5a6 6 0 0 0 8-7l-4 3-4-4 3-4Z" transform="translate(1 -2)"></path></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"></path><circle cx="12" cy="12" r="4"></circle><path d="M12 6v3m0 6v3m-6-6h3m6 0h3"></path></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M4 10a8 8 0 0 1 14-5l3 3M21 2v6h-6M20 14a8 8 0 0 1-14 5l-3-3M3 22v-6h6"></path></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6l4 2"></path></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"></path></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"></path></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"></path></symbol>
+  </defs></svg>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Space-X home"><img class="nav-wordmark" src="assets/logos/space-x-wordmark-light.svg" alt="Space-X" width="534" height="160"></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">+</span></button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <a href="#vision">The idea</a><a href="#evolution">Self-evolution</a><a href="#research-film">Film</a><a href="#evidence-lab">Evidence lab</a><a href="#growth">Growth</a><a href="#case-atlas">Case atlas</a>
+      </nav>
+      <a class="nav-cta" href="#results">Measured gains <svg class="icon"><use href="#i-diagonal"></use></svg></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" id="top" aria-labelledby="paper-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <img class="hero-wordmark" src="assets/logos/space-x-wordmark-light.svg" alt="Space-X" width="534" height="160">
+          <div class="paper-title-label"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6Z M14 3v5h4 M9 12h6 M9 16h6"></path></svg><span>PAPER TITLE</span></div>
+          <h1 class="hero-paper-title" id="paper-title"><span class="paper-title-brand">Space-X:</span> Self-Evolving Spatial Agents Weaving Clues into <span class="paper-title-evidence">Evidence Chains</span></h1>
+          <p class="hero-slogan">Weaving clues<br>into <span class="word-answer">answers<svg viewBox="0 0 360 20" aria-hidden="true"><path d="M3 14C90 1 248 2 354 8M6 19C95 9 238 6 340 11"></path></svg></span>.</p>
+          <p class="hero-lead">Seeing is a beginning.<br> Reasoning is making the connections.</p>
+          <p class="hero-description">Space-X turns images, tool outputs, and memory into a continuous evidence chain. Its agents evolve the tools <em>and</em> the way they use them.</p>
+          <!-- PAPER URL: edit PAPER_URL in paper-link.js; the button enables automatically. -->
+          <div class="hero-actions"><a id="paper-link" class="button paper-link" role="link" aria-disabled="true" tabindex="0" title="Paper link coming soon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6Z M14 3v5h4 M9 12h6 M9 16h6"></path></svg><span>Read the paper</span><span class="paper-link-status">Coming soon</span></a><!-- CODE URL: edit CODE_URL in code-link.js; the button enables automatically. -->
+            <a id="code-link" class="button code-link" role="link" aria-disabled="true" tabindex="0" title="Code repository coming soon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-11-2 14"></path></svg><span>GitHub Code</span><span class="code-link-status">Coming soon</span></a><a class="text-action" href="#research-film">Watch the film <svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></a><a class="button primary" href="#evidence-lab">Follow an evidence chain <svg class="icon"><use href="#i-arrow"></use></svg></a><a class="text-action" href="#evolution">Meet the two agents <svg class="icon"><use href="#i-diagonal"></use></svg></a></div>
+          <div class="hero-points"><span><svg class="icon"><use href="#i-target"></use></svg> Grounded</span><span><svg class="icon"><use href="#i-link"></use></svg> Connected</span><span><svg class="icon"><use href="#i-check"></use></svg> Traceable</span></div>
+        </div>
+        <div class="evidence-observatory" aria-label="Interactive saved evidence visualization">
+          <div class="observatory-heading"><span><span class="status-dot"></span> EVIDENCE OBSERVATORY</span><span class="mono">RECORDED CASE</span></div>
+          <div class="query-strip"><svg class="icon"><use href="#i-target"></use></svg><p>How far apart are the <strong>closest surfaces?</strong></p></div>
+          <div class="source-pair">
+            <figure><div class="image-window"><img id="hero-source-a" src="assets/cases/stool_rgb.webp" alt="Source view of the white step stool" width="504" height="378"><span class="target-outline stool-outline" aria-hidden="true"></span></div><figcaption><span class="small-square cyan"></span> Stool <span class="mono">SOURCE A</span></figcaption></figure>
+            <figure><div class="image-window"><img id="hero-source-b" src="assets/cases/toilet_rgb.webp" alt="Source view of the adult toilet" width="504" height="378"><span class="target-outline toilet-outline" aria-hidden="true"></span></div><figcaption><span class="small-square violet"></span> Toilet <span class="mono">SOURCE B</span></figcaption></figure>
+          </div>
+          <div class="layer-control" role="group" aria-label="Choose a saved tool output">
+            <button type="button" data-layer="rgb" aria-pressed="true"><svg class="icon"><use href="#i-eye"></use></svg> Original views</button>
+            <button type="button" data-layer="mask" aria-pressed="false"><svg class="icon"><use href="#i-target"></use></svg> SAM3 masks</button>
+            <button type="button" data-layer="depth" aria-pressed="false"><svg class="icon"><use href="#i-cube"></use></svg> DA3 depth</button>
+          </div>
+          <div class="source-connectors" aria-hidden="true"><span></span><span></span><b>Same objects. Shared geometry.</b></div>
+          <div class="cloud-window">
+            <svg id="metric-cloud" viewBox="0 0 560 205" role="img" aria-label="Saved point samples with their closest surface endpoints">
+              <defs><pattern id="cloud-grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#bdcfd9" stroke-width=".6"></path></pattern><linearGradient id="metric-line"><stop stop-color="#12877c"></stop><stop offset="1" stop-color="#8365b7"></stop></linearGradient></defs>
+              <rect width="560" height="205" fill="url(#cloud-grid)"></rect><g id="point-cloud-a"></g><g id="point-cloud-b"></g><g id="cloud-measure"></g>
+              <path d="M30 169v-33m0 33h33" stroke="#6b8b9c" fill="none"></path><text x="68" y="173" fill="#5b7889" font-size="9">PC1</text><text x="27" y="127" fill="#5b7889" font-size="9">PC2</text>
+            </svg>
+            <span class="cloud-caption">SAVED GEOMETRY / PCA PROJECTION</span>
+            <div class="metric-value">0.86<span>m</span><small>source-supported estimate</small></div>
+          </div>
+          <div class="observatory-footer"><span><svg class="icon"><use href="#i-check"></use></svg> Objects bound</span><span><svg class="icon"><use href="#i-check"></use></svg> Endpoints matched</span><span><svg class="icon"><use href="#i-check"></use></svg> Sources reviewed</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom"><p>One evolving harness. Tools, memory, and evidence working together.</p><a href="#vision">Scroll to connect the dots <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="vision section-shell section-space" id="vision">
+      <div class="section-heading"><p class="eyebrow">THE MISSING CONNECTION</p><h2>More tools. <span>Better evidence?</span></h2><p>A tool can return the right output and still leave a question unanswered.<br> The difference is what the agent does with it.</p></div>
+      <div class="problem-grid">
+        <article class="problem"><div class="problem-visual view-fan"><img src="assets/cases/sofa_1.webp" alt="Sofa view" loading="lazy"><img src="assets/cases/sofa_2.webp" alt="A second room view" loading="lazy"><img src="assets/cases/sofa_3.webp" alt="A third room view" loading="lazy"><span class="visual-tag">Which view supports the question?</span></div><h3>Looking without a target</h3><p>Repeated observations can miss the object, observer position, or facing landmark that defines the question.</p><div class="resolution"><svg class="icon"><use href="#i-target"></use></svg><span>Acquire the missing premise</span></div></article>
+        <article class="problem"><div class="problem-visual mismatch"><img src="assets/cases/stool_mask_focus.webp" alt="Stool segmentation candidate" loading="lazy"><div><span>Camera depth</span><b aria-hidden="true">≠</b><span class="correct">Surface distance</span></div><span class="visual-tag">A number needs the right meaning.</span></div><h3>Outputs without connections</h3><p>A mask, depth map, and distance only become evidence when their objects, sources, and reference frames agree.</p><div class="resolution"><svg class="icon"><use href="#i-link"></use></svg><span>Bind and associate the evidence</span></div></article>
+        <article class="problem"><div class="problem-visual disagreement"><span class="proposal">Proposal A <strong>0.86 m</strong></span><span class="dispute-link" aria-hidden="true">?</span><span class="proposal">Proposal B <strong>0.10 m</strong></span><span class="visual-tag">Revisit the sources. Resolve the premise.</span></div><h3>Answers without enough support</h3><p>Conflicting proposals need a source-based check of the disputed premise, with enough capacity left to conclude.</p><div class="resolution"><svg class="icon"><use href="#i-check"></use></svg><span>Judge with traceable support</span></div></article>
+      </div>
+      <div class="thesis"><span class="thread-knot" aria-hidden="true">X</span><p><strong>Evolve the whole connection.</strong> Evidence needs guide tool development.<br>Usable tool results guide the next observation, association, and decision.</p></div>
+    </section>
+
+    <section class="evolution section-space" id="evolution">
+      <div class="section-shell">
+        <div class="section-heading"><p class="eyebrow">TWO AGENTS. ONE SHARED OBJECTIVE.</p><h2>Learn to reason.<br><span>Then improve the way.</span></h2><p>Each execution builds an evidence chain.<br> Each iteration improves the tools and rules that make the next chain possible.</p></div>
+        <div class="evolution-stage">
+          <div class="loop-path top-path"><span>Execution traces · broken links · evaluation feedback</span><svg class="icon"><use href="#i-arrow"></use></svg></div>
+          <article class="agent-card execution"><div class="agent-id"><span>A<sub>e</sub></span><span>TASK-TIME REASONING</span></div><h3>Execution Agent</h3><p>Use capabilities to solve the current question.</p><div class="agent-workshop"><img src="assets/logos/evidence_workshop.svg" alt="Execution robot working with tools inside its evidence workshop" loading="lazy"></div><div class="agent-steps"><span><svg class="icon"><use href="#i-target"></use></svg> Acquire</span><svg class="icon"><use href="#i-arrow"></use></svg><span><svg class="icon"><use href="#i-link"></use></svg> Associate</span><svg class="icon"><use href="#i-arrow"></use></svg><span><svg class="icon"><use href="#i-check"></use></svg> Judge</span></div></article>
+          <div class="evolution-core"><div class="orbit-ring" aria-hidden="true"></div><svg class="icon"><use href="#i-repeat"></use></svg><strong>Reliable<br>evidence chains</strong><span>THE EVOLUTION TARGET</span></div>
+          <article class="agent-card control"><div class="agent-id"><span>A<sub>c</sub></span><span>CROSS-ITERATION IMPROVEMENT</span></div><h3>Control Agent</h3><p>Improve the system around the reasoning model.</p><div class="control-illustration"><img src="assets/logos/control_robot.svg" alt="Control robot inspecting and improving the tool workspace" loading="lazy"><div class="edit-stack"><span><svg class="icon"><use href="#i-tool"></use></svg> Tools &amp; interfaces</span><span><svg class="icon"><use href="#i-memory"></use></svg> Memory &amp; skills</span><span><svg class="icon"><use href="#i-link"></use></svg> Evidence-use rules</span></div></div><div class="agent-steps"><span>Diagnose</span><svg class="icon"><use href="#i-arrow"></use></svg><span>Edit</span><svg class="icon"><use href="#i-arrow"></use></svg><span>Evaluate</span></div></article>
+          <div class="loop-path bottom-path"><svg class="icon"><use href="#i-arrow"></use></svg><span>Retained capabilities · clearer interfaces · reusable reasoning practices</span></div>
+        </div>
+        <div class="evolution-example"><div><span class="micro-label">ONE DEVELOPMENT EXAMPLE</span><h3>From forgotten observations<br> to source-linked memory.</h3></div><div class="mini-chain"><p><span class="chain-label">OBSERVED FAILURE</span>Useful views disappear across context windows.</p><svg class="icon"><use href="#i-arrow"></use></svg><p><span class="chain-label">STRUCTURAL CHANGE</span>Relay observations, restore cited images, reserve review capacity.</p><svg class="icon"><use href="#i-arrow"></use></svg><p><span class="chain-label">RECORDED OUTCOME</span>The sofa case reaches a supported <strong>front-left</strong> answer.</p></div></div>
+      </div>
+    </section>
+
+    <section class="research-film section-space" id="research-film" aria-labelledby="research-film-title">
+      <div class="section-shell">
+        <div class="film-heading">
+          <div><p class="eyebrow">THE RESEARCH FILM</p><h2 id="research-film-title">See the connections.<br><span>Watch the reasoning unfold.</span></h2></div>
+          <div class="film-intro"><p>The core idea, spatial cases, and measured gains.<br>One connected story of self-evolution.</p><span class="film-format"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>03:32 <span aria-hidden="true">/</span> ENGLISH <span aria-hidden="true">/</span> 1080P</span></div>
+        </div>
+        <div class="film-layout">
+          <div class="film-screen">
+            <video id="film" controls playsinline preload="metadata" poster="video/Space-X_video_poster.jpg?v=b97b02461380" aria-label="Space-X English research film" aria-describedby="film-description">
+              <source src="video/Space-X_research_overview_en.mp4?v=b97b02461380" type="video/mp4">
+              <p><a href="video/Space-X_research_overview_en.mp4">Download the Space-X video</a>.</p>
+            </video>
+            <div class="film-status"><span class="film-now">NOW SHOWING</span><strong id="current-chapter">The central idea</strong><span id="play-time">00:00 / 03:32</span></div>
+            <p class="sr-only" id="film-description">A narrated overview of evidence chains, dual-agent self-evolution, spatial cases, benchmark gains, and X-SFT. English subtitles are included in the video.</p>
+            <p class="film-error" id="playback-error" role="status" hidden>Open the <a href="video/Space-X_research_overview_en.mp4">MP4 video</a> to watch the film.</p>
+          </div>
+          <aside class="film-rail" aria-label="Video chapters">
+            <div class="film-rail-heading"><span>EXPLORE THE FILM</span><span>12 CHAPTERS</span></div>
+            <div class="film-chapters" id="chapters" role="group" aria-label="Jump to a video chapter"></div>
+            <noscript><p>Use the video controls to explore the film.</p></noscript>
+          </aside>
+        </div>
+        <div class="film-bottom"><p><svg class="icon" aria-hidden="true"><use href="#i-link"></use></svg>A harness is more than a toolbox. Its components evolve together.</p><div class="film-actions"><button class="text-action" id="restart" type="button"><svg class="icon" aria-hidden="true"><use href="#i-repeat"></use></svg>Replay</button><a class="text-action" href="video/Space-X_research_overview_en.mp4" download>Download film <svg class="icon" aria-hidden="true"><use href="#i-diagonal"></use></svg></a></div></div>
+      </div>
+    </section>
+
+    <section class="lab section-shell section-space" id="evidence-lab">
+      <div class="section-heading"><p class="eyebrow">THE EVIDENCE LAB</p><h2>Don't just see the answer.<br><span>See what supports it.</span></h2><p>Explore four recorded development cases, from the first clue to a source-grounded decision.</p></div>
+      <div class="case-tabs" role="group" aria-label="Choose a recorded case">
+        <button type="button" data-case="metric" aria-pressed="true"><svg class="icon"><use href="#i-cube"></use></svg><span>Measure surfaces</span></button>
+        <button type="button" data-case="mural" aria-pressed="false"><svg class="icon"><use href="#i-target"></use></svg><span>Change viewpoint</span></button>
+        <button type="button" data-case="monitors" aria-pressed="false"><svg class="icon"><use href="#i-eye"></use></svg><span>Count across views</span></button>
+        <button type="button" data-case="sofa" aria-pressed="false"><svg class="icon"><use href="#i-memory"></use></svg><span>Carry evidence forward</span></button>
+      </div>
+      <div class="case-workspace">
+        <div class="case-topline"><span class="micro-label" id="case-category">METRIC SPATIAL REASONING</span><span class="replay-label"><span class="status-dot"></span> Recorded evidence walkthrough</span></div>
+        <h3 id="case-question">What is the closest surface-to-surface distance between the stool and the toilet?</h3>
+        <div class="case-body">
+          <div class="case-media"><div class="case-image-grid" id="case-images"></div><div class="case-visual-detail" id="case-visual-detail"></div><p class="media-caption" id="case-media-caption"></p></div>
+          <div class="case-explanation"><div class="case-steps" role="group" aria-label="Choose an evidence-chain stage"><button type="button" data-step="0" aria-pressed="true"><span>1</span> Acquire</button><button type="button" data-step="1" aria-pressed="false"><span>2</span> Associate</button><button type="button" data-step="2" aria-pressed="false"><span>3</span> Judge</button></div><div class="step-copy" aria-live="polite"><p class="micro-label" id="step-kicker"></p><h4 id="step-title"></h4><p id="step-body"></p><div class="evidence-tokens" id="step-tokens"></div></div><div class="case-progress-actions"><span id="step-count">01 / 03</span><button type="button" class="text-action" id="next-step">Next connection <svg class="icon"><use href="#i-arrow"></use></svg></button></div></div>
+        </div>
+        <div class="case-outcome"><div><span class="micro-label">EARLIER EXECUTION</span><strong id="case-before"></strong></div><svg class="icon"><use href="#i-arrow"></use></svg><div class="improved-answer"><span class="micro-label">IMPROVED EXECUTION</span><strong id="case-after"></strong></div><p id="case-takeaway"></p></div>
+      </div>
+      <p class="data-note" id="case-caveat"></p>
+      <div class="atlas-jump"><a class="text-action" href="#case-atlas">Explore 25 appendix analyses across five themes <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
+    </section>
+
+    <section class="memory-section section-space">
+      <div class="section-shell memory-grid">
+        <div class="memory-copy"><p class="eyebrow">MEMORY THAT KEEPS THE LINKS</p><h2>Remember the clue.<br><span>Keep its context.</span></h2><p>Five complementary memory roles preserve what was seen, what it means, what remains uncertain, and what to do next.</p><p class="memory-principle">A source reference travels with the claim, so later reasoning can return to the evidence.</p><a class="text-action" href="#architecture">Inside the complete system <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
+        <div class="memory-console"><div class="memory-selector" role="group" aria-label="Explore memory roles"><button type="button" data-memory="work" aria-pressed="true"><svg class="icon"><use href="#i-target"></use></svg> Working</button><button type="button" data-memory="obs" aria-pressed="false"><svg class="icon"><use href="#i-eye"></use></svg> Observation</button><button type="button" data-memory="spatial" aria-pressed="false"><svg class="icon"><use href="#i-cube"></use></svg> Spatial</button><button type="button" data-memory="epis" aria-pressed="false"><svg class="icon"><use href="#i-clock"></use></svg> Episodic</button><button type="button" data-memory="proc" aria-pressed="false"><svg class="icon"><use href="#i-tool"></use></svg> Procedural</button></div><div class="memory-detail" aria-live="polite"><div class="memory-detail-header"><span class="memory-number" id="memory-number">01</span><div><span class="micro-label" id="memory-scope"></span><h3 id="memory-title"></h3></div></div><p id="memory-description"></p><div class="memory-record"><span class="micro-label">ILLUSTRATIVE RECORD</span><div id="memory-record"></div></div><div class="memory-flow"><span>Retrieve</span><i></i><strong id="memory-effect"></strong><i></i><span>Update</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="architecture section-space" id="architecture">
+      <div class="section-shell"><div class="section-heading"><p class="eyebrow">A LOOK INSIDE SPACE-X</p><h2>One system.<br><span>Connected capabilities.</span></h2><p>Tools construct evidence. Memory maintains the connections.<br> The API reasons over what is actually supported.</p></div>
+        <div class="tool-ribbon" aria-label="Tool and reasoning capabilities"><span><svg class="icon"><use href="#i-eye"></use></svg> View retrieval</span><span><svg class="icon"><use href="#i-target"></use></svg> Segmentation</span><span><svg class="icon"><use href="#i-cube"></use></svg> Depth &amp; geometry</span><span><svg class="icon"><use href="#i-link"></use></svg> Spatial readouts</span><span><svg class="icon"><use href="#i-memory"></use></svg> Source restoration</span><span><svg class="icon"><use href="#i-check"></use></svg> Reinspection</span></div>
+        <div class="figure-tabs" role="group" aria-label="Choose a paper figure"><button type="button" data-figure="architecture" aria-pressed="true">Execution architecture</button><button type="button" data-figure="evolution" aria-pressed="false">Self-evolution pipeline</button><button type="button" data-figure="motivation" aria-pressed="false">Motivation &amp; failures</button></div>
+        <figure class="paper-figure"><button type="button" id="expand-figure" aria-label="Explore full figure: execution architecture"><img id="paper-figure-image" src="assets/figures/architecture.webp" width="2700" height="1540" alt="Space-X architecture: inputs, tools, construction, memory, and source-linked review" loading="lazy"><span class="expand-chip"><svg class="icon"><use href="#i-expand"></use></svg> Explore full figure</span></button><figcaption id="paper-figure-caption">From input to tools to evidence construction, with five memory roles and source-linked review connecting successive API calls.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="results research-results section-space" id="results" aria-labelledby="research-results-title">
+      <div class="section-shell">
+        <div class="results-heading research-heading"><div><p class="eyebrow">SAME MODEL. NEW POSSIBILITIES.</p><h2 id="research-results-title">Same models.<br><span>Stronger spatial reasoning.</span></h2></div><div class="benchmark-signature"><span>ViewSpatial</span><span>SPAR</span><span>MMSI</span><span class="video-signature">VSI <small>10 initial frames</small></span></div></div>
+        <div class="research-toolbar">
+          <div class="research-models" role="group" aria-label="Select a base model">
+            <button type="button" data-research-model="gpt-6-sol" aria-pressed="true">GPT-6-sol</button>
+            <button type="button" data-research-model="gpt-6-astra" aria-pressed="false">GPT-6-astra</button>
+            <button type="button" data-research-model="gemini-3.8-flash" aria-pressed="false">Gemini-3.8-Flash</button>
+            <button type="button" data-research-model="gemini-4-argon" aria-pressed="false">Gemini-4-Argon</button>
+          </div>
+          <div class="result-display-controls"><div role="group" aria-label="Gain display"><button type="button" data-gain-format="relative" aria-pressed="true">Relative %</button><button type="button" data-gain-format="points" aria-pressed="false">Score points</button></div><label><input id="research-focus-scale" type="checkbox" checked> Zoom</label><button type="button" id="results-replay" aria-label="Replay score increases"><svg class="icon" aria-hidden="true"><use href="#i-repeat"></use></svg></button></div>
+        </div>
+        <div id="research-scorecards" class="performance-panels"></div>
+        <p class="score-axis-key"><span><i></i>Model alone</span><span><i></i>Space-X</span><span>Benchmark scores · labeled zoomed axes</span></p>
+        <p class="sr-only" id="research-live" role="status" aria-live="polite"></p>
+        <noscript><p>GPT-6-sol: ViewSpatial 53.19 → 79.99 · SPAR 57.15 → 70.39 · MMSI 53.90 → 66.33 · VSI 48.40 → 65.34.</p></noscript>
+        <div class="capability-showcase" id="subtask-highlights" aria-labelledby="subtask-title">
+          <div class="capability-heading"><div><p class="eyebrow">THE BIGGEST LEAPS</p><h3 id="subtask-title">See the difference.</h3></div><span class="highlight-threshold">Selected gains &gt; 10%</span></div>
+          <div class="capability-filters" role="group" aria-label="Choose a benchmark for subtask highlights">
+            <button type="button" data-subtask-benchmark="viewspatial" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-target"></use></svg>ViewSpatial</button>
+            <button type="button" data-subtask-benchmark="spar" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-cube"></use></svg>SPAR</button>
+            <button type="button" data-subtask-benchmark="mmsi" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-link"></use></svg>MMSI</button>
+            <button type="button" data-subtask-benchmark="vsi" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>VSI</button>
+          </div>
+          <div class="capability-stage" id="capability-stage"></div>
+          <div class="capability-task-rail" id="capability-task-rail" role="group" aria-label="Choose a highlighted subtask"></div>
+          <div class="capability-navigation"><span id="capability-counter" aria-live="polite"></span><div><button type="button" id="capability-prev" aria-label="Previous highlight"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button><button type="button" id="capability-play" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg><span>Play highlights</span></button><button type="button" id="capability-next" aria-label="Next highlight"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="growth-section section-space" id="growth" aria-labelledby="growth-title">
+      <div class="section-shell">
+        <div class="section-heading"><p class="eyebrow">SELF-EVOLUTION, MADE VISIBLE</p><h2 id="growth-title">Capabilities grow.<br><span>Connections grow with them.</span></h2><p>Follow the tools, skills, memory and evidence links as Space-X takes shape.</p></div>
+        <div class="growth-console">
+          <div class="growth-console-top"><div class="growth-mark"><svg class="icon" aria-hidden="true"><use href="#i-repeat"></use></svg><div><span class="micro-label">EVOLUTION REPLAY</span><strong>One shared objective. Five kinds of progress.</strong></div></div><span class="growth-model-chip">GPT-6-sol · construction run</span></div>
+          <div class="growth-stats"><div><span>Implemented candidates</span><strong id="growth-count">575</strong><small>of 575 in the recorded sequence</small></div><div><span>ViewSpatial</span><strong id="growth-viewspatial">79.99</strong><small>starting score <b>53.19</b></small></div><div><span>SPAR</span><strong id="growth-spar">70.39</strong><small>starting score <b>57.15</b></small></div><div class="growth-insight-stat"><span>Beyond adding tools</span><strong>66.26<span>%</span></strong><small>of candidates address rules, memory,<br>evidence links or execution control</small></div></div>
+          <div class="growth-legend" id="growth-legend" role="group" aria-label="Show or hide optimization categories"></div>
+          <div class="growth-chart-wrap"><div class="growth-axis-label">Capability &amp; evidence organization <span>cumulative candidates · 0–200</span></div><div id="growth-chart" class="growth-chart" role="img" aria-label="Two linked charts: five cumulative optimization categories and ten uniformly sampled benchmark evaluations."></div><div class="growth-benchmark-key"><span><i></i> ViewSpatial</span><span><i></i> SPAR</span><small>Dashed lines · benchmark scores · 50–80</small></div></div>
+          <div class="growth-scrubber"><button type="button" id="growth-replay" class="growth-replay"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg><span>Replay evolution</span></button><div class="growth-range-wrap"><label for="growth-sample">Uniformly sampled evaluation <output id="growth-sample-label" for="growth-sample">10 / 10</output></label><input type="range" id="growth-sample" min="0" max="9" step="1" value="9" aria-label="Select an evaluation along the evolution sequence"></div><button type="button" id="growth-reset" class="growth-reset">Show complete run</button></div>
+          <div class="growth-phases" id="growth-phases"></div>
+          <div class="growth-phase-note"><span class="status-dot"></span><strong id="growth-phase-name">Integrate &amp; refine</strong><p id="growth-phase-copy">Combine capabilities, restore source evidence and close the reasoning chain.</p></div>
+        </div>
+        <p class="growth-minimal-note">575 optimization steps. Ten measured checkpoints.</p>
+
+      </div>
+    </section>
+
+    <section class="research-insights section-shell section-space" id="research-insights" aria-labelledby="research-insights-title">
+      <div class="section-heading"><p class="eyebrow">WHAT THE EXPERIMENTS TEACH US</p><h2 id="research-insights-title">Not just more tools.<br><span>A better way to use them.</span></h2><p>Better tools. Connected memory. A harness that adapts.</p></div>
+      <div class="research-insight-grid">
+        <article class="research-insight-card joint-insight"><div class="insight-icon"><svg class="icon" aria-hidden="true"><use href="#i-tool"></use></svg></div><span class="micro-label">CAPABILITY × EVIDENCE USE</span><h3>Build the tools.<br>Teach the connections.</h3><p>Jointly evolving tools and evidence rules beats changing either side alone.</p><label class="insight-select-label" for="joint-benchmark">Explore a benchmark <select id="joint-benchmark"><option value="0">ViewSpatial</option><option value="1">SPAR</option><option value="2">MMSI</option></select></label><div id="joint-chart" class="insight-bar-chart"></div><div class="joint-axis" aria-hidden="true"><span>0</span><span>50</span><span>100</span></div><div class="insight-verdict"><strong id="joint-gain">+11.84 pts</strong><span>joint evolution over tools alone</span></div></article>
+        <article class="research-insight-card memory-insight"><div class="insight-icon"><svg class="icon" aria-hidden="true"><use href="#i-memory"></use></svg></div><span class="micro-label">EVIDENCE THAT STAYS USABLE</span><h3>Keep the clue.<br>Preserve the connection.</h3><p>Explicit links align evidence. Role-specific memory carries it into the next decision.</p><div class="memory-proof-flow" aria-label="Evidence moves from a source through linked memory into a decision"><span><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg>Source</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg><span><svg class="icon" aria-hidden="true"><use href="#i-memory"></use></svg>Memory</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg><span><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Decision</span></div><div class="memory-proof-value"><span>Evidence delivered to later calls</span><strong>98.24<span>%</span></strong><small>71.06% with flat records</small></div><div class="memory-proof-trail" id="memory-proof-trail"></div><div class="insight-verdict"><strong>21.70 → 1.05<span>%</span></strong><span>semantic mismatch, flat records → full continuity</span></div></article>
+        <article class="research-insight-card adaptation-insight"><div class="insight-icon"><svg class="icon" aria-hidden="true"><use href="#i-repeat"></use></svg></div><span class="micro-label">X-SFT · ADAPT WHAT YOU ALREADY BUILT</span><h3>Transfer the system.<br>Make it your own.</h3><p>Let a new model improve the inherited harness, using the original development data.</p><label class="insight-select-label" for="adaptation-model">Target model <select id="adaptation-model"><option value="0">GPT-6-astra</option><option value="1">Gemini-3.8-Flash</option><option value="2">Gemini-4-Argon</option></select></label><div class="adaptation-steps"><span>Inherited<br>Space-X</span><span class="adaptation-iteration">15<small>iterations</small></span><span>Target-adapted<br>Space-X</span></div><div id="adaptation-scores" class="adaptation-scores"></div><div class="insight-verdict"><strong>One starting point.<br>Three successful adaptations.</strong><span>Reuse structure. Refine model fit.</span></div></article>
+      </div>
+      <div class="research-insight-ending"><svg class="icon" aria-hidden="true"><use href="#i-link"></use></svg><p><strong>The improvement is in the coordination.</strong><br>Tools, memory and decisions evolve around one continuous evidence chain.</p><a class="text-action" href="#case-atlas">See the mechanisms in action <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
+    </section>
+
+
+    <section class="case-atlas section-space" id="case-atlas" aria-labelledby="atlas-heading">
+      <div class="section-shell">
+        <div class="section-heading"><p class="eyebrow">THE EXTENDED CASE ATLAS</p><h2 id="atlas-heading">More than an answer.<br><span>A closer look at what changed.</span></h2><p>Pick a scene. Follow the evidence. See what changes.</p></div>
+        <div class="atlas-toolbar"><div class="atlas-stat"><strong>14</strong><span>distinct questions</span><i></i><strong>25</strong><span>thematic analyses</span></div><label class="atlas-search"><svg class="icon" aria-hidden="true"><use href="#i-target"></use></svg><input type="search" id="atlas-search" placeholder="Search objects, tools, or mechanisms…" aria-label="Search appendix case analyses"><span class="search-shortcut" aria-hidden="true">Find a link</span></label></div>
+        <div class="atlas-filters" role="group" aria-label="Filter case analyses by theme" id="atlas-filters"></div>
+        <div class="atlas-theme"><div><span class="micro-label" id="atlas-theme-question"></span><h3 id="atlas-theme-title"></h3></div><p id="atlas-theme-description"></p></div>
+        <div class="atlas-count-row"><p id="atlas-count" role="status" aria-live="polite"></p><p>Explore a different angle.</p></div>
+        <div class="atlas-cards" id="atlas-cards"></div>
+        <div class="atlas-empty" id="atlas-empty" hidden><svg class="icon" aria-hidden="true"><use href="#i-target"></use></svg><h3>No matching case in this theme.</h3><p>Try “memory”, “depth”, “source”, or search across all themes.</p><button type="button" id="atlas-reset" class="button primary">Reset search &amp; show all</button></div>
+
+        <article class="atlas-reader" id="atlas-reader" aria-labelledby="atlas-case-title">
+          <div class="reader-top"><span class="reader-id" id="atlas-case-id"></span><span id="atlas-case-tag"></span><button type="button" class="reader-link" id="atlas-copy-link"><svg class="icon" aria-hidden="true"><use href="#i-link"></use></svg> <span>Copy case link</span></button></div>
+          <h3 id="atlas-case-title" tabindex="-1"></h3>
+          <p class="atlas-question" id="atlas-question"></p>
+          <div class="reader-modes" role="group" aria-label="Choose how to explore this case"><button type="button" data-atlas-mode="path" aria-pressed="true"><svg class="icon"><use href="#i-link"></use></svg> Evidence path</button><button type="button" data-atlas-mode="compare" aria-pressed="false"><svg class="icon"><use href="#i-repeat"></use></svg> Before &amp; after</button><button type="button" data-atlas-mode="insight" aria-pressed="false"><svg class="icon"><use href="#i-tool"></use></svg> Design insight</button></div>
+          <div class="reader-grid">
+            <div class="reader-media">
+              <div class="gallery-top"><span class="micro-label">SOURCE INSPECTOR</span><span id="atlas-source-count"></span></div>
+              <button type="button" class="atlas-source-main" id="atlas-expand-source" aria-label="Enlarge source image"><img id="atlas-source-image" alt="" width="640" height="430"><span class="source-zoom-hint"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg> Enlarge source</span></button>
+              <p class="source-caption" id="atlas-source-caption"></p>
+              <div class="atlas-thumbs" role="group" aria-label="Choose a source image" id="atlas-thumbs"></div>
+              <div class="atlas-special" id="atlas-special"></div>
+            </div>
+            <div class="reader-analysis">
+              <div class="atlas-path" id="atlas-path"><div class="atlas-chain" role="group" aria-label="Follow the evidence links" id="atlas-chain"></div><div class="atlas-step-detail" aria-live="polite"><span class="micro-label" id="atlas-step-label"></span><h4 id="atlas-step-title"></h4><p id="atlas-step-body"></p></div><div class="atlas-evidence-ledger" id="atlas-evidence-ledger"></div><div class="atlas-step-actions"><button type="button" id="atlas-prev-step" class="atlas-small-button"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg> Previous</button><span id="atlas-step-counter"></span><button type="button" id="atlas-next-step" class="atlas-small-button">Next link <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button></div></div>
+              <div class="atlas-comparison" id="atlas-comparison" hidden></div>
+              <div class="atlas-insight" id="atlas-insight" hidden></div>
+            </div>
+          </div>
+          <div class="atlas-conclusion"><span class="conclusion-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span><div><span class="micro-label">WHAT THIS CASE SHOWS</span><p id="atlas-takeaway"></p></div><div class="reference-answer"><span class="micro-label">REFERENCE</span><strong id="atlas-reference"></strong></div></div>
+
+          <div class="atlas-reader-bottom"><button type="button" id="atlas-prev-case" class="text-action"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg> Previous case</button><span id="atlas-reader-position"></span><button type="button" id="atlas-next-case" class="text-action">Next case <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button></div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="closing section-shell"><img class="closing-logo" src="assets/logos/space-x-symbol-light.svg" alt="Space-X evidence-weave logo" width="160" height="160" loading="lazy"><p class="eyebrow">FROM SEEING TO SOLVING</p><h2>Every answer has a chain.<br><span>Make every link count.</span></h2><p>Space-X: Self-Evolving Spatial Agents Weaving Clues into Evidence Chains</p><a class="button primary" href="#evidence-lab">Explore the evidence <svg class="icon"><use href="#i-arrow"></use></svg></a></section>
+  </main>
+  <footer class="section-shell"><a class="brand" href="#top" aria-label="Space-X home"><img class="footer-wordmark" src="assets/logos/space-x-wordmark-light.svg" alt="Space-X" width="534" height="160" loading="lazy"></a><span>Space-X · Self-evolving spatial intelligence</span><a href="#results">Explore the gains <svg class="icon"><use href="#i-diagonal"></use></svg></a></footer>
+  <dialog id="figure-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><h2 id="dialog-title">Execution architecture</h2><button type="button" id="close-dialog" aria-label="Close expanded figure"><svg class="icon"><use href="#i-close"></use></svg></button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div><p id="dialog-caption"></p></dialog>
+  <dialog id="source-dialog" aria-labelledby="source-dialog-title"><div class="dialog-header"><h2 id="source-dialog-title">Source inspector</h2><button type="button" id="close-source-dialog" aria-label="Close source inspector"><svg class="icon"><use href="#i-close"></use></svg></button></div><div class="source-dialog-image"><img id="source-dialog-image" alt=""></div><p id="source-dialog-caption"></p><div class="source-dialog-controls"><button type="button" id="source-dialog-prev">Previous source</button><span id="source-dialog-count"></span><button type="button" id="source-dialog-next">Next source</button></div></dialog>
+  <div class="atlas-toast" id="atlas-toast" role="status" hidden></div>
+  <noscript><div class="noscript-note">Enable JavaScript to switch evidence layers, cases, memories, and figures. The method overview and result summaries remain readable above.</div></noscript>
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* The film sits between the self-evolution loop and the interactive evidence lab. */
+.research-film {
+  --film-ink: #173c53;
+  --film-muted: #416274;
+  --film-teal: #066b73;
+  --film-line: #9bb8c9;
+  background: #e6eef5;
+  border-bottom: 1.5px solid var(--film-line);
+  scroll-margin-top: 90px;
+}
+.research-film .film-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 36px; margin-bottom: 34px; }
+.research-film .film-heading .eyebrow { color: var(--film-teal); margin-bottom: 15px; }
+.research-film h2 { color: var(--film-ink); font-size: clamp(31px,3vw,43px); line-height: 1.15; }
+.research-film h2 > span { color: var(--film-teal); }
+.research-film .film-intro { max-width: 385px; }
+.research-film .film-intro p { color: var(--film-muted); font-size: 14px; line-height: 1.8; }
+.research-film .film-format { display: flex; align-items: center; gap: 12px; margin-top: 18px; color: var(--film-teal); font-family: var(--display); font-size: 12px; font-weight: 600; letter-spacing: .055em; }
+.research-film .film-format .icon { width: 15px; height: 15px; }
+.research-film .film-layout { display: grid; grid-template-columns: minmax(0,1fr) 260px; align-items: start; gap: 22px; }
+.research-film .film-screen { overflow: hidden; min-width: 0; background: #f4f8fb; border: 2px solid #8eafc1; border-radius: 12px; box-shadow: 0 18px 38px #31536e14; }
+.research-film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #e3edf4; }
+.research-film video:focus-visible { outline: 3px solid var(--film-teal); outline-offset: -3px; }
+.research-film .film-status { display: flex; align-items: center; gap: 13px; min-height: 52px; padding: 13px 17px; border-top: 1px solid #b1c8d5; }
+.research-film .film-now { font-size: 10px; font-weight: 800; letter-spacing: .09em; color: var(--film-teal); white-space: nowrap; }
+.research-film .film-status strong { color: var(--film-ink); font-size: 12px; line-height: 1.5; }
+.research-film #play-time { margin-left: auto; font-size: 11px; color: var(--film-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.research-film .film-error { padding: 15px; font-size: 13px; }
+.research-film .film-error a { text-decoration: underline; }
+.research-film .film-rail { border-top: 2px solid var(--film-teal); }
+.research-film .film-rail-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 0 12px; color: var(--film-muted); font-family: var(--display); font-size: 10px; font-weight: 600; letter-spacing: .065em; }
+.research-film .film-chapters { display: grid; gap: 3px; max-height: 550px; overflow-y: auto; scrollbar-color: #86a7ba #dbe7f0; scrollbar-width: thin; padding-right: 4px; }
+.research-film .film-chapter { display: flex; align-items: center; gap: 10px; min-height: 43px; padding: 7px 9px; border: 1px solid transparent; border-radius: 4px; background: transparent; text-align: left; transition: background .15s,border-color .15s; }
+.research-film .film-chapter:hover { background: #d9e9f0; }
+.research-film .film-chapter[aria-current="true"] { background: #d1e6eb; border-color: #7aabb4; }
+.research-film .film-chapter-number { font: 500 16px var(--display); color: #3b6578; min-width: 21px; }
+.research-film .film-chapter-copy { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 9px; flex: 1; }
+.research-film .film-chapter-name { color: var(--film-ink); font-size: 11px; line-height: 1.35; font-weight: 700; }
+.research-film .film-chapter-time { color: var(--film-muted); font-size: 10px; font-variant-numeric: tabular-nums; }
+.research-film .film-bottom { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 22px; }
+.research-film .film-bottom > p { display: flex; align-items: center; gap: 10px; color: var(--film-muted); font-size: 12px; line-height: 1.7; }
+.research-film .film-bottom > p .icon { width: 19px; height: 19px; color: var(--film-teal); }
+.research-film .film-actions { display: flex; gap: 24px; flex-shrink: 0; }
+.research-film .film-actions .text-action { font-size: 12px; color: var(--film-ink); min-height: 44px; }
+.research-film .film-actions .text-action:hover { color: var(--film-teal); }
+@media (max-width: 1120px) {
+  .research-film .film-layout { grid-template-columns: minmax(0,1fr) 220px; gap: 16px; }
+  .research-film .film-chapters { max-height: 440px; }
+  .research-film .film-chapter { gap: 7px; }
+  .research-film .film-chapter-copy { gap: 6px; }
+  .research-film .film-now { display: none; }
+  .research-film .film-intro p { font-size: 13px; }
+}
+@media (max-width: 900px) {
+  .research-film .film-layout { grid-template-columns: 1fr; gap: 23px; }
+  .research-film .film-chapters { grid-template-columns: repeat(3,minmax(0,1fr)); max-height: none; overflow: visible; padding-right: 0; gap: 6px; }
+  .research-film .film-chapter { border-color: #b6cbd7; min-height: 57px; }
+  .research-film .film-chapter-copy { grid-template-columns: 1fr; gap: 4px; }
+  .research-film .film-intro { max-width: 310px; }
+  .research-film .film-bottom { align-items: flex-start; }
+  .research-film .film-bottom > p { max-width: 440px; }
+}
+@media (max-width: 700px) {
+  .research-film .film-heading { display: block; text-align: center; margin-bottom: 26px; }
+  .research-film .film-heading .eyebrow { justify-content: center; }
+  .research-film h2 { font-size: 33px; }
+  .research-film .film-intro { max-width: 400px; margin: 18px auto 0; }
+  .research-film .film-format { justify-content: center; margin-top: 14px; font-size: 11px; }
+  .research-film .film-screen { border-radius: 8px; }
+  .research-film .film-status { padding: 11px 12px; min-height: 49px; gap: 10px; }
+  .research-film .film-status strong { font-size: 11px; }
+  .research-film #play-time { font-size: 10px; }
+  .research-film .film-chapters { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .research-film .film-chapter { min-height: 64px; padding: 9px 8px; }
+  .research-film .film-bottom { flex-direction: column; gap: 13px; align-items: center; }
+  .research-film .film-bottom > p { justify-content: center; text-align: center; font-size: 11px; }
+  .research-film .film-actions { gap: 29px; }
+}
+@media (prefers-reduced-motion: reduce) { .research-film .film-chapter { transition: none; } }

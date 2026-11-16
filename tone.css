@@ -1,0 +1,125 @@
+/* Blue-gray tuning: more structure and technical contrast, still a light theme.
+   Loaded last so this small visual adjustment stays separate from page layout. */
+:root {
+  --bg: #e1eaf2;
+  --bg-deep: #d7e3ed;
+  --panel: #f3f7fa;
+  --panel-light: #e3edf3;
+  --line: #a5becd;
+  --muted: #476272;
+  --edge: #90adbf;
+  --edge-soft: #b1c6d3;
+  --edge-strong: #6c95aa;
+}
+body { background: var(--bg); }
+.site-header {
+  background: #eaf1f7f2;
+  border-bottom: 1.5px solid #a3bccd;
+  box-shadow: 0 3px 18px #30587510;
+}
+.hero:before {
+  background-image: linear-gradient(#7899b021 1px, transparent 1px),
+                    linear-gradient(90deg, #7899b021 1px, transparent 1px);
+}
+.hero-bottom { border-bottom-width: 1.5px; }
+.evolution { background: #d7e3ee; border-color: #a3bccd; }
+.memory-section { background: #dce9ef; border-color: #a1bdc9; }
+.architecture { background: #e8eff5; }
+.case-atlas { background: #d7e3ed; border-color: #a3bccd; }
+.evolution, .memory-section, .case-atlas { border-block-width: 1.5px; }
+
+/* Keep reading surfaces lighter than the page, without large pure-white blocks. */
+.evidence-observatory {
+  background: linear-gradient(145deg, #f3f8fb, #e7f0f6);
+  border: 1.5px solid #739daf;
+  box-shadow: 0 16px 44px #315b761c, 0 2px 6px #264c660a;
+}
+.evidence-observatory:before { opacity: .5; }
+.agent-card, .case-workspace, .memory-console, .result-card, .atlas-reader {
+  background: #f3f7fa;
+  border-width: 1.5px;
+  border-color: var(--edge);
+  box-shadow: 0 7px 25px #31536e10;
+}
+.agent-card.control { background: #efeff7; border-color: #afa1c5; }
+.agent-card.execution { border-color: #83aeb8; }
+.agent-steps { border-top: 1.5px solid #b4cbd6; }
+.problem-visual { background: #dce8f0; border: 1.5px solid #a8c0cf; }
+.proposal { background: #eff4f8; border: 1.5px solid #a5bdcc; }
+.thesis { background: #dcebef; border: 1.5px solid #a3c3cc; }
+.layer-control, .case-tabs, .memory-selector {
+  background: #d8e6ee;
+  border-color: #a2bece;
+  border-width: 1.5px;
+}
+.source-connectors b { background: #ebf3f8; }
+.cloud-window { background: #dceaf2; border: 1.5px solid #9bbaca; }
+.case-visual-detail, .memory-record, .atlas-evidence-ledger, .instrument {
+  background: #e5eef4;
+  border: 1.5px solid #abc4d2;
+}
+.memory-record>.micro-label { color: #486272; }
+.case-outcome { background: #deeaf2; border-top: 1.5px solid #abc5d3; }
+.case-image-grid img, .source-pair img, .atlas-source-main {
+  border-width: 1.5px;
+  border-color: #96b4c6;
+}
+.paper-figure { border: 1.5px solid #9eb8c9; }
+.edit-stack>span { border-width: 1.5px; border-color: #c3b6d9; }
+.evidence-tokens span { border-width: 1.5px; border-color: #9dbfcc; }
+
+/* Stronger linework is limited to meaningful structure and evidence links. */
+.icon { stroke-width: 1.95; }
+.word-answer svg { stroke-width: 2.4; opacity: .7; }
+.source-connectors:before, .source-connectors:after { border-width: 1.5px; }
+.source-connectors:before { border-color: #4f979c; }
+.source-connectors:after { border-color: #8e78b1; }
+.top-path, .top-path:before, .top-path:after { border-width: 1.5px; border-color: #638f9f; }
+.bottom-path, .bottom-path:before, .bottom-path:after { border-width: 1.5px; border-color: #9480b3; }
+.orbit-ring { border: 1.5px dashed #8ea9ba; }
+.target-outline { border-width: 2px; }
+#cloud-grid path { stroke: #a4c1d0; stroke-width: .85; }
+#cloud-measure line { stroke-width: 2; }
+#metric-cloud>path { stroke: #668a9e; stroke-width: 1.5; }
+#point-cloud-a circle, #point-cloud-b circle { opacity: .85; }
+.memory-flow i { height: 1.5px; background: #8aaebb; }
+.nav-cta, .tool-ribbon>span, .expand-chip, .atlas-small-button {
+  border-width: 1.5px;
+  border-color: #93b3c6;
+}
+.nav-cta { background: #eef5f9; }
+.architecture .tool-ribbon>span { background: #e2edf4; border-color: #a1bdce; }
+.figure-tabs button[aria-pressed=true] { border-width: 1.5px; border-color: #7ba8b7; }
+
+/* The extended case atlas uses the same stronger edge hierarchy. */
+.atlas-card { background: #f1f6fa; border: 1.5px solid #a4bece; }
+.atlas-card[aria-pressed=true] {
+  border-color: var(--theme);
+  box-shadow: 0 0 0 .5px var(--theme), 0 5px 18px #21496412;
+}
+.atlas-search { background: #edf4f9; border: 1.5px solid #95b4c8; }
+.atlas-search input::placeholder { color: #536e7e; }
+.atlas-filters button { background: #eaf2f7; border: 1.5px solid #a4bece; }
+.atlas-filters button[aria-pressed=true] { background: #f5f9fb; border-color: var(--theme); }
+.filter-count { background: #d7e5ee; }
+.atlas-theme { border-top: 1.5px solid #a4bdcd; }
+.reader-modes button { background: #e6eff5; border-width: 1.5px; border-color: #b0c6d3; }
+.reader-modes button[aria-pressed=true], .atlas-chain button[aria-pressed=true] { border-color: var(--theme); }
+.atlas-chain button { background: #e8f0f6; border: 1.5px solid #aac3d3; }
+.atlas-chain button:not(:last-child):after { background: #f3f7fa; color: #547c92; font-weight: 600; }
+.atlas-thumb { background: #edf4f8; border: 1.5px solid #a9c2d0; }
+.atlas-thumb[aria-pressed=true] { border-color: var(--theme); box-shadow: none; }
+.compare-arm, .compare-change, .held-fixed, .artifact-card, .study-check { border-width: 1.5px; }
+.compare-arm { border-color: #ceb8aa; }
+.compare-arm.after { border-color: #a6caba; }
+.compare-change, .held-fixed, .study-check { border-color: #abc3d2; }
+.atlas-conclusion { border-block-width: 1.5px; }
+.atlas-provenance { border-bottom: 1.5px solid #bacdd9; }
+.atlas-provenance p, .atlas-footnote { color: #456576; }
+.atlas-reader-bottom>span { color: #4d6979; }
+
+@media(max-width:700px) {
+  .site-header nav { background: #eaf2f8; border-color: #a3bccd; }
+  /* Preserve the existing stacked mobile loop rather than boxing its labels. */
+  .loop-path { border: 0; }
+}

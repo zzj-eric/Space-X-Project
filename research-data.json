@@ -1,0 +1,6217 @@
+{
+  "snapshot": "2026-11-15",
+  "vsiSnapshot": "2026-11-14T23:21:06.581412+08:00",
+  "models": [
+    {
+      "id": "gpt-6-sol",
+      "label": "GPT-6-sol"
+    },
+    {
+      "id": "gpt-6-astra",
+      "label": "GPT-6-astra"
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "label": "Gemini-3.8-Flash"
+    },
+    {
+      "id": "gemini-4-argon",
+      "label": "Gemini-4-Argon"
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "viewspatial",
+      "name": "ViewSpatial",
+      "description": "Perspective & orientation",
+      "metric": "Benchmark score"
+    },
+    {
+      "id": "spar",
+      "name": "SPAR",
+      "description": "Geometry & spatial relations",
+      "metric": "Benchmark score"
+    },
+    {
+      "id": "mmsi",
+      "name": "MMSI",
+      "description": "Reasoning across images",
+      "metric": "Benchmark score"
+    },
+    {
+      "id": "vsi",
+      "name": "VSI",
+      "description": "Video spatial reasoning",
+      "metric": "Benchmark score",
+      "badge": "Only 10 initial frames"
+    }
+  ],
+  "subtasks": {
+    "gpt-6-sol": {
+      "viewspatial": [
+        {
+          "id": "camera-relative-direction",
+          "name": "Camera-relative direction",
+          "icon": "target",
+          "mechanism": "Bind the target to the requested camera frame.",
+          "baseline": 59.0525,
+          "spacex": 75.0,
+          "delta": 15.947499999999998,
+          "relativeGain": 27.005630582955842
+        },
+        {
+          "id": "camera-object-orientation",
+          "name": "Object orientation \u00b7 camera view",
+          "icon": "cube",
+          "mechanism": "Connect object axes to the camera coordinate frame.",
+          "baseline": 37.751,
+          "spacex": 93.4608,
+          "delta": 55.70980000000001,
+          "relativeGain": 147.57171995443832
+        },
+        {
+          "id": "person-object-orientation",
+          "name": "Object orientation \u00b7 person view",
+          "icon": "target",
+          "mechanism": "Bind observer position, facing direction and object orientation.",
+          "baseline": 44.4779,
+          "spacex": 93.6747,
+          "delta": 49.1968,
+          "relativeGain": 110.60953866976635
+        },
+        {
+          "id": "person-relative-direction",
+          "name": "Person-relative direction",
+          "icon": "target",
+          "mechanism": "Use a jointly anchored observer and target relation.",
+          "baseline": 76.2471,
+          "spacex": 88.2423,
+          "delta": 11.995199999999997,
+          "relativeGain": 15.732008168179506
+        },
+        {
+          "id": "scene-simulation",
+          "name": "Scene simulation",
+          "icon": "memory",
+          "mechanism": "Carry observations and unresolved scene relations into later calls.",
+          "baseline": 47.9638,
+          "spacex": 57.0909,
+          "delta": 9.127099999999999,
+          "relativeGain": 19.029142811870617
+        }
+      ],
+      "spar": [
+        {
+          "id": "low",
+          "name": "Low \u00b7 spatial perception",
+          "icon": "eye",
+          "mechanism": "Interpret depth, distances and metric quantities consistently.",
+          "baseline": 49.49,
+          "spacex": 57.81,
+          "delta": 8.32,
+          "relativeGain": 16.811477066073955
+        },
+        {
+          "id": "middle",
+          "name": "Middle \u00b7 matching & viewpoints",
+          "icon": "link",
+          "mechanism": "Connect matching views with requested reference frames.",
+          "baseline": 45.9,
+          "spacex": 78.58,
+          "delta": 32.68,
+          "relativeGain": 71.19825708061003
+        },
+        {
+          "id": "high",
+          "name": "High \u00b7 spatial imagination",
+          "icon": "cube",
+          "mechanism": "Compose spatial relations into complete geometric reasoning.",
+          "baseline": 67.71,
+          "spacex": 78.84,
+          "delta": 11.13000000000001,
+          "relativeGain": 16.437749224634487
+        }
+      ],
+      "mmsi": [
+        {
+          "id": "camera-camera",
+          "name": "Camera-to-camera relations",
+          "icon": "cube",
+          "mechanism": "Link cameras through shared source geometry.",
+          "baseline": 62.3656,
+          "spacex": 78.4946,
+          "delta": 16.129000000000005,
+          "relativeGain": 25.86201367420502
+        },
+        {
+          "id": "object-object",
+          "name": "Object-to-object relations",
+          "icon": "link",
+          "mechanism": "Associate object identities and their spatial relation.",
+          "baseline": 39.3617,
+          "spacex": 55.3191,
+          "delta": 15.9574,
+          "relativeGain": 40.54042381299588
+        },
+        {
+          "id": "region-region",
+          "name": "Region-to-region relations",
+          "icon": "target",
+          "mechanism": "Bind region evidence to the same source and frame.",
+          "baseline": 53.0864,
+          "spacex": 62.963,
+          "delta": 9.876600000000003,
+          "relativeGain": 18.604765062238172
+        },
+        {
+          "id": "camera-object",
+          "name": "Camera-to-object relations",
+          "icon": "cube",
+          "mechanism": "Ground the target and transform it into the requested camera.",
+          "baseline": 38.3721,
+          "spacex": 80.2326,
+          "delta": 41.8605,
+          "relativeGain": 109.09098016527632
+        },
+        {
+          "id": "object-region",
+          "name": "Object-to-region relations",
+          "icon": "target",
+          "mechanism": "Keep object and region references attached to their sources.",
+          "baseline": 44.7059,
+          "spacex": 52.9412,
+          "delta": 8.235300000000002,
+          "relativeGain": 18.42105851800322
+        },
+        {
+          "id": "camera-region",
+          "name": "Camera-to-region relations",
+          "icon": "cube",
+          "mechanism": "Express source-bound regions in the requested camera frame.",
+          "baseline": 67.4699,
+          "spacex": 74.6988,
+          "delta": 7.22890000000001,
+          "relativeGain": 10.71425924745703
+        },
+        {
+          "id": "measurement",
+          "name": "Metric attributes",
+          "icon": "cube",
+          "mechanism": "Preserve measurement endpoints, units and scale.",
+          "baseline": 68.75,
+          "spacex": 69.8413,
+          "delta": 1.091300000000004,
+          "relativeGain": 1.5873454545454604
+        },
+        {
+          "id": "appearance",
+          "name": "Appearance attributes",
+          "icon": "eye",
+          "mechanism": "Inspect the local visual evidence for the queried attribute.",
+          "baseline": 50.0,
+          "spacex": 57.5758,
+          "delta": 7.575800000000001,
+          "relativeGain": 15.151600000000002
+        },
+        {
+          "id": "camera-motion",
+          "name": "Camera motion",
+          "icon": "clock",
+          "mechanism": "Associate camera observations across temporal changes.",
+          "baseline": 72.973,
+          "spacex": 78.3784,
+          "delta": 5.4054,
+          "relativeGain": 7.407397256519535
+        },
+        {
+          "id": "object-motion",
+          "name": "Object motion",
+          "icon": "clock",
+          "mechanism": "Track queried object identity and motion across views.",
+          "baseline": 44.7368,
+          "spacex": 59.2105,
+          "delta": 14.473700000000001,
+          "relativeGain": 32.3530069204771
+        },
+        {
+          "id": "multistep",
+          "name": "Multistep reasoning",
+          "icon": "memory",
+          "mechanism": "Relay observations and unresolved premises between reasoning steps.",
+          "baseline": 55.0505,
+          "spacex": 63.4518,
+          "delta": 8.401299999999999,
+          "relativeGain": 15.261078464319125
+        }
+      ],
+      "vsi": [
+        {
+          "id": "counting",
+          "name": "Object counting",
+          "icon": "target",
+          "mechanism": "Filter candidates and associate repeated sightings with physical instances.",
+          "baseline": 1.2920353982300885,
+          "spacex": 52.12389380530974,
+          "delta": 50.83185840707965,
+          "relativeGain": 3934.2465753424663
+        },
+        {
+          "id": "absolute-distance",
+          "name": "Absolute distance",
+          "icon": "cube",
+          "mechanism": "Attach geometry, scale and measurement endpoints to source regions.",
+          "baseline": 43.033573141486805,
+          "spacex": 63.786407766990294,
+          "delta": 20.75283462550349,
+          "relativeGain": 48.224753629618036
+        },
+        {
+          "id": "object-size",
+          "name": "Object size",
+          "icon": "cube",
+          "mechanism": "Connect object extent to source geometry and metric scale.",
+          "baseline": 69.62224554039874,
+          "spacex": 70.94438614900315,
+          "delta": 1.322140608604414,
+          "relativeGain": 1.8990203466465814
+        },
+        {
+          "id": "room-size",
+          "name": "Room size",
+          "icon": "cube",
+          "mechanism": "Aggregate spatial coverage into a consistent room estimate.",
+          "baseline": 44.44444444444445,
+          "spacex": 59.583333333333336,
+          "delta": 15.138888888888886,
+          "relativeGain": 34.06249999999999
+        },
+        {
+          "id": "relative-distance",
+          "name": "Relative distance",
+          "icon": "link",
+          "mechanism": "Compare targets using source-bound geometric evidence.",
+          "baseline": 54.647887323943664,
+          "spacex": 60.70422535211267,
+          "delta": 6.056338028169009,
+          "relativeGain": 11.082474226804113
+        },
+        {
+          "id": "relative-direction",
+          "name": "Relative direction",
+          "icon": "target",
+          "mechanism": "Preserve target, observer position and facing direction across views.",
+          "baseline": 57.39830155206788,
+          "spacex": 77.85581053475775,
+          "delta": 20.457508982689873,
+          "relativeGain": 35.641314166991855
+        },
+        {
+          "id": "routes",
+          "name": "Route planning",
+          "icon": "link",
+          "mechanism": "Connect observations and spatial relations along the requested route.",
+          "baseline": 57.73195876288659,
+          "spacex": 66.49484536082474,
+          "delta": 8.762886597938149,
+          "relativeGain": 15.178571428571438
+        },
+        {
+          "id": "appearance-order",
+          "name": "Appearance order",
+          "icon": "clock",
+          "mechanism": "Link timestamped sightings and restore decisive source frames.",
+          "baseline": 59.06148867313916,
+          "spacex": 71.19741100323624,
+          "delta": 12.135922330097081,
+          "relativeGain": 20.54794520547944
+        }
+      ]
+    },
+    "gpt-6-astra": {
+      "viewspatial": [
+        {
+          "id": "camera-relative-direction",
+          "name": "Camera-relative direction",
+          "icon": "target",
+          "mechanism": "Bind the target to the requested camera frame.",
+          "baseline": 62.9379,
+          "spacex": 79.6011,
+          "delta": 16.663200000000003,
+          "relativeGain": 26.475621207571276
+        },
+        {
+          "id": "camera-object-orientation",
+          "name": "Object orientation \u00b7 camera view",
+          "icon": "cube",
+          "mechanism": "Connect object axes to the camera coordinate frame.",
+          "baseline": 37.8514,
+          "spacex": 95.9839,
+          "delta": 58.13250000000001,
+          "relativeGain": 153.58084509423696
+        },
+        {
+          "id": "person-object-orientation",
+          "name": "Object orientation \u00b7 person view",
+          "icon": "target",
+          "mechanism": "Bind observer position, facing direction and object orientation.",
+          "baseline": 44.8795,
+          "spacex": 96.6867,
+          "delta": 51.8072,
+          "relativeGain": 115.43622366559343
+        },
+        {
+          "id": "person-relative-direction",
+          "name": "Person-relative direction",
+          "icon": "target",
+          "mechanism": "Use a jointly anchored observer and target relation.",
+          "baseline": 89.0736,
+          "spacex": 90.4988,
+          "delta": 1.4252000000000038,
+          "relativeGain": 1.6000251477429943
+        },
+        {
+          "id": "scene-simulation",
+          "name": "Scene simulation",
+          "icon": "memory",
+          "mechanism": "Carry observations and unresolved scene relations into later calls.",
+          "baseline": 66.1538,
+          "spacex": 70.2899,
+          "delta": 4.136099999999999,
+          "relativeGain": 6.25224854808038
+        }
+      ],
+      "spar": [
+        {
+          "id": "low",
+          "name": "Low \u00b7 spatial perception",
+          "icon": "eye",
+          "mechanism": "Interpret depth, distances and metric quantities consistently.",
+          "baseline": 60.44,
+          "spacex": 60.05,
+          "delta": -0.39000000000000057,
+          "relativeGain": -0.6452680344142961
+        },
+        {
+          "id": "middle",
+          "name": "Middle \u00b7 matching & viewpoints",
+          "icon": "link",
+          "mechanism": "Connect matching views with requested reference frames.",
+          "baseline": 62.87,
+          "spacex": 83.81,
+          "delta": 20.940000000000005,
+          "relativeGain": 33.306823604262775
+        },
+        {
+          "id": "high",
+          "name": "High \u00b7 spatial imagination",
+          "icon": "cube",
+          "mechanism": "Compose spatial relations into complete geometric reasoning.",
+          "baseline": 78.57,
+          "spacex": 82.73,
+          "delta": 4.160000000000011,
+          "relativeGain": 5.294641720758573
+        }
+      ],
+      "mmsi": [
+        {
+          "id": "camera-camera",
+          "name": "Camera-to-camera relations",
+          "icon": "cube",
+          "mechanism": "Link cameras through shared source geometry.",
+          "baseline": 73.1183,
+          "spacex": 80.6452,
+          "delta": 7.526899999999998,
+          "relativeGain": 10.294139770755061
+        },
+        {
+          "id": "object-object",
+          "name": "Object-to-object relations",
+          "icon": "link",
+          "mechanism": "Associate object identities and their spatial relation.",
+          "baseline": 69.1489,
+          "spacex": 77.6596,
+          "delta": 8.5107,
+          "relativeGain": 12.307787976381404
+        },
+        {
+          "id": "region-region",
+          "name": "Region-to-region relations",
+          "icon": "target",
+          "mechanism": "Bind region evidence to the same source and frame.",
+          "baseline": 75.3086,
+          "spacex": 77.7778,
+          "delta": 2.4692000000000007,
+          "relativeGain": 3.278775598006072
+        },
+        {
+          "id": "camera-object",
+          "name": "Camera-to-object relations",
+          "icon": "cube",
+          "mechanism": "Ground the target and transform it into the requested camera.",
+          "baseline": 61.6279,
+          "spacex": 87.2093,
+          "delta": 25.581400000000002,
+          "relativeGain": 41.50944620861656
+        },
+        {
+          "id": "object-region",
+          "name": "Object-to-region relations",
+          "icon": "target",
+          "mechanism": "Keep object and region references attached to their sources.",
+          "baseline": 65.8824,
+          "spacex": 67.0588,
+          "delta": 1.176400000000001,
+          "relativeGain": 1.7856058674243818
+        },
+        {
+          "id": "camera-region",
+          "name": "Camera-to-region relations",
+          "icon": "cube",
+          "mechanism": "Express source-bound regions in the requested camera frame.",
+          "baseline": 72.2892,
+          "spacex": 85.5422,
+          "delta": 13.253,
+          "relativeGain": 18.33330566668327
+        },
+        {
+          "id": "measurement",
+          "name": "Metric attributes",
+          "icon": "cube",
+          "mechanism": "Preserve measurement endpoints, units and scale.",
+          "baseline": 73.4375,
+          "spacex": 75.0,
+          "delta": 1.5625,
+          "relativeGain": 2.127659574468085
+        },
+        {
+          "id": "appearance",
+          "name": "Appearance attributes",
+          "icon": "eye",
+          "mechanism": "Inspect the local visual evidence for the queried attribute.",
+          "baseline": 69.697,
+          "spacex": 72.7273,
+          "delta": 3.030299999999997,
+          "relativeGain": 4.347819848773974
+        },
+        {
+          "id": "camera-motion",
+          "name": "Camera motion",
+          "icon": "clock",
+          "mechanism": "Associate camera observations across temporal changes.",
+          "baseline": 83.7838,
+          "spacex": 81.0811,
+          "delta": -2.702699999999993,
+          "relativeGain": -3.2258026014575525
+        },
+        {
+          "id": "object-motion",
+          "name": "Object motion",
+          "icon": "clock",
+          "mechanism": "Track queried object identity and motion across views.",
+          "baseline": 64.4737,
+          "spacex": 64.4737,
+          "delta": 0.0,
+          "relativeGain": 0.0
+        },
+        {
+          "id": "multistep",
+          "name": "Multistep reasoning",
+          "icon": "memory",
+          "mechanism": "Relay observations and unresolved premises between reasoning steps.",
+          "baseline": 75.2525,
+          "spacex": 79.798,
+          "delta": 4.545500000000004,
+          "relativeGain": 6.040330886017081
+        }
+      ],
+      "vsi": [
+        {
+          "id": "counting",
+          "name": "Object counting",
+          "icon": "target",
+          "mechanism": "Filter candidates and associate repeated sightings with physical instances.",
+          "baseline": 25.026548672566374,
+          "spacex": 58.62254025044723,
+          "delta": 33.59599157788085,
+          "relativeGain": 134.24140906296097
+        },
+        {
+          "id": "absolute-distance",
+          "name": "Absolute distance",
+          "icon": "cube",
+          "mechanism": "Attach geometry, scale and measurement endpoints to source regions.",
+          "baseline": 48.85265700483092,
+          "spacex": 68.32313341493268,
+          "delta": 19.470476410101767,
+          "relativeGain": 39.855511662705226
+        },
+        {
+          "id": "object-size",
+          "name": "Object size",
+          "icon": "cube",
+          "mechanism": "Connect object extent to source geometry and metric scale.",
+          "baseline": 73.36152219873149,
+          "spacex": 74.6779303062302,
+          "delta": 1.3164081074987024,
+          "relativeGain": 1.794412204169701
+        },
+        {
+          "id": "room-size",
+          "name": "Room size",
+          "icon": "cube",
+          "mechanism": "Aggregate spatial coverage into a consistent room estimate.",
+          "baseline": 54.17543859649123,
+          "spacex": 65.65972222222223,
+          "delta": 11.484283625730995,
+          "relativeGain": 21.19832145941278
+        },
+        {
+          "id": "relative-distance",
+          "name": "Relative distance",
+          "icon": "link",
+          "mechanism": "Compare targets using source-bound geometric evidence.",
+          "baseline": 64.50704225352113,
+          "spacex": 65.95744680851064,
+          "delta": 1.450404554989504,
+          "relativeGain": 2.2484437424509776
+        },
+        {
+          "id": "relative-direction",
+          "name": "Relative direction",
+          "icon": "target",
+          "mechanism": "Preserve target, observer position and facing direction across views.",
+          "baseline": 74.92024024275011,
+          "spacex": 85.11794552065227,
+          "delta": 10.197705277902159,
+          "relativeGain": 13.611415613271438
+        },
+        {
+          "id": "routes",
+          "name": "Route planning",
+          "icon": "link",
+          "mechanism": "Connect observations and spatial relations along the requested route.",
+          "baseline": 83.50515463917526,
+          "spacex": 89.70588235294117,
+          "delta": 6.2007277137659145,
+          "relativeGain": 7.425562817719674
+        },
+        {
+          "id": "appearance-order",
+          "name": "Appearance order",
+          "icon": "clock",
+          "mechanism": "Link timestamped sightings and restore decisive source frames.",
+          "baseline": 64.27406199021208,
+          "spacex": 67.87479406919276,
+          "delta": 3.600732078980684,
+          "relativeGain": 5.602154224403957
+        }
+      ]
+    },
+    "gemini-3.8-flash": {
+      "viewspatial": [
+        {
+          "id": "camera-relative-direction",
+          "name": "Camera-relative direction",
+          "icon": "target",
+          "mechanism": "Bind the target to the requested camera frame.",
+          "baseline": 63.5234,
+          "spacex": 85.4563,
+          "delta": 21.932899999999997,
+          "relativeGain": 34.527276562652496
+        },
+        {
+          "id": "camera-object-orientation",
+          "name": "Object orientation \u00b7 camera view",
+          "icon": "cube",
+          "mechanism": "Connect object axes to the camera coordinate frame.",
+          "baseline": 41.9679,
+          "spacex": 97.9499,
+          "delta": 55.982,
+          "relativeGain": 133.3924261161507
+        },
+        {
+          "id": "person-object-orientation",
+          "name": "Object orientation \u00b7 person view",
+          "icon": "target",
+          "mechanism": "Bind observer position, facing direction and object orientation.",
+          "baseline": 44.7791,
+          "spacex": 81.1688,
+          "delta": 36.389700000000005,
+          "relativeGain": 81.26492046512772
+        },
+        {
+          "id": "person-relative-direction",
+          "name": "Person-relative direction",
+          "icon": "target",
+          "mechanism": "Use a jointly anchored observer and target relation.",
+          "baseline": 85.1544,
+          "spacex": 90.3743,
+          "delta": 5.21990000000001,
+          "relativeGain": 6.129923996880972
+        },
+        {
+          "id": "scene-simulation",
+          "name": "Scene simulation",
+          "icon": "memory",
+          "mechanism": "Carry observations and unresolved scene relations into later calls.",
+          "baseline": 53.6652,
+          "spacex": 67.3077,
+          "delta": 13.642499999999998,
+          "relativeGain": 25.421502202544666
+        }
+      ],
+      "spar": [
+        {
+          "id": "low",
+          "name": "Low \u00b7 spatial perception",
+          "icon": "eye",
+          "mechanism": "Interpret depth, distances and metric quantities consistently.",
+          "baseline": 58.67,
+          "spacex": 62.49,
+          "delta": 3.8200000000000003,
+          "relativeGain": 6.51099369354014
+        },
+        {
+          "id": "middle",
+          "name": "Middle \u00b7 matching & viewpoints",
+          "icon": "link",
+          "mechanism": "Connect matching views with requested reference frames.",
+          "baseline": 43.87,
+          "spacex": 77.63,
+          "delta": 33.76,
+          "relativeGain": 76.95463870526555
+        },
+        {
+          "id": "high",
+          "name": "High \u00b7 spatial imagination",
+          "icon": "cube",
+          "mechanism": "Compose spatial relations into complete geometric reasoning.",
+          "baseline": 73.23,
+          "spacex": 87.01,
+          "delta": 13.780000000000001,
+          "relativeGain": 18.817424552778917
+        }
+      ],
+      "mmsi": [
+        {
+          "id": "camera-camera",
+          "name": "Camera-to-camera relations",
+          "icon": "cube",
+          "mechanism": "Link cameras through shared source geometry.",
+          "baseline": 61.2903,
+          "spacex": 83.3333,
+          "delta": 22.042999999999992,
+          "relativeGain": 35.96490798707135
+        },
+        {
+          "id": "object-object",
+          "name": "Object-to-object relations",
+          "icon": "link",
+          "mechanism": "Associate object identities and their spatial relation.",
+          "baseline": 40.8602,
+          "spacex": 60.0,
+          "delta": 19.1398,
+          "relativeGain": 46.84215936290082
+        },
+        {
+          "id": "region-region",
+          "name": "Region-to-region relations",
+          "icon": "target",
+          "mechanism": "Bind region evidence to the same source and frame.",
+          "baseline": 41.9753,
+          "spacex": 66.6667,
+          "delta": 24.69140000000001,
+          "relativeGain": 58.82364152251446
+        },
+        {
+          "id": "camera-object",
+          "name": "Camera-to-object relations",
+          "icon": "cube",
+          "mechanism": "Ground the target and transform it into the requested camera.",
+          "baseline": 43.0233,
+          "spacex": 67.3913,
+          "delta": 24.368000000000002,
+          "relativeGain": 56.63907696527232
+        },
+        {
+          "id": "object-region",
+          "name": "Object-to-region relations",
+          "icon": "target",
+          "mechanism": "Keep object and region references attached to their sources.",
+          "baseline": 58.8235,
+          "spacex": 66.6667,
+          "delta": 7.843200000000003,
+          "relativeGain": 13.33344666672334
+        },
+        {
+          "id": "camera-region",
+          "name": "Camera-to-region relations",
+          "icon": "cube",
+          "mechanism": "Express source-bound regions in the requested camera frame.",
+          "baseline": 54.2169,
+          "spacex": 78.2609,
+          "delta": 24.044000000000004,
+          "relativeGain": 44.34779561354486
+        },
+        {
+          "id": "measurement",
+          "name": "Metric attributes",
+          "icon": "cube",
+          "mechanism": "Preserve measurement endpoints, units and scale.",
+          "baseline": 65.625,
+          "spacex": 55.5556,
+          "delta": -10.069400000000002,
+          "relativeGain": -15.34384761904762
+        },
+        {
+          "id": "appearance",
+          "name": "Appearance attributes",
+          "icon": "eye",
+          "mechanism": "Inspect the local visual evidence for the queried attribute.",
+          "baseline": 51.5152,
+          "spacex": 42.8571,
+          "delta": -8.658099999999997,
+          "relativeGain": -16.80688418175606
+        },
+        {
+          "id": "camera-motion",
+          "name": "Camera motion",
+          "icon": "clock",
+          "mechanism": "Associate camera observations across temporal changes.",
+          "baseline": 75.6757,
+          "spacex": 80.0,
+          "delta": 4.324299999999994,
+          "relativeGain": 5.714251734704791
+        },
+        {
+          "id": "object-motion",
+          "name": "Object motion",
+          "icon": "clock",
+          "mechanism": "Track queried object identity and motion across views.",
+          "baseline": 52.6316,
+          "spacex": 50.0,
+          "delta": -2.631599999999999,
+          "relativeGain": -5.000037999984798
+        },
+        {
+          "id": "multistep",
+          "name": "Multistep reasoning",
+          "icon": "memory",
+          "mechanism": "Relay observations and unresolved premises between reasoning steps.",
+          "baseline": 46.9697,
+          "spacex": 60.4167,
+          "delta": 13.446999999999996,
+          "relativeGain": 28.62909492715515
+        }
+      ],
+      "vsi": [
+        {
+          "id": "counting",
+          "name": "Object counting",
+          "icon": "target",
+          "mechanism": "Filter candidates and associate repeated sightings with physical instances.",
+          "baseline": 45.85840707964602,
+          "spacex": 49.542857142857144,
+          "delta": 3.6844500632111234,
+          "relativeGain": 8.034404807851349
+        },
+        {
+          "id": "absolute-distance",
+          "name": "Absolute distance",
+          "icon": "cube",
+          "mechanism": "Attach geometry, scale and measurement endpoints to source regions.",
+          "baseline": 30.347721822541967,
+          "spacex": 40.0,
+          "delta": 9.652278177458033,
+          "relativeGain": 31.805610430659815
+        },
+        {
+          "id": "object-size",
+          "name": "Object size",
+          "icon": "cube",
+          "mechanism": "Connect object extent to source geometry and metric scale.",
+          "baseline": 73.3473242392445,
+          "spacex": 73.08641975308642,
+          "delta": -0.2609044861580827,
+          "relativeGain": -0.35571098041295107
+        },
+        {
+          "id": "room-size",
+          "name": "Room size",
+          "icon": "cube",
+          "mechanism": "Aggregate spatial coverage into a consistent room estimate.",
+          "baseline": 50.55555555555556,
+          "spacex": 55.26315789473685,
+          "delta": 4.7076023391812925,
+          "relativeGain": 9.31174089068827
+        },
+        {
+          "id": "relative-distance",
+          "name": "Relative distance",
+          "icon": "link",
+          "mechanism": "Compare targets using source-bound geometric evidence.",
+          "baseline": 59.57746478873239,
+          "spacex": 71.42857142857143,
+          "delta": 11.851106639839038,
+          "relativeGain": 19.89192840256671
+        },
+        {
+          "id": "relative-direction",
+          "name": "Relative direction",
+          "icon": "target",
+          "mechanism": "Preserve target, observer position and facing direction across views.",
+          "baseline": 52.72698251019909,
+          "spacex": 67.19298245614034,
+          "delta": 14.465999945941249,
+          "relativeGain": 27.435668147979186
+        },
+        {
+          "id": "routes",
+          "name": "Route planning",
+          "icon": "link",
+          "mechanism": "Connect observations and spatial relations along the requested route.",
+          "baseline": 53.09278350515464,
+          "spacex": 87.5,
+          "delta": 34.40721649484536,
+          "relativeGain": 64.80582524271844
+        },
+        {
+          "id": "appearance-order",
+          "name": "Appearance order",
+          "icon": "clock",
+          "mechanism": "Link timestamped sightings and restore decisive source frames.",
+          "baseline": 59.22330097087378,
+          "spacex": 87.32394366197182,
+          "delta": 28.100642691098045,
+          "relativeGain": 47.44862618332949
+        }
+      ]
+    },
+    "gemini-4-argon": {
+      "viewspatial": [
+        {
+          "id": "camera-relative-direction",
+          "name": "Camera-relative direction",
+          "icon": "target",
+          "mechanism": "Bind the target to the requested camera frame.",
+          "baseline": 62.4365,
+          "spacex": 82.0685,
+          "delta": 19.631999999999998,
+          "relativeGain": 31.443146236576357
+        },
+        {
+          "id": "camera-object-orientation",
+          "name": "Object orientation \u00b7 camera view",
+          "icon": "cube",
+          "mechanism": "Connect object axes to the camera coordinate frame.",
+          "baseline": 36.5462,
+          "spacex": 93.763,
+          "delta": 57.216800000000006,
+          "relativeGain": 156.5601895682725
+        },
+        {
+          "id": "person-object-orientation",
+          "name": "Object orientation \u00b7 person view",
+          "icon": "target",
+          "mechanism": "Bind observer position, facing direction and object orientation.",
+          "baseline": 43.4739,
+          "spacex": 97.0864,
+          "delta": 53.6125,
+          "relativeGain": 123.32111910824655
+        },
+        {
+          "id": "person-relative-direction",
+          "name": "Person-relative direction",
+          "icon": "target",
+          "mechanism": "Use a jointly anchored observer and target relation.",
+          "baseline": 92.0428,
+          "spacex": 92.9801,
+          "delta": 0.9372999999999934,
+          "relativeGain": 1.018330602719597
+        },
+        {
+          "id": "scene-simulation",
+          "name": "Scene simulation",
+          "icon": "memory",
+          "mechanism": "Carry observations and unresolved scene relations into later calls.",
+          "baseline": 70.3327,
+          "spacex": 75.2169,
+          "delta": 4.884199999999993,
+          "relativeGain": 6.9444227222899055
+        }
+      ],
+      "spar": [
+        {
+          "id": "low",
+          "name": "Low \u00b7 spatial perception",
+          "icon": "eye",
+          "mechanism": "Interpret depth, distances and metric quantities consistently.",
+          "baseline": 62.14,
+          "spacex": 65.73,
+          "delta": 3.5900000000000034,
+          "relativeGain": 5.777277116189255
+        },
+        {
+          "id": "middle",
+          "name": "Middle \u00b7 matching & viewpoints",
+          "icon": "link",
+          "mechanism": "Connect matching views with requested reference frames.",
+          "baseline": 59.6,
+          "spacex": 82.92,
+          "delta": 23.32,
+          "relativeGain": 39.12751677852349
+        },
+        {
+          "id": "high",
+          "name": "High \u00b7 spatial imagination",
+          "icon": "cube",
+          "mechanism": "Compose spatial relations into complete geometric reasoning.",
+          "baseline": 76.47,
+          "spacex": 83.82,
+          "delta": 7.349999999999994,
+          "relativeGain": 9.611612397018432
+        }
+      ],
+      "mmsi": [
+        {
+          "id": "camera-camera",
+          "name": "Camera-to-camera relations",
+          "icon": "cube",
+          "mechanism": "Link cameras through shared source geometry.",
+          "baseline": 79.3478,
+          "spacex": 74.2857,
+          "delta": -5.062100000000001,
+          "relativeGain": -6.379634974126567
+        },
+        {
+          "id": "object-object",
+          "name": "Object-to-object relations",
+          "icon": "link",
+          "mechanism": "Associate object identities and their spatial relation.",
+          "baseline": 73.913,
+          "spacex": 73.6111,
+          "delta": -0.3019000000000034,
+          "relativeGain": -0.40845318144305254
+        },
+        {
+          "id": "region-region",
+          "name": "Region-to-region relations",
+          "icon": "target",
+          "mechanism": "Bind region evidence to the same source and frame.",
+          "baseline": 79.0123,
+          "spacex": 81.3559,
+          "delta": 2.3436000000000092,
+          "relativeGain": 2.9661204647884056
+        },
+        {
+          "id": "camera-object",
+          "name": "Camera-to-object relations",
+          "icon": "cube",
+          "mechanism": "Ground the target and transform it into the requested camera.",
+          "baseline": 75.0,
+          "spacex": 85.7143,
+          "delta": 10.714299999999994,
+          "relativeGain": 14.285733333333326
+        },
+        {
+          "id": "object-region",
+          "name": "Object-to-region relations",
+          "icon": "target",
+          "mechanism": "Keep object and region references attached to their sources.",
+          "baseline": 73.494,
+          "spacex": 76.7857,
+          "delta": 3.291700000000006,
+          "relativeGain": 4.478869023321639
+        },
+        {
+          "id": "camera-region",
+          "name": "Camera-to-region relations",
+          "icon": "cube",
+          "mechanism": "Express source-bound regions in the requested camera frame.",
+          "baseline": 80.4878,
+          "spacex": 87.3239,
+          "delta": 6.836100000000002,
+          "relativeGain": 8.493336878384056
+        },
+        {
+          "id": "measurement",
+          "name": "Metric attributes",
+          "icon": "cube",
+          "mechanism": "Preserve measurement endpoints, units and scale.",
+          "baseline": 73.4375,
+          "spacex": 82.6087,
+          "delta": 9.171199999999999,
+          "relativeGain": 12.488442553191488
+        },
+        {
+          "id": "appearance",
+          "name": "Appearance attributes",
+          "icon": "eye",
+          "mechanism": "Inspect the local visual evidence for the queried attribute.",
+          "baseline": 54.5455,
+          "spacex": 54.902,
+          "delta": 0.35650000000000404,
+          "relativeGain": 0.6535827886810169
+        },
+        {
+          "id": "camera-motion",
+          "name": "Camera motion",
+          "icon": "clock",
+          "mechanism": "Associate camera observations across temporal changes.",
+          "baseline": 85.1351,
+          "spacex": 84.4828,
+          "delta": -0.6522999999999968,
+          "relativeGain": -0.7661939670006811
+        },
+        {
+          "id": "object-motion",
+          "name": "Object motion",
+          "icon": "clock",
+          "mechanism": "Track queried object identity and motion across views.",
+          "baseline": 65.7895,
+          "spacex": 73.5294,
+          "delta": 7.739899999999992,
+          "relativeGain": 11.764643294142669
+        },
+        {
+          "id": "multistep",
+          "name": "Multistep reasoning",
+          "icon": "memory",
+          "mechanism": "Relay observations and unresolved premises between reasoning steps.",
+          "baseline": 73.057,
+          "spacex": 80.7453,
+          "delta": 7.688299999999998,
+          "relativeGain": 10.523700672077965
+        }
+      ],
+      "vsi": [
+        {
+          "id": "counting",
+          "name": "Object counting",
+          "icon": "target",
+          "mechanism": "Filter candidates and associate repeated sightings with physical instances.",
+          "baseline": 56.67256637168142,
+          "spacex": 64.47105788423154,
+          "delta": 7.798491512550122,
+          "relativeGain": 13.760611194849526
+        },
+        {
+          "id": "absolute-distance",
+          "name": "Absolute distance",
+          "icon": "cube",
+          "mechanism": "Attach geometry, scale and measurement endpoints to source regions.",
+          "baseline": 50.671462829736214,
+          "spacex": 68.59450726978999,
+          "delta": 17.923044440053772,
+          "relativeGain": 35.37108154994048
+        },
+        {
+          "id": "object-size",
+          "name": "Object size",
+          "icon": "cube",
+          "mechanism": "Connect object extent to source geometry and metric scale.",
+          "baseline": 75.498426023085,
+          "spacex": 83.01470588235294,
+          "delta": 7.516279859267939,
+          "relativeGain": 9.95554510894002
+        },
+        {
+          "id": "room-size",
+          "name": "Room size",
+          "icon": "cube",
+          "mechanism": "Aggregate spatial coverage into a consistent room estimate.",
+          "baseline": 51.84027777777778,
+          "spacex": 57.664974619289346,
+          "delta": 5.824696841511567,
+          "relativeGain": 11.23585191128822
+        },
+        {
+          "id": "relative-distance",
+          "name": "Relative distance",
+          "icon": "link",
+          "mechanism": "Compare targets using source-bound geometric evidence.",
+          "baseline": 66.05633802816901,
+          "spacex": 83.08605341246292,
+          "delta": 17.029715384293908,
+          "relativeGain": 25.780592586031293
+        },
+        {
+          "id": "relative-direction",
+          "name": "Relative direction",
+          "icon": "target",
+          "mechanism": "Preserve target, observer position and facing direction across views.",
+          "baseline": 74.47834448282755,
+          "spacex": 86.41873854490397,
+          "delta": 11.940394062076422,
+          "relativeGain": 16.032034741091103
+        },
+        {
+          "id": "routes",
+          "name": "Route planning",
+          "icon": "link",
+          "mechanism": "Connect observations and spatial relations along the requested route.",
+          "baseline": 69.0721649484536,
+          "spacex": 80.0,
+          "delta": 10.927835051546396,
+          "relativeGain": 15.820895522388065
+        },
+        {
+          "id": "appearance-order",
+          "name": "Appearance order",
+          "icon": "clock",
+          "mechanism": "Link timestamped sightings and restore decisive source frames.",
+          "baseline": 62.23662884927067,
+          "spacex": 79.92831541218638,
+          "delta": 17.691686562915706,
+          "relativeGain": 28.4264859617682
+        }
+      ]
+    }
+  },
+  "highlightThreshold": 10,
+  "highlightThresholdType": "relativeGain",
+  "highlightLimit": 6,
+  "pairs": {
+    "gpt-6-sol": {
+      "viewspatial": {
+        "baseline": {
+          "score": 53.1863
+        },
+        "spacex": {
+          "score": 79.986
+        },
+        "delta": 26.7997,
+        "relativeGain": 50.38835188761015
+      },
+      "spar": {
+        "baseline": {
+          "score": 57.1522
+        },
+        "spacex": {
+          "score": 70.3861
+        },
+        "delta": 13.233899999999998,
+        "relativeGain": 23.155539069362156
+      },
+      "mmsi": {
+        "baseline": {
+          "score": 53.9
+        },
+        "spacex": {
+          "score": 66.3327
+        },
+        "delta": 12.432700000000004,
+        "relativeGain": 23.066233766233772
+      },
+      "vsi": {
+        "baseline": {
+          "score": 48.40399185457468
+        },
+        "spacex": {
+          "score": 65.336289163196
+        },
+        "delta": 16.932297308621322,
+        "relativeGain": 34.98120022723094
+      }
+    },
+    "gpt-6-astra": {
+      "viewspatial": {
+        "baseline": {
+          "score": 59.8879
+        },
+        "spacex": {
+          "score": 85.2626
+        },
+        "delta": 25.374700000000004,
+        "relativeGain": 42.370328563866835
+      },
+      "spar": {
+        "baseline": {
+          "score": 68.9618
+        },
+        "spacex": {
+          "score": 73.8189
+        },
+        "delta": 4.857100000000003,
+        "relativeGain": 7.043174627112406
+      },
+      "mmsi": {
+        "baseline": {
+          "score": 71.6
+        },
+        "spacex": {
+          "score": 77.7
+        },
+        "delta": 6.1000000000000085,
+        "relativeGain": 8.519553072625712
+      },
+      "vsi": {
+        "baseline": {
+          "score": 61.07783319978483
+        },
+        "spacex": {
+          "score": 71.99242436814114
+        },
+        "delta": 10.914591168356317,
+        "relativeGain": 17.8699711442854
+      }
+    },
+    "gemini-3.8-flash": {
+      "viewspatial": {
+        "baseline": {
+          "score": 57.7758
+        },
+        "spacex": {
+          "score": 85.2188
+        },
+        "delta": 27.443000000000005,
+        "relativeGain": 47.499125931618444
+      },
+      "spar": {
+        "baseline": {
+          "score": 62.9976
+        },
+        "spacex": {
+          "score": 75.7916
+        },
+        "delta": 12.794000000000004,
+        "relativeGain": 20.308710173085966
+      },
+      "mmsi": {
+        "baseline": {
+          "score": 52.6527
+        },
+        "spacex": {
+          "score": 65.9292
+        },
+        "delta": 13.276499999999992,
+        "relativeGain": 25.215231127748417
+      },
+      "vsi": {
+        "baseline": {
+          "score": 53.09119255899349
+        },
+        "spacex": {
+          "score": 66.4172415421705
+        },
+        "delta": 13.32604898317701,
+        "relativeGain": 25.10030071064888
+      }
+    },
+    "gemini-4-argon": {
+      "viewspatial": {
+        "baseline": {
+          "score": 60.4676
+        },
+        "spacex": {
+          "score": 87.6148
+        },
+        "delta": 27.147200000000005,
+        "relativeGain": 44.89544814082254
+      },
+      "spar": {
+        "baseline": {
+          "score": 68.2062
+        },
+        "spacex": {
+          "score": 76.4482
+        },
+        "delta": 8.242000000000004,
+        "relativeGain": 12.08394544777455
+      },
+      "mmsi": {
+        "baseline": {
+          "score": 74.1641
+        },
+        "spacex": {
+          "score": 78.4537
+        },
+        "delta": 4.289599999999993,
+        "relativeGain": 5.7839305000667345
+      },
+      "vsi": {
+        "baseline": {
+          "score": 63.31577616387516
+        },
+        "spacex": {
+          "score": 75.39729412815214
+        },
+        "delta": 12.081517964276983,
+        "relativeGain": 19.081370704526083
+      }
+    }
+  },
+  "evolution": {
+    "total": 575,
+    "columns": [
+      "position",
+      "T",
+      "S",
+      "M",
+      "E",
+      "C"
+    ],
+    "cumulative": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        3,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        4,
+        1,
+        0,
+        0,
+        1,
+        2
+      ],
+      [
+        5,
+        1,
+        0,
+        0,
+        1,
+        3
+      ],
+      [
+        6,
+        1,
+        0,
+        0,
+        1,
+        4
+      ],
+      [
+        7,
+        1,
+        0,
+        0,
+        1,
+        5
+      ],
+      [
+        8,
+        1,
+        1,
+        0,
+        1,
+        5
+      ],
+      [
+        9,
+        1,
+        2,
+        0,
+        1,
+        5
+      ],
+      [
+        10,
+        1,
+        2,
+        0,
+        1,
+        6
+      ],
+      [
+        11,
+        1,
+        2,
+        0,
+        1,
+        7
+      ],
+      [
+        12,
+        1,
+        2,
+        0,
+        2,
+        7
+      ],
+      [
+        13,
+        1,
+        2,
+        0,
+        2,
+        8
+      ],
+      [
+        14,
+        1,
+        3,
+        0,
+        2,
+        8
+      ],
+      [
+        15,
+        1,
+        3,
+        0,
+        3,
+        8
+      ],
+      [
+        16,
+        1,
+        3,
+        0,
+        4,
+        8
+      ],
+      [
+        17,
+        1,
+        4,
+        0,
+        4,
+        8
+      ],
+      [
+        18,
+        1,
+        4,
+        0,
+        5,
+        8
+      ],
+      [
+        19,
+        1,
+        4,
+        0,
+        5,
+        9
+      ],
+      [
+        20,
+        2,
+        4,
+        0,
+        5,
+        9
+      ],
+      [
+        21,
+        2,
+        4,
+        1,
+        5,
+        9
+      ],
+      [
+        22,
+        2,
+        4,
+        1,
+        5,
+        10
+      ],
+      [
+        23,
+        3,
+        4,
+        1,
+        5,
+        10
+      ],
+      [
+        24,
+        4,
+        4,
+        1,
+        5,
+        10
+      ],
+      [
+        25,
+        4,
+        4,
+        2,
+        5,
+        10
+      ],
+      [
+        26,
+        4,
+        4,
+        2,
+        6,
+        10
+      ],
+      [
+        27,
+        4,
+        4,
+        2,
+        6,
+        11
+      ],
+      [
+        28,
+        4,
+        4,
+        2,
+        6,
+        12
+      ],
+      [
+        29,
+        4,
+        4,
+        2,
+        6,
+        13
+      ],
+      [
+        30,
+        4,
+        4,
+        2,
+        7,
+        13
+      ],
+      [
+        31,
+        4,
+        4,
+        3,
+        7,
+        13
+      ],
+      [
+        32,
+        4,
+        5,
+        3,
+        7,
+        13
+      ],
+      [
+        33,
+        5,
+        5,
+        3,
+        7,
+        13
+      ],
+      [
+        34,
+        6,
+        5,
+        3,
+        7,
+        13
+      ],
+      [
+        35,
+        7,
+        5,
+        3,
+        7,
+        13
+      ],
+      [
+        36,
+        7,
+        6,
+        3,
+        7,
+        13
+      ],
+      [
+        37,
+        7,
+        6,
+        3,
+        7,
+        14
+      ],
+      [
+        38,
+        8,
+        6,
+        3,
+        7,
+        14
+      ],
+      [
+        39,
+        8,
+        6,
+        3,
+        7,
+        15
+      ],
+      [
+        40,
+        8,
+        6,
+        3,
+        7,
+        16
+      ],
+      [
+        41,
+        8,
+        7,
+        3,
+        7,
+        16
+      ],
+      [
+        42,
+        8,
+        7,
+        3,
+        8,
+        16
+      ],
+      [
+        43,
+        8,
+        7,
+        3,
+        8,
+        17
+      ],
+      [
+        44,
+        8,
+        7,
+        4,
+        8,
+        17
+      ],
+      [
+        45,
+        8,
+        7,
+        5,
+        8,
+        17
+      ],
+      [
+        46,
+        8,
+        8,
+        5,
+        8,
+        17
+      ],
+      [
+        47,
+        9,
+        8,
+        5,
+        8,
+        17
+      ],
+      [
+        48,
+        9,
+        9,
+        5,
+        8,
+        17
+      ],
+      [
+        49,
+        9,
+        10,
+        5,
+        8,
+        17
+      ],
+      [
+        50,
+        10,
+        10,
+        5,
+        8,
+        17
+      ],
+      [
+        51,
+        10,
+        10,
+        5,
+        8,
+        18
+      ],
+      [
+        52,
+        10,
+        10,
+        6,
+        8,
+        18
+      ],
+      [
+        53,
+        10,
+        11,
+        6,
+        8,
+        18
+      ],
+      [
+        54,
+        10,
+        11,
+        6,
+        8,
+        19
+      ],
+      [
+        55,
+        10,
+        11,
+        6,
+        9,
+        19
+      ],
+      [
+        56,
+        10,
+        12,
+        6,
+        9,
+        19
+      ],
+      [
+        57,
+        10,
+        12,
+        6,
+        9,
+        20
+      ],
+      [
+        58,
+        10,
+        12,
+        6,
+        9,
+        21
+      ],
+      [
+        59,
+        10,
+        13,
+        6,
+        9,
+        21
+      ],
+      [
+        60,
+        11,
+        13,
+        6,
+        9,
+        21
+      ],
+      [
+        61,
+        11,
+        13,
+        6,
+        9,
+        22
+      ],
+      [
+        62,
+        12,
+        13,
+        6,
+        9,
+        22
+      ],
+      [
+        63,
+        12,
+        13,
+        6,
+        10,
+        22
+      ],
+      [
+        64,
+        13,
+        13,
+        6,
+        10,
+        22
+      ],
+      [
+        65,
+        14,
+        13,
+        6,
+        10,
+        22
+      ],
+      [
+        66,
+        15,
+        13,
+        6,
+        10,
+        22
+      ],
+      [
+        67,
+        16,
+        13,
+        6,
+        10,
+        22
+      ],
+      [
+        68,
+        17,
+        13,
+        6,
+        10,
+        22
+      ],
+      [
+        69,
+        17,
+        13,
+        6,
+        10,
+        23
+      ],
+      [
+        70,
+        17,
+        13,
+        6,
+        10,
+        24
+      ],
+      [
+        71,
+        17,
+        13,
+        6,
+        10,
+        25
+      ],
+      [
+        72,
+        17,
+        13,
+        6,
+        11,
+        25
+      ],
+      [
+        73,
+        17,
+        13,
+        6,
+        12,
+        25
+      ],
+      [
+        74,
+        17,
+        13,
+        6,
+        13,
+        25
+      ],
+      [
+        75,
+        17,
+        13,
+        6,
+        13,
+        26
+      ],
+      [
+        76,
+        18,
+        13,
+        6,
+        13,
+        26
+      ],
+      [
+        77,
+        19,
+        13,
+        6,
+        13,
+        26
+      ],
+      [
+        78,
+        20,
+        13,
+        6,
+        13,
+        26
+      ],
+      [
+        79,
+        20,
+        14,
+        6,
+        13,
+        26
+      ],
+      [
+        80,
+        20,
+        15,
+        6,
+        13,
+        26
+      ],
+      [
+        81,
+        21,
+        15,
+        6,
+        13,
+        26
+      ],
+      [
+        82,
+        22,
+        15,
+        6,
+        13,
+        26
+      ],
+      [
+        83,
+        23,
+        15,
+        6,
+        13,
+        26
+      ],
+      [
+        84,
+        23,
+        15,
+        6,
+        13,
+        27
+      ],
+      [
+        85,
+        24,
+        15,
+        6,
+        13,
+        27
+      ],
+      [
+        86,
+        24,
+        15,
+        6,
+        13,
+        28
+      ],
+      [
+        87,
+        24,
+        15,
+        6,
+        14,
+        28
+      ],
+      [
+        88,
+        24,
+        15,
+        6,
+        14,
+        29
+      ],
+      [
+        89,
+        24,
+        15,
+        7,
+        14,
+        29
+      ],
+      [
+        90,
+        25,
+        15,
+        7,
+        14,
+        29
+      ],
+      [
+        91,
+        25,
+        15,
+        7,
+        15,
+        29
+      ],
+      [
+        92,
+        26,
+        15,
+        7,
+        15,
+        29
+      ],
+      [
+        93,
+        26,
+        15,
+        7,
+        16,
+        29
+      ],
+      [
+        94,
+        26,
+        15,
+        8,
+        16,
+        29
+      ],
+      [
+        95,
+        26,
+        15,
+        9,
+        16,
+        29
+      ],
+      [
+        96,
+        26,
+        15,
+        10,
+        16,
+        29
+      ],
+      [
+        97,
+        26,
+        15,
+        10,
+        17,
+        29
+      ],
+      [
+        98,
+        27,
+        15,
+        10,
+        17,
+        29
+      ],
+      [
+        99,
+        27,
+        16,
+        10,
+        17,
+        29
+      ],
+      [
+        100,
+        28,
+        16,
+        10,
+        17,
+        29
+      ],
+      [
+        101,
+        28,
+        17,
+        10,
+        17,
+        29
+      ],
+      [
+        102,
+        28,
+        18,
+        10,
+        17,
+        29
+      ],
+      [
+        103,
+        28,
+        18,
+        11,
+        17,
+        29
+      ],
+      [
+        104,
+        28,
+        18,
+        11,
+        18,
+        29
+      ],
+      [
+        105,
+        28,
+        18,
+        11,
+        18,
+        30
+      ],
+      [
+        106,
+        28,
+        18,
+        12,
+        18,
+        30
+      ],
+      [
+        107,
+        28,
+        19,
+        12,
+        18,
+        30
+      ],
+      [
+        108,
+        28,
+        19,
+        13,
+        18,
+        30
+      ],
+      [
+        109,
+        28,
+        20,
+        13,
+        18,
+        30
+      ],
+      [
+        110,
+        28,
+        20,
+        13,
+        19,
+        30
+      ],
+      [
+        111,
+        28,
+        20,
+        13,
+        19,
+        31
+      ],
+      [
+        112,
+        28,
+        20,
+        13,
+        19,
+        32
+      ],
+      [
+        113,
+        29,
+        20,
+        13,
+        19,
+        32
+      ],
+      [
+        114,
+        29,
+        21,
+        13,
+        19,
+        32
+      ],
+      [
+        115,
+        29,
+        22,
+        13,
+        19,
+        32
+      ],
+      [
+        116,
+        30,
+        22,
+        13,
+        19,
+        32
+      ],
+      [
+        117,
+        31,
+        22,
+        13,
+        19,
+        32
+      ],
+      [
+        118,
+        31,
+        22,
+        13,
+        19,
+        33
+      ],
+      [
+        119,
+        31,
+        22,
+        13,
+        20,
+        33
+      ],
+      [
+        120,
+        32,
+        22,
+        13,
+        20,
+        33
+      ],
+      [
+        121,
+        32,
+        22,
+        13,
+        21,
+        33
+      ],
+      [
+        122,
+        32,
+        22,
+        13,
+        21,
+        34
+      ],
+      [
+        123,
+        33,
+        22,
+        13,
+        21,
+        34
+      ],
+      [
+        124,
+        33,
+        22,
+        13,
+        22,
+        34
+      ],
+      [
+        125,
+        34,
+        22,
+        13,
+        22,
+        34
+      ],
+      [
+        126,
+        35,
+        22,
+        13,
+        22,
+        34
+      ],
+      [
+        127,
+        35,
+        23,
+        13,
+        22,
+        34
+      ],
+      [
+        128,
+        36,
+        23,
+        13,
+        22,
+        34
+      ],
+      [
+        129,
+        36,
+        23,
+        13,
+        22,
+        35
+      ],
+      [
+        130,
+        36,
+        23,
+        13,
+        22,
+        36
+      ],
+      [
+        131,
+        36,
+        24,
+        13,
+        22,
+        36
+      ],
+      [
+        132,
+        37,
+        24,
+        13,
+        22,
+        36
+      ],
+      [
+        133,
+        37,
+        24,
+        13,
+        23,
+        36
+      ],
+      [
+        134,
+        37,
+        24,
+        13,
+        23,
+        37
+      ],
+      [
+        135,
+        37,
+        24,
+        13,
+        23,
+        38
+      ],
+      [
+        136,
+        37,
+        24,
+        13,
+        24,
+        38
+      ],
+      [
+        137,
+        37,
+        25,
+        13,
+        24,
+        38
+      ],
+      [
+        138,
+        37,
+        26,
+        13,
+        24,
+        38
+      ],
+      [
+        139,
+        38,
+        26,
+        13,
+        24,
+        38
+      ],
+      [
+        140,
+        38,
+        27,
+        13,
+        24,
+        38
+      ],
+      [
+        141,
+        38,
+        28,
+        13,
+        24,
+        38
+      ],
+      [
+        142,
+        38,
+        28,
+        14,
+        24,
+        38
+      ],
+      [
+        143,
+        39,
+        28,
+        14,
+        24,
+        38
+      ],
+      [
+        144,
+        39,
+        29,
+        14,
+        24,
+        38
+      ],
+      [
+        145,
+        40,
+        29,
+        14,
+        24,
+        38
+      ],
+      [
+        146,
+        41,
+        29,
+        14,
+        24,
+        38
+      ],
+      [
+        147,
+        42,
+        29,
+        14,
+        24,
+        38
+      ],
+      [
+        148,
+        42,
+        29,
+        14,
+        24,
+        39
+      ],
+      [
+        149,
+        42,
+        29,
+        15,
+        24,
+        39
+      ],
+      [
+        150,
+        42,
+        30,
+        15,
+        24,
+        39
+      ],
+      [
+        151,
+        43,
+        30,
+        15,
+        24,
+        39
+      ],
+      [
+        152,
+        44,
+        30,
+        15,
+        24,
+        39
+      ],
+      [
+        153,
+        44,
+        30,
+        15,
+        25,
+        39
+      ],
+      [
+        154,
+        44,
+        30,
+        16,
+        25,
+        39
+      ],
+      [
+        155,
+        44,
+        30,
+        16,
+        26,
+        39
+      ],
+      [
+        156,
+        44,
+        30,
+        17,
+        26,
+        39
+      ],
+      [
+        157,
+        44,
+        30,
+        18,
+        26,
+        39
+      ],
+      [
+        158,
+        44,
+        30,
+        19,
+        26,
+        39
+      ],
+      [
+        159,
+        45,
+        30,
+        19,
+        26,
+        39
+      ],
+      [
+        160,
+        46,
+        30,
+        19,
+        26,
+        39
+      ],
+      [
+        161,
+        47,
+        30,
+        19,
+        26,
+        39
+      ],
+      [
+        162,
+        48,
+        30,
+        19,
+        26,
+        39
+      ],
+      [
+        163,
+        49,
+        30,
+        19,
+        26,
+        39
+      ],
+      [
+        164,
+        49,
+        30,
+        20,
+        26,
+        39
+      ],
+      [
+        165,
+        49,
+        31,
+        20,
+        26,
+        39
+      ],
+      [
+        166,
+        49,
+        32,
+        20,
+        26,
+        39
+      ],
+      [
+        167,
+        50,
+        32,
+        20,
+        26,
+        39
+      ],
+      [
+        168,
+        50,
+        32,
+        20,
+        27,
+        39
+      ],
+      [
+        169,
+        50,
+        33,
+        20,
+        27,
+        39
+      ],
+      [
+        170,
+        50,
+        33,
+        20,
+        27,
+        40
+      ],
+      [
+        171,
+        51,
+        33,
+        20,
+        27,
+        40
+      ],
+      [
+        172,
+        51,
+        33,
+        20,
+        27,
+        41
+      ],
+      [
+        173,
+        51,
+        34,
+        20,
+        27,
+        41
+      ],
+      [
+        174,
+        51,
+        34,
+        20,
+        27,
+        42
+      ],
+      [
+        175,
+        51,
+        35,
+        20,
+        27,
+        42
+      ],
+      [
+        176,
+        51,
+        36,
+        20,
+        27,
+        42
+      ],
+      [
+        177,
+        51,
+        36,
+        20,
+        28,
+        42
+      ],
+      [
+        178,
+        52,
+        36,
+        20,
+        28,
+        42
+      ],
+      [
+        179,
+        52,
+        37,
+        20,
+        28,
+        42
+      ],
+      [
+        180,
+        53,
+        37,
+        20,
+        28,
+        42
+      ],
+      [
+        181,
+        54,
+        37,
+        20,
+        28,
+        42
+      ],
+      [
+        182,
+        54,
+        37,
+        20,
+        29,
+        42
+      ],
+      [
+        183,
+        54,
+        37,
+        20,
+        30,
+        42
+      ],
+      [
+        184,
+        54,
+        37,
+        20,
+        30,
+        43
+      ],
+      [
+        185,
+        54,
+        37,
+        21,
+        30,
+        43
+      ],
+      [
+        186,
+        54,
+        37,
+        21,
+        31,
+        43
+      ],
+      [
+        187,
+        55,
+        37,
+        21,
+        31,
+        43
+      ],
+      [
+        188,
+        56,
+        37,
+        21,
+        31,
+        43
+      ],
+      [
+        189,
+        57,
+        37,
+        21,
+        31,
+        43
+      ],
+      [
+        190,
+        58,
+        37,
+        21,
+        31,
+        43
+      ],
+      [
+        191,
+        58,
+        37,
+        21,
+        32,
+        43
+      ],
+      [
+        192,
+        59,
+        37,
+        21,
+        32,
+        43
+      ],
+      [
+        193,
+        59,
+        37,
+        21,
+        32,
+        44
+      ],
+      [
+        194,
+        59,
+        38,
+        21,
+        32,
+        44
+      ],
+      [
+        195,
+        59,
+        39,
+        21,
+        32,
+        44
+      ],
+      [
+        196,
+        59,
+        39,
+        21,
+        32,
+        45
+      ],
+      [
+        197,
+        60,
+        39,
+        21,
+        32,
+        45
+      ],
+      [
+        198,
+        60,
+        39,
+        21,
+        33,
+        45
+      ],
+      [
+        199,
+        61,
+        39,
+        21,
+        33,
+        45
+      ],
+      [
+        200,
+        61,
+        40,
+        21,
+        33,
+        45
+      ],
+      [
+        201,
+        61,
+        40,
+        22,
+        33,
+        45
+      ],
+      [
+        202,
+        61,
+        40,
+        22,
+        34,
+        45
+      ],
+      [
+        203,
+        62,
+        40,
+        22,
+        34,
+        45
+      ],
+      [
+        204,
+        62,
+        40,
+        23,
+        34,
+        45
+      ],
+      [
+        205,
+        62,
+        41,
+        23,
+        34,
+        45
+      ],
+      [
+        206,
+        62,
+        41,
+        23,
+        34,
+        46
+      ],
+      [
+        207,
+        63,
+        41,
+        23,
+        34,
+        46
+      ],
+      [
+        208,
+        63,
+        42,
+        23,
+        34,
+        46
+      ],
+      [
+        209,
+        63,
+        42,
+        23,
+        35,
+        46
+      ],
+      [
+        210,
+        63,
+        42,
+        23,
+        35,
+        47
+      ],
+      [
+        211,
+        63,
+        42,
+        23,
+        36,
+        47
+      ],
+      [
+        212,
+        63,
+        42,
+        23,
+        36,
+        48
+      ],
+      [
+        213,
+        63,
+        42,
+        23,
+        37,
+        48
+      ],
+      [
+        214,
+        63,
+        42,
+        23,
+        37,
+        49
+      ],
+      [
+        215,
+        64,
+        42,
+        23,
+        37,
+        49
+      ],
+      [
+        216,
+        64,
+        43,
+        23,
+        37,
+        49
+      ],
+      [
+        217,
+        64,
+        44,
+        23,
+        37,
+        49
+      ],
+      [
+        218,
+        64,
+        44,
+        23,
+        38,
+        49
+      ],
+      [
+        219,
+        64,
+        44,
+        23,
+        38,
+        50
+      ],
+      [
+        220,
+        64,
+        45,
+        23,
+        38,
+        50
+      ],
+      [
+        221,
+        64,
+        46,
+        23,
+        38,
+        50
+      ],
+      [
+        222,
+        65,
+        46,
+        23,
+        38,
+        50
+      ],
+      [
+        223,
+        65,
+        46,
+        23,
+        38,
+        51
+      ],
+      [
+        224,
+        65,
+        46,
+        23,
+        38,
+        52
+      ],
+      [
+        225,
+        65,
+        46,
+        23,
+        38,
+        53
+      ],
+      [
+        226,
+        65,
+        46,
+        23,
+        38,
+        54
+      ],
+      [
+        227,
+        65,
+        47,
+        23,
+        38,
+        54
+      ],
+      [
+        228,
+        65,
+        47,
+        23,
+        39,
+        54
+      ],
+      [
+        229,
+        65,
+        47,
+        23,
+        40,
+        54
+      ],
+      [
+        230,
+        65,
+        47,
+        23,
+        40,
+        55
+      ],
+      [
+        231,
+        66,
+        47,
+        23,
+        40,
+        55
+      ],
+      [
+        232,
+        67,
+        47,
+        23,
+        40,
+        55
+      ],
+      [
+        233,
+        68,
+        47,
+        23,
+        40,
+        55
+      ],
+      [
+        234,
+        68,
+        47,
+        23,
+        40,
+        56
+      ],
+      [
+        235,
+        69,
+        47,
+        23,
+        40,
+        56
+      ],
+      [
+        236,
+        69,
+        48,
+        23,
+        40,
+        56
+      ],
+      [
+        237,
+        70,
+        48,
+        23,
+        40,
+        56
+      ],
+      [
+        238,
+        70,
+        49,
+        23,
+        40,
+        56
+      ],
+      [
+        239,
+        70,
+        50,
+        23,
+        40,
+        56
+      ],
+      [
+        240,
+        70,
+        50,
+        23,
+        41,
+        56
+      ],
+      [
+        241,
+        71,
+        50,
+        23,
+        41,
+        56
+      ],
+      [
+        242,
+        72,
+        50,
+        23,
+        41,
+        56
+      ],
+      [
+        243,
+        72,
+        50,
+        24,
+        41,
+        56
+      ],
+      [
+        244,
+        72,
+        50,
+        24,
+        42,
+        56
+      ],
+      [
+        245,
+        73,
+        50,
+        24,
+        42,
+        56
+      ],
+      [
+        246,
+        74,
+        50,
+        24,
+        42,
+        56
+      ],
+      [
+        247,
+        75,
+        50,
+        24,
+        42,
+        56
+      ],
+      [
+        248,
+        76,
+        50,
+        24,
+        42,
+        56
+      ],
+      [
+        249,
+        76,
+        51,
+        24,
+        42,
+        56
+      ],
+      [
+        250,
+        76,
+        51,
+        25,
+        42,
+        56
+      ],
+      [
+        251,
+        76,
+        52,
+        25,
+        42,
+        56
+      ],
+      [
+        252,
+        76,
+        52,
+        25,
+        43,
+        56
+      ],
+      [
+        253,
+        76,
+        52,
+        25,
+        44,
+        56
+      ],
+      [
+        254,
+        77,
+        52,
+        25,
+        44,
+        56
+      ],
+      [
+        255,
+        78,
+        52,
+        25,
+        44,
+        56
+      ],
+      [
+        256,
+        79,
+        52,
+        25,
+        44,
+        56
+      ],
+      [
+        257,
+        79,
+        52,
+        25,
+        44,
+        57
+      ],
+      [
+        258,
+        79,
+        53,
+        25,
+        44,
+        57
+      ],
+      [
+        259,
+        79,
+        54,
+        25,
+        44,
+        57
+      ],
+      [
+        260,
+        79,
+        55,
+        25,
+        44,
+        57
+      ],
+      [
+        261,
+        80,
+        55,
+        25,
+        44,
+        57
+      ],
+      [
+        262,
+        80,
+        55,
+        25,
+        45,
+        57
+      ],
+      [
+        263,
+        81,
+        55,
+        25,
+        45,
+        57
+      ],
+      [
+        264,
+        81,
+        55,
+        25,
+        46,
+        57
+      ],
+      [
+        265,
+        81,
+        55,
+        25,
+        47,
+        57
+      ],
+      [
+        266,
+        82,
+        55,
+        25,
+        47,
+        57
+      ],
+      [
+        267,
+        82,
+        55,
+        25,
+        47,
+        58
+      ],
+      [
+        268,
+        83,
+        55,
+        25,
+        47,
+        58
+      ],
+      [
+        269,
+        84,
+        55,
+        25,
+        47,
+        58
+      ],
+      [
+        270,
+        85,
+        55,
+        25,
+        47,
+        58
+      ],
+      [
+        271,
+        85,
+        55,
+        25,
+        48,
+        58
+      ],
+      [
+        272,
+        85,
+        56,
+        25,
+        48,
+        58
+      ],
+      [
+        273,
+        86,
+        56,
+        25,
+        48,
+        58
+      ],
+      [
+        274,
+        86,
+        57,
+        25,
+        48,
+        58
+      ],
+      [
+        275,
+        86,
+        58,
+        25,
+        48,
+        58
+      ],
+      [
+        276,
+        86,
+        58,
+        25,
+        48,
+        59
+      ],
+      [
+        277,
+        86,
+        58,
+        25,
+        48,
+        60
+      ],
+      [
+        278,
+        87,
+        58,
+        25,
+        48,
+        60
+      ],
+      [
+        279,
+        87,
+        58,
+        25,
+        49,
+        60
+      ],
+      [
+        280,
+        88,
+        58,
+        25,
+        49,
+        60
+      ],
+      [
+        281,
+        88,
+        59,
+        25,
+        49,
+        60
+      ],
+      [
+        282,
+        89,
+        59,
+        25,
+        49,
+        60
+      ],
+      [
+        283,
+        89,
+        59,
+        25,
+        49,
+        61
+      ],
+      [
+        284,
+        89,
+        59,
+        25,
+        50,
+        61
+      ],
+      [
+        285,
+        89,
+        59,
+        25,
+        51,
+        61
+      ],
+      [
+        286,
+        89,
+        59,
+        25,
+        51,
+        62
+      ],
+      [
+        287,
+        89,
+        59,
+        26,
+        51,
+        62
+      ],
+      [
+        288,
+        90,
+        59,
+        26,
+        51,
+        62
+      ],
+      [
+        289,
+        90,
+        59,
+        26,
+        51,
+        63
+      ],
+      [
+        290,
+        90,
+        59,
+        26,
+        52,
+        63
+      ],
+      [
+        291,
+        90,
+        59,
+        26,
+        52,
+        64
+      ],
+      [
+        292,
+        91,
+        59,
+        26,
+        52,
+        64
+      ],
+      [
+        293,
+        91,
+        59,
+        26,
+        52,
+        65
+      ],
+      [
+        294,
+        91,
+        59,
+        26,
+        53,
+        65
+      ],
+      [
+        295,
+        91,
+        59,
+        26,
+        54,
+        65
+      ],
+      [
+        296,
+        92,
+        59,
+        26,
+        54,
+        65
+      ],
+      [
+        297,
+        92,
+        60,
+        26,
+        54,
+        65
+      ],
+      [
+        298,
+        93,
+        60,
+        26,
+        54,
+        65
+      ],
+      [
+        299,
+        94,
+        60,
+        26,
+        54,
+        65
+      ],
+      [
+        300,
+        94,
+        61,
+        26,
+        54,
+        65
+      ],
+      [
+        301,
+        94,
+        62,
+        26,
+        54,
+        65
+      ],
+      [
+        302,
+        94,
+        63,
+        26,
+        54,
+        65
+      ],
+      [
+        303,
+        94,
+        63,
+        26,
+        55,
+        65
+      ],
+      [
+        304,
+        94,
+        63,
+        26,
+        56,
+        65
+      ],
+      [
+        305,
+        94,
+        64,
+        26,
+        56,
+        65
+      ],
+      [
+        306,
+        95,
+        64,
+        26,
+        56,
+        65
+      ],
+      [
+        307,
+        95,
+        64,
+        26,
+        57,
+        65
+      ],
+      [
+        308,
+        96,
+        64,
+        26,
+        57,
+        65
+      ],
+      [
+        309,
+        96,
+        64,
+        26,
+        57,
+        66
+      ],
+      [
+        310,
+        96,
+        64,
+        26,
+        58,
+        66
+      ],
+      [
+        311,
+        96,
+        64,
+        27,
+        58,
+        66
+      ],
+      [
+        312,
+        96,
+        64,
+        27,
+        58,
+        67
+      ],
+      [
+        313,
+        96,
+        64,
+        27,
+        59,
+        67
+      ],
+      [
+        314,
+        97,
+        64,
+        27,
+        59,
+        67
+      ],
+      [
+        315,
+        97,
+        64,
+        28,
+        59,
+        67
+      ],
+      [
+        316,
+        97,
+        64,
+        28,
+        59,
+        68
+      ],
+      [
+        317,
+        97,
+        64,
+        28,
+        60,
+        68
+      ],
+      [
+        318,
+        98,
+        64,
+        28,
+        60,
+        68
+      ],
+      [
+        319,
+        98,
+        65,
+        28,
+        60,
+        68
+      ],
+      [
+        320,
+        99,
+        65,
+        28,
+        60,
+        68
+      ],
+      [
+        321,
+        99,
+        65,
+        28,
+        60,
+        69
+      ],
+      [
+        322,
+        99,
+        65,
+        29,
+        60,
+        69
+      ],
+      [
+        323,
+        99,
+        66,
+        29,
+        60,
+        69
+      ],
+      [
+        324,
+        100,
+        66,
+        29,
+        60,
+        69
+      ],
+      [
+        325,
+        101,
+        66,
+        29,
+        60,
+        69
+      ],
+      [
+        326,
+        101,
+        67,
+        29,
+        60,
+        69
+      ],
+      [
+        327,
+        102,
+        67,
+        29,
+        60,
+        69
+      ],
+      [
+        328,
+        103,
+        67,
+        29,
+        60,
+        69
+      ],
+      [
+        329,
+        104,
+        67,
+        29,
+        60,
+        69
+      ],
+      [
+        330,
+        104,
+        67,
+        29,
+        60,
+        70
+      ],
+      [
+        331,
+        105,
+        67,
+        29,
+        60,
+        70
+      ],
+      [
+        332,
+        106,
+        67,
+        29,
+        60,
+        70
+      ],
+      [
+        333,
+        107,
+        67,
+        29,
+        60,
+        70
+      ],
+      [
+        334,
+        107,
+        68,
+        29,
+        60,
+        70
+      ],
+      [
+        335,
+        108,
+        68,
+        29,
+        60,
+        70
+      ],
+      [
+        336,
+        109,
+        68,
+        29,
+        60,
+        70
+      ],
+      [
+        337,
+        110,
+        68,
+        29,
+        60,
+        70
+      ],
+      [
+        338,
+        111,
+        68,
+        29,
+        60,
+        70
+      ],
+      [
+        339,
+        111,
+        68,
+        29,
+        60,
+        71
+      ],
+      [
+        340,
+        111,
+        68,
+        29,
+        61,
+        71
+      ],
+      [
+        341,
+        111,
+        68,
+        30,
+        61,
+        71
+      ],
+      [
+        342,
+        111,
+        68,
+        31,
+        61,
+        71
+      ],
+      [
+        343,
+        112,
+        68,
+        31,
+        61,
+        71
+      ],
+      [
+        344,
+        113,
+        68,
+        31,
+        61,
+        71
+      ],
+      [
+        345,
+        114,
+        68,
+        31,
+        61,
+        71
+      ],
+      [
+        346,
+        114,
+        68,
+        32,
+        61,
+        71
+      ],
+      [
+        347,
+        115,
+        68,
+        32,
+        61,
+        71
+      ],
+      [
+        348,
+        115,
+        68,
+        33,
+        61,
+        71
+      ],
+      [
+        349,
+        116,
+        68,
+        33,
+        61,
+        71
+      ],
+      [
+        350,
+        117,
+        68,
+        33,
+        61,
+        71
+      ],
+      [
+        351,
+        117,
+        68,
+        33,
+        62,
+        71
+      ],
+      [
+        352,
+        117,
+        68,
+        33,
+        63,
+        71
+      ],
+      [
+        353,
+        118,
+        68,
+        33,
+        63,
+        71
+      ],
+      [
+        354,
+        118,
+        68,
+        33,
+        63,
+        72
+      ],
+      [
+        355,
+        118,
+        68,
+        33,
+        63,
+        73
+      ],
+      [
+        356,
+        118,
+        68,
+        33,
+        63,
+        74
+      ],
+      [
+        357,
+        119,
+        68,
+        33,
+        63,
+        74
+      ],
+      [
+        358,
+        119,
+        69,
+        33,
+        63,
+        74
+      ],
+      [
+        359,
+        120,
+        69,
+        33,
+        63,
+        74
+      ],
+      [
+        360,
+        120,
+        69,
+        33,
+        64,
+        74
+      ],
+      [
+        361,
+        120,
+        69,
+        33,
+        65,
+        74
+      ],
+      [
+        362,
+        120,
+        70,
+        33,
+        65,
+        74
+      ],
+      [
+        363,
+        120,
+        71,
+        33,
+        65,
+        74
+      ],
+      [
+        364,
+        120,
+        71,
+        33,
+        66,
+        74
+      ],
+      [
+        365,
+        120,
+        71,
+        33,
+        67,
+        74
+      ],
+      [
+        366,
+        121,
+        71,
+        33,
+        67,
+        74
+      ],
+      [
+        367,
+        122,
+        71,
+        33,
+        67,
+        74
+      ],
+      [
+        368,
+        122,
+        71,
+        33,
+        68,
+        74
+      ],
+      [
+        369,
+        122,
+        71,
+        33,
+        69,
+        74
+      ],
+      [
+        370,
+        122,
+        72,
+        33,
+        69,
+        74
+      ],
+      [
+        371,
+        123,
+        72,
+        33,
+        69,
+        74
+      ],
+      [
+        372,
+        124,
+        72,
+        33,
+        69,
+        74
+      ],
+      [
+        373,
+        124,
+        72,
+        33,
+        70,
+        74
+      ],
+      [
+        374,
+        125,
+        72,
+        33,
+        70,
+        74
+      ],
+      [
+        375,
+        126,
+        72,
+        33,
+        70,
+        74
+      ],
+      [
+        376,
+        126,
+        73,
+        33,
+        70,
+        74
+      ],
+      [
+        377,
+        127,
+        73,
+        33,
+        70,
+        74
+      ],
+      [
+        378,
+        128,
+        73,
+        33,
+        70,
+        74
+      ],
+      [
+        379,
+        129,
+        73,
+        33,
+        70,
+        74
+      ],
+      [
+        380,
+        129,
+        73,
+        33,
+        71,
+        74
+      ],
+      [
+        381,
+        129,
+        73,
+        33,
+        71,
+        75
+      ],
+      [
+        382,
+        129,
+        73,
+        33,
+        71,
+        76
+      ],
+      [
+        383,
+        130,
+        73,
+        33,
+        71,
+        76
+      ],
+      [
+        384,
+        131,
+        73,
+        33,
+        71,
+        76
+      ],
+      [
+        385,
+        132,
+        73,
+        33,
+        71,
+        76
+      ],
+      [
+        386,
+        132,
+        74,
+        33,
+        71,
+        76
+      ],
+      [
+        387,
+        132,
+        75,
+        33,
+        71,
+        76
+      ],
+      [
+        388,
+        132,
+        75,
+        33,
+        71,
+        77
+      ],
+      [
+        389,
+        132,
+        76,
+        33,
+        71,
+        77
+      ],
+      [
+        390,
+        132,
+        77,
+        33,
+        71,
+        77
+      ],
+      [
+        391,
+        132,
+        78,
+        33,
+        71,
+        77
+      ],
+      [
+        392,
+        133,
+        78,
+        33,
+        71,
+        77
+      ],
+      [
+        393,
+        134,
+        78,
+        33,
+        71,
+        77
+      ],
+      [
+        394,
+        134,
+        78,
+        33,
+        72,
+        77
+      ],
+      [
+        395,
+        135,
+        78,
+        33,
+        72,
+        77
+      ],
+      [
+        396,
+        136,
+        78,
+        33,
+        72,
+        77
+      ],
+      [
+        397,
+        136,
+        78,
+        33,
+        72,
+        78
+      ],
+      [
+        398,
+        137,
+        78,
+        33,
+        72,
+        78
+      ],
+      [
+        399,
+        137,
+        79,
+        33,
+        72,
+        78
+      ],
+      [
+        400,
+        138,
+        79,
+        33,
+        72,
+        78
+      ],
+      [
+        401,
+        139,
+        79,
+        33,
+        72,
+        78
+      ],
+      [
+        402,
+        139,
+        80,
+        33,
+        72,
+        78
+      ],
+      [
+        403,
+        140,
+        80,
+        33,
+        72,
+        78
+      ],
+      [
+        404,
+        140,
+        81,
+        33,
+        72,
+        78
+      ],
+      [
+        405,
+        140,
+        82,
+        33,
+        72,
+        78
+      ],
+      [
+        406,
+        140,
+        82,
+        33,
+        72,
+        79
+      ],
+      [
+        407,
+        140,
+        82,
+        33,
+        72,
+        80
+      ],
+      [
+        408,
+        140,
+        82,
+        33,
+        72,
+        81
+      ],
+      [
+        409,
+        140,
+        82,
+        33,
+        72,
+        82
+      ],
+      [
+        410,
+        140,
+        82,
+        33,
+        72,
+        83
+      ],
+      [
+        411,
+        140,
+        83,
+        33,
+        72,
+        83
+      ],
+      [
+        412,
+        140,
+        83,
+        33,
+        72,
+        84
+      ],
+      [
+        413,
+        141,
+        83,
+        33,
+        72,
+        84
+      ],
+      [
+        414,
+        141,
+        83,
+        33,
+        72,
+        85
+      ],
+      [
+        415,
+        141,
+        83,
+        33,
+        72,
+        86
+      ],
+      [
+        416,
+        141,
+        83,
+        33,
+        72,
+        87
+      ],
+      [
+        417,
+        141,
+        83,
+        33,
+        72,
+        88
+      ],
+      [
+        418,
+        141,
+        83,
+        33,
+        72,
+        89
+      ],
+      [
+        419,
+        141,
+        83,
+        33,
+        72,
+        90
+      ],
+      [
+        420,
+        142,
+        83,
+        33,
+        72,
+        90
+      ],
+      [
+        421,
+        143,
+        83,
+        33,
+        72,
+        90
+      ],
+      [
+        422,
+        143,
+        84,
+        33,
+        72,
+        90
+      ],
+      [
+        423,
+        143,
+        85,
+        33,
+        72,
+        90
+      ],
+      [
+        424,
+        143,
+        85,
+        33,
+        73,
+        90
+      ],
+      [
+        425,
+        143,
+        85,
+        33,
+        74,
+        90
+      ],
+      [
+        426,
+        144,
+        85,
+        33,
+        74,
+        90
+      ],
+      [
+        427,
+        145,
+        85,
+        33,
+        74,
+        90
+      ],
+      [
+        428,
+        145,
+        86,
+        33,
+        74,
+        90
+      ],
+      [
+        429,
+        145,
+        86,
+        33,
+        75,
+        90
+      ],
+      [
+        430,
+        145,
+        86,
+        33,
+        75,
+        91
+      ],
+      [
+        431,
+        145,
+        86,
+        34,
+        75,
+        91
+      ],
+      [
+        432,
+        145,
+        86,
+        34,
+        75,
+        92
+      ],
+      [
+        433,
+        145,
+        86,
+        34,
+        76,
+        92
+      ],
+      [
+        434,
+        145,
+        86,
+        34,
+        77,
+        92
+      ],
+      [
+        435,
+        145,
+        86,
+        34,
+        77,
+        93
+      ],
+      [
+        436,
+        145,
+        86,
+        34,
+        78,
+        93
+      ],
+      [
+        437,
+        145,
+        86,
+        34,
+        79,
+        93
+      ],
+      [
+        438,
+        146,
+        86,
+        34,
+        79,
+        93
+      ],
+      [
+        439,
+        147,
+        86,
+        34,
+        79,
+        93
+      ],
+      [
+        440,
+        147,
+        86,
+        34,
+        80,
+        93
+      ],
+      [
+        441,
+        147,
+        86,
+        34,
+        81,
+        93
+      ],
+      [
+        442,
+        147,
+        86,
+        34,
+        81,
+        94
+      ],
+      [
+        443,
+        147,
+        86,
+        34,
+        82,
+        94
+      ],
+      [
+        444,
+        147,
+        86,
+        34,
+        83,
+        94
+      ],
+      [
+        445,
+        148,
+        86,
+        34,
+        83,
+        94
+      ],
+      [
+        446,
+        148,
+        86,
+        34,
+        84,
+        94
+      ],
+      [
+        447,
+        149,
+        86,
+        34,
+        84,
+        94
+      ],
+      [
+        448,
+        149,
+        87,
+        34,
+        84,
+        94
+      ],
+      [
+        449,
+        150,
+        87,
+        34,
+        84,
+        94
+      ],
+      [
+        450,
+        150,
+        87,
+        34,
+        84,
+        95
+      ],
+      [
+        451,
+        151,
+        87,
+        34,
+        84,
+        95
+      ],
+      [
+        452,
+        152,
+        87,
+        34,
+        84,
+        95
+      ],
+      [
+        453,
+        152,
+        87,
+        34,
+        84,
+        96
+      ],
+      [
+        454,
+        153,
+        87,
+        34,
+        84,
+        96
+      ],
+      [
+        455,
+        153,
+        87,
+        34,
+        85,
+        96
+      ],
+      [
+        456,
+        154,
+        87,
+        34,
+        85,
+        96
+      ],
+      [
+        457,
+        154,
+        87,
+        34,
+        86,
+        96
+      ],
+      [
+        458,
+        155,
+        87,
+        34,
+        86,
+        96
+      ],
+      [
+        459,
+        155,
+        87,
+        34,
+        86,
+        97
+      ],
+      [
+        460,
+        155,
+        88,
+        34,
+        86,
+        97
+      ],
+      [
+        461,
+        155,
+        89,
+        34,
+        86,
+        97
+      ],
+      [
+        462,
+        155,
+        89,
+        34,
+        86,
+        98
+      ],
+      [
+        463,
+        155,
+        89,
+        34,
+        87,
+        98
+      ],
+      [
+        464,
+        156,
+        89,
+        34,
+        87,
+        98
+      ],
+      [
+        465,
+        156,
+        89,
+        34,
+        87,
+        99
+      ],
+      [
+        466,
+        156,
+        90,
+        34,
+        87,
+        99
+      ],
+      [
+        467,
+        157,
+        90,
+        34,
+        87,
+        99
+      ],
+      [
+        468,
+        157,
+        90,
+        34,
+        87,
+        100
+      ],
+      [
+        469,
+        158,
+        90,
+        34,
+        87,
+        100
+      ],
+      [
+        470,
+        158,
+        91,
+        34,
+        87,
+        100
+      ],
+      [
+        471,
+        158,
+        92,
+        34,
+        87,
+        100
+      ],
+      [
+        472,
+        159,
+        92,
+        34,
+        87,
+        100
+      ],
+      [
+        473,
+        159,
+        92,
+        34,
+        88,
+        100
+      ],
+      [
+        474,
+        159,
+        92,
+        34,
+        88,
+        101
+      ],
+      [
+        475,
+        160,
+        92,
+        34,
+        88,
+        101
+      ],
+      [
+        476,
+        161,
+        92,
+        34,
+        88,
+        101
+      ],
+      [
+        477,
+        162,
+        92,
+        34,
+        88,
+        101
+      ],
+      [
+        478,
+        163,
+        92,
+        34,
+        88,
+        101
+      ],
+      [
+        479,
+        163,
+        92,
+        34,
+        88,
+        102
+      ],
+      [
+        480,
+        163,
+        92,
+        34,
+        88,
+        103
+      ],
+      [
+        481,
+        163,
+        92,
+        34,
+        88,
+        104
+      ],
+      [
+        482,
+        163,
+        93,
+        34,
+        88,
+        104
+      ],
+      [
+        483,
+        163,
+        94,
+        34,
+        88,
+        104
+      ],
+      [
+        484,
+        163,
+        94,
+        34,
+        88,
+        105
+      ],
+      [
+        485,
+        164,
+        94,
+        34,
+        88,
+        105
+      ],
+      [
+        486,
+        164,
+        94,
+        34,
+        89,
+        105
+      ],
+      [
+        487,
+        164,
+        94,
+        34,
+        89,
+        106
+      ],
+      [
+        488,
+        164,
+        94,
+        34,
+        90,
+        106
+      ],
+      [
+        489,
+        164,
+        94,
+        34,
+        91,
+        106
+      ],
+      [
+        490,
+        165,
+        94,
+        34,
+        91,
+        106
+      ],
+      [
+        491,
+        166,
+        94,
+        34,
+        91,
+        106
+      ],
+      [
+        492,
+        166,
+        94,
+        34,
+        92,
+        106
+      ],
+      [
+        493,
+        166,
+        94,
+        34,
+        93,
+        106
+      ],
+      [
+        494,
+        166,
+        94,
+        34,
+        94,
+        106
+      ],
+      [
+        495,
+        166,
+        94,
+        34,
+        95,
+        106
+      ],
+      [
+        496,
+        166,
+        95,
+        34,
+        95,
+        106
+      ],
+      [
+        497,
+        166,
+        95,
+        34,
+        95,
+        107
+      ],
+      [
+        498,
+        166,
+        95,
+        34,
+        96,
+        107
+      ],
+      [
+        499,
+        167,
+        95,
+        34,
+        96,
+        107
+      ],
+      [
+        500,
+        167,
+        95,
+        34,
+        97,
+        107
+      ],
+      [
+        501,
+        167,
+        96,
+        34,
+        97,
+        107
+      ],
+      [
+        502,
+        167,
+        96,
+        34,
+        98,
+        107
+      ],
+      [
+        503,
+        168,
+        96,
+        34,
+        98,
+        107
+      ],
+      [
+        504,
+        168,
+        96,
+        34,
+        99,
+        107
+      ],
+      [
+        505,
+        169,
+        96,
+        34,
+        99,
+        107
+      ],
+      [
+        506,
+        169,
+        96,
+        34,
+        100,
+        107
+      ],
+      [
+        507,
+        170,
+        96,
+        34,
+        100,
+        107
+      ],
+      [
+        508,
+        171,
+        96,
+        34,
+        100,
+        107
+      ],
+      [
+        509,
+        171,
+        97,
+        34,
+        100,
+        107
+      ],
+      [
+        510,
+        171,
+        97,
+        35,
+        100,
+        107
+      ],
+      [
+        511,
+        172,
+        97,
+        35,
+        100,
+        107
+      ],
+      [
+        512,
+        172,
+        97,
+        35,
+        101,
+        107
+      ],
+      [
+        513,
+        172,
+        97,
+        35,
+        101,
+        108
+      ],
+      [
+        514,
+        172,
+        97,
+        35,
+        102,
+        108
+      ],
+      [
+        515,
+        172,
+        98,
+        35,
+        102,
+        108
+      ],
+      [
+        516,
+        172,
+        98,
+        35,
+        103,
+        108
+      ],
+      [
+        517,
+        173,
+        98,
+        35,
+        103,
+        108
+      ],
+      [
+        518,
+        174,
+        98,
+        35,
+        103,
+        108
+      ],
+      [
+        519,
+        175,
+        98,
+        35,
+        103,
+        108
+      ],
+      [
+        520,
+        176,
+        98,
+        35,
+        103,
+        108
+      ],
+      [
+        521,
+        177,
+        98,
+        35,
+        103,
+        108
+      ],
+      [
+        522,
+        178,
+        98,
+        35,
+        103,
+        108
+      ],
+      [
+        523,
+        178,
+        99,
+        35,
+        103,
+        108
+      ],
+      [
+        524,
+        178,
+        100,
+        35,
+        103,
+        108
+      ],
+      [
+        525,
+        178,
+        101,
+        35,
+        103,
+        108
+      ],
+      [
+        526,
+        178,
+        102,
+        35,
+        103,
+        108
+      ],
+      [
+        527,
+        178,
+        102,
+        36,
+        103,
+        108
+      ],
+      [
+        528,
+        178,
+        102,
+        36,
+        104,
+        108
+      ],
+      [
+        529,
+        179,
+        102,
+        36,
+        104,
+        108
+      ],
+      [
+        530,
+        179,
+        103,
+        36,
+        104,
+        108
+      ],
+      [
+        531,
+        180,
+        103,
+        36,
+        104,
+        108
+      ],
+      [
+        532,
+        180,
+        103,
+        36,
+        105,
+        108
+      ],
+      [
+        533,
+        180,
+        103,
+        36,
+        105,
+        109
+      ],
+      [
+        534,
+        181,
+        103,
+        36,
+        105,
+        109
+      ],
+      [
+        535,
+        181,
+        104,
+        36,
+        105,
+        109
+      ],
+      [
+        536,
+        182,
+        104,
+        36,
+        105,
+        109
+      ],
+      [
+        537,
+        183,
+        104,
+        36,
+        105,
+        109
+      ],
+      [
+        538,
+        183,
+        104,
+        36,
+        106,
+        109
+      ],
+      [
+        539,
+        184,
+        104,
+        36,
+        106,
+        109
+      ],
+      [
+        540,
+        185,
+        104,
+        36,
+        106,
+        109
+      ],
+      [
+        541,
+        185,
+        105,
+        36,
+        106,
+        109
+      ],
+      [
+        542,
+        185,
+        105,
+        36,
+        106,
+        110
+      ],
+      [
+        543,
+        186,
+        105,
+        36,
+        106,
+        110
+      ],
+      [
+        544,
+        186,
+        106,
+        36,
+        106,
+        110
+      ],
+      [
+        545,
+        186,
+        106,
+        37,
+        106,
+        110
+      ],
+      [
+        546,
+        187,
+        106,
+        37,
+        106,
+        110
+      ],
+      [
+        547,
+        188,
+        106,
+        37,
+        106,
+        110
+      ],
+      [
+        548,
+        189,
+        106,
+        37,
+        106,
+        110
+      ],
+      [
+        549,
+        189,
+        106,
+        37,
+        106,
+        111
+      ],
+      [
+        550,
+        190,
+        106,
+        37,
+        106,
+        111
+      ],
+      [
+        551,
+        190,
+        106,
+        37,
+        107,
+        111
+      ],
+      [
+        552,
+        190,
+        107,
+        37,
+        107,
+        111
+      ],
+      [
+        553,
+        190,
+        107,
+        37,
+        108,
+        111
+      ],
+      [
+        554,
+        190,
+        107,
+        37,
+        108,
+        112
+      ],
+      [
+        555,
+        190,
+        107,
+        37,
+        108,
+        113
+      ],
+      [
+        556,
+        190,
+        107,
+        37,
+        109,
+        113
+      ],
+      [
+        557,
+        191,
+        107,
+        37,
+        109,
+        113
+      ],
+      [
+        558,
+        191,
+        107,
+        37,
+        109,
+        114
+      ],
+      [
+        559,
+        192,
+        107,
+        37,
+        109,
+        114
+      ],
+      [
+        560,
+        193,
+        107,
+        37,
+        109,
+        114
+      ],
+      [
+        561,
+        193,
+        107,
+        37,
+        109,
+        115
+      ],
+      [
+        562,
+        193,
+        107,
+        37,
+        109,
+        116
+      ],
+      [
+        563,
+        193,
+        107,
+        37,
+        110,
+        116
+      ],
+      [
+        564,
+        193,
+        108,
+        37,
+        110,
+        116
+      ],
+      [
+        565,
+        193,
+        108,
+        37,
+        111,
+        116
+      ],
+      [
+        566,
+        193,
+        108,
+        37,
+        112,
+        116
+      ],
+      [
+        567,
+        193,
+        108,
+        38,
+        112,
+        116
+      ],
+      [
+        568,
+        193,
+        108,
+        38,
+        113,
+        116
+      ],
+      [
+        569,
+        193,
+        108,
+        39,
+        113,
+        116
+      ],
+      [
+        570,
+        193,
+        108,
+        39,
+        114,
+        116
+      ],
+      [
+        571,
+        193,
+        108,
+        39,
+        115,
+        116
+      ],
+      [
+        572,
+        194,
+        108,
+        39,
+        115,
+        116
+      ],
+      [
+        573,
+        194,
+        108,
+        39,
+        115,
+        117
+      ],
+      [
+        574,
+        194,
+        108,
+        39,
+        115,
+        118
+      ],
+      [
+        575,
+        194,
+        108,
+        39,
+        116,
+        118
+      ]
+    ],
+    "scores": [
+      {
+        "sample": 1,
+        "position": 0.0,
+        "viewspatial": 53.19,
+        "spar": 57.15
+      },
+      {
+        "sample": 2,
+        "position": 63.888888889,
+        "viewspatial": 54.58,
+        "spar": 57.76
+      },
+      {
+        "sample": 3,
+        "position": 127.777777778,
+        "viewspatial": 59.14,
+        "spar": 61.64
+      },
+      {
+        "sample": 4,
+        "position": 191.666666667,
+        "viewspatial": 65.62,
+        "spar": 61.96
+      },
+      {
+        "sample": 5,
+        "position": 255.555555556,
+        "viewspatial": 68.09,
+        "spar": 63.14
+      },
+      {
+        "sample": 6,
+        "position": 319.444444444,
+        "viewspatial": 68.82,
+        "spar": 64.01
+      },
+      {
+        "sample": 7,
+        "position": 383.333333333,
+        "viewspatial": 70.65,
+        "spar": 66.03
+      },
+      {
+        "sample": 8,
+        "position": 447.222222222,
+        "viewspatial": 74.05,
+        "spar": 68.95
+      },
+      {
+        "sample": 9,
+        "position": 511.111111111,
+        "viewspatial": 79.83,
+        "spar": 70.26
+      },
+      {
+        "sample": 10,
+        "position": 575.0,
+        "viewspatial": 79.99,
+        "spar": 70.39
+      }
+    ],
+    "categories": [
+      {
+        "id": "T",
+        "name": "Tools & geometry",
+        "color": "#3875ab",
+        "final": 194
+      },
+      {
+        "id": "S",
+        "name": "Skills & task rules",
+        "color": "#7957ac",
+        "final": 108
+      },
+      {
+        "id": "M",
+        "name": "Memory & state",
+        "color": "#147f79",
+        "final": 39
+      },
+      {
+        "id": "E",
+        "name": "Evidence links & delivery",
+        "color": "#ba694c",
+        "final": 116
+      },
+      {
+        "id": "C",
+        "name": "Control & integration",
+        "color": "#927521",
+        "final": 118
+      }
+    ],
+    "phases": [
+      {
+        "name": "Build & ground",
+        "end": 130,
+        "note": "Bind the question to objects, frames and explicit premises."
+      },
+      {
+        "name": "Specialize evidence",
+        "end": 276,
+        "note": "Develop the tools and skills required by different spatial questions."
+      },
+      {
+        "name": "Connect & complete",
+        "end": 445,
+        "note": "Carry observations forward and make tool results usable at decision time."
+      },
+      {
+        "name": "Integrate & refine",
+        "end": 575,
+        "note": "Combine capabilities, restore source evidence and close the reasoning chain."
+      }
+    ]
+  },
+  "experiments": {
+    "benchmarks": [
+      "ViewSpatial",
+      "SPAR",
+      "MMSI"
+    ],
+    "joint": [
+      {
+        "name": "Initial structure",
+        "tools": 7,
+        "operations": 4,
+        "scores": [
+          56.86,
+          59.28,
+          54.19
+        ]
+      },
+      {
+        "name": "Tools only",
+        "tools": 39,
+        "operations": 4,
+        "scores": [
+          68.15,
+          63.96,
+          60.19
+        ]
+      },
+      {
+        "name": "Rules only",
+        "tools": 7,
+        "operations": 9,
+        "scores": [
+          61.52,
+          61.02,
+          57.8
+        ]
+      },
+      {
+        "name": "Joint evolution",
+        "tools": 55,
+        "operations": 12,
+        "scores": [
+          79.99,
+          70.39,
+          66.33
+        ]
+      }
+    ],
+    "memory": [
+      {
+        "name": "Flat records",
+        "scores": [
+          67.25,
+          63.03,
+          59.91
+        ],
+        "mismatch": 21.7,
+        "delivery": 71.06
+      },
+      {
+        "name": "Evidence association",
+        "scores": [
+          73.26,
+          66.96,
+          63.73
+        ],
+        "mismatch": 5.64,
+        "delivery": 82.2
+      },
+      {
+        "name": "Association + memory",
+        "scores": [
+          79.99,
+          70.39,
+          66.33
+        ],
+        "mismatch": 1.05,
+        "delivery": 98.24
+      }
+    ],
+    "adaptation": [
+      {
+        "id": "gpt-6-astra",
+        "label": "GPT-6-astra",
+        "before": [
+          85.26,
+          73.82,
+          77.7
+        ],
+        "after": [
+          87.24,
+          76.53,
+          79.17
+        ]
+      },
+      {
+        "id": "gemini-3.8-flash",
+        "label": "Gemini-3.8-Flash",
+        "before": [
+          85.22,
+          75.79,
+          65.93
+        ],
+        "after": [
+          87.93,
+          77.32,
+          68.09
+        ]
+      },
+      {
+        "id": "gemini-4-argon",
+        "label": "Gemini-4-Argon",
+        "before": [
+          87.61,
+          76.45,
+          78.45
+        ],
+        "after": [
+          89.33,
+          77.96,
+          80.48
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "Benchmark and subtask scores",
+      "path": "benchmark-results.json",
+      "sha256": "323aa6489293662b1c5df008934f563f1cc703b86595e83b237d5e8d515368f5"
+    },
+    {
+      "name": "Recorded optimization sequence and experiment results",
+      "path": "research-data.json"
+    }
+  ]
+}
