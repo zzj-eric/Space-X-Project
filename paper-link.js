@@ -5,7 +5,7 @@
  * github_pages/ and the deployment ZIP. If editing an already uploaded
  * website directly, change paper-link.js in that website's root instead.
  */
-const PAPER_URL = "";
+const PAPER_URL = "https://arxiv.org/pdf/2611.24004";
 
 (() => {
   const link = document.getElementById('paper-link');
